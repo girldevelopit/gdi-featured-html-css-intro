@@ -2,7 +2,7 @@
 
 This is the official Girl Develop It Core HTML/CSS curriculum. It was developed through the contributions of Pamela Fox, Alexis Goldstein, Erin M. Kidwell, Izzy Johnston, and Jen Myers.
 
-The course is meant to be taught in 4 or 6 two-hour sections. If you are teaching a 4 section course, you can ignore classes 5 and 6 without losing any impact or information. Each of the slides and practice files are customizable according to the needs of a given class or audience.
+The course is meant to be taught in 4 two-hour sections. Each of the slides and practice files are customizable according to the needs of a given class or audience.
 
 ## Classes
 
@@ -29,14 +29,6 @@ Students will start customizing their portfolio with all sorts of goodies.
 ### Class 4
 
 Box model? Floating? Columns? What is this sorcery? You've brought people through the core of html and css. Now give them the next steps to be pros. Students will add columns, footers and headers to their portfolios.
-
-### Class 5
-
-Advanced HTML elements. Introduction to forms and HTML5. Who knew it was so easy to create a button! Include all of the HTML5 excitement like semantically named elements (header, footer) and form helpers.
-
-### Class 6
-
-Advanced CSS techniques. Gradients, rounded corners, and all of those things we've been waiting for since 2004. Take all those images and buttons made throughout the class and make them beautiful. Introduce the concept of media queries and responsive design.
 
 ## Theme customization
 
