@@ -1,0 +1,86 @@
+Over the past 4 months we've been working with the base curriculum and
+have discussed and made changes to the content of the slides. We've
+re-ordered a few things and provided more examples. Our students take
+home a copy of the slides and find it helpful to have these examples
+and definitions handy at home.
+
+Class 1:
+- Added dino pic
+- Added intro to Sublime text 2, where we remove tab completion and
+auto complete to help the students learn to write code by hand. This
+could be moved around where the instructor feels fit. We have our TAs
+walk around and help everyone and have been experimenting with doing it
+before class even starts.
+- Added example of folder structure with image
+- Added example of site we'll be building today. Students liked having
+a visual of the final product.
+- Modified the text of the element explanation due to student feedback.
+- Added a visual breakdown of an HTML tag
+- Added more content to the attribute / value area to help clarify
+things
+- Added example of old doctype, noted that it's case-insensitive
+- Added extended definition to the head and body tags
+- Added exercise to code out html template with the base tags.
+- Modified explanation of nesting
+- Added visual example of paragraphs
+- Added visual example of headings
+- Moved Lists to later
+- Added exercise to add content to site
+- Added section to talk about link attributes (e-mail and target)
+- Added section about relative vs. absolute links
+- Moved lists to after images. Students were having a hard time getting
+the hang of this right away
+- Added visual example of lists
+- Added section on comments
+- Added visual example of tables
+- Added visual example of character codes
+- Changed transition to linear
+
+Class 2:
+- Added visual representation of CSS rule
+- Added names of colors
+- Changed transition to linear
+
+Class 3:
+- Added example of what they would be making in class today
+- Moved inline and block from first class to this class. Students
+didn't understand the relation of it so early since they weren't
+learning any CSS
+- Added visual example of Inline & Block
+- Separated out Div & span
+- Added section about just div with examples of attributes being IDs
+and classes
+- Added exercise to have students break out page into divs from the
+beginning. We found that teaching them this was the easiest for them to
+understand.
+- Had students add spans to text to show how to 'highlight code' as if
+with a highlighter.
+- Moved pseudo classes
+- Added new images for box model
+- Added visual example of padding. We use the "Imagine this is a photo
+hanging on your wall. The content is your photo, the padding is your
+mat or the space between the photo and the frame. The border is the
+frame. The margin is the space between the picture frames" They relate
+to it.
+- Added note that padding adds to width of box
+- Added visual example of margin
+- Added visual example of border
+- Added section on width
+- Added section on height
+- Changed transition to linear
+
+Class 4:
+- Added smaller images of for static positioning. On the big screen
+they weren't line breaking
+- Modified explanation of relative positioning.
+- Modified explanation of absolute positioning
+- Added concrete example of absolute positioning. Up until this point
+students weren't understanding what was happening with positioning.
+Using the example of a caption over the image was easy for them to
+relate to and is something they see every day.
+- Modified explanation of z-index
+- Added exercise to have students add a caption to their images
+- Modified explanation of floating
+- Added visual examples of floating
+- Modified explanation of clearing
+- Changed transition to linear

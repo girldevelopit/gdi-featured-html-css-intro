@@ -58,8 +58,7 @@
           </div>
         </section>
         
-       <!-- Static Positioning-->
-       <section>
+        <section>
          <h3>Static Positioning</h3>
          <div class = "left-align">
          <p>HTML elements are positioned static by default.</p>
@@ -72,13 +71,22 @@
          <h3>Static Positioning</h3>
          <p>In normal flow, inline boxes flow from left to right, wrapping to next line when needed.</p>
 <pre><code class = "html">
-&lt;img src="http://girldevelopit.com/assets/pink-logo.png"/>
-&lt;img src="http://girldevelopit.com/assets/pink-logo.png"/>
-&lt;img src="http://girldevelopit.com/assets/pink-logo.png"/>
+&lt;img src="images/cookie1.png"/>
+&lt;img src="images/cookie2.png"/>
+&lt;img src="images/cookie3.png"/>
+...
+&lt;img src="images/cookie2.png"/>
+&lt;img src="images/cookie3.png"/>
+
 </code></pre>
-<img src="http://girldevelopit.com/assets/pink-logo.png" style ="width:45%"/>
-<img src="http://girldevelopit.com/assets/pink-logo.png" style ="width:45%"/>
-<img src="http://girldevelopit.com/assets/pink-logo.png" style ="width:45%"/>
+<img src="images/cookie1.png"/>
+<img src="images/cookie2.png"/>
+<img src="images/cookie3.png"/>
+<img src="images/cookie1.png"/>
+<img src="images/cookie2.png"/>
+<img src="images/cookie3.png"/>
+<img src="images/cookie2.png"/>
+<img src="images/cookie3.png"/>
        </section>
        
        <section>
@@ -100,9 +108,12 @@
        <section>
          <h3>Relative Positioning</h3>
          <div class = "left-align">
-         <p>Makes an element a "positioning context" in which to position other elements relative to it.</p>
-         <p>Relative positioning and absolute positioning are used together.</p>
-         <p>Use the properties top, bottom, right and left to relative position an element.</p>
+         <ul>
+         <li>Takes the element out of the normal flow, allowing it to be moved to the top, left, right or bottom. </li>
+         <li>Does not affect the elements surrounding it.</li>
+         <li>Makes an element a "positioning context" in which to position other elements relative to it.</li>
+         <li>Relative positioning and absolute positioning are used together.</li>
+         </ul>
          </div>
        </section>
        
@@ -119,40 +130,48 @@
     background-color: yellow;
   }
 </code></pre>
+ <div style="border:2px solid black;">
  <div style="position: relative; left: 80px; top: 20px;
    height: 100px; background-color: yellow; color:black; text-align:left">
    Hello, hi!
  </div>
+ </div>
        </section>
        <!-- Absolute positioning-->
-       <section>
+       <section >
          <h3>Absolute Positioning</h3>
          <div class = "left-align">
-         <p>Determined by its oﬀset values in the properties top, bottom, right and left.</p>
-         <p>An absolutely positioned element is offset from its container block, positioned relative.</p>
-         <p>Its container block is the first element that has a position other than static.</p>
-         <p>If no such element is found, the container block is &lt;html>.</p>
+         <ul>
+         <li>Positions element outside of the normal flow.</li>
+         <li>An absolutely positioned element is offset from its container block, positioned relative.</li>
+         <li>Its container block is the first element that has a position other than static.</li>
+         <li>If no such element is found, the container block is &lt;html>.</li>
+         <li>Other elements act as if it's not there.</li>
+         <li>Determined by its oﬀset values in the properties top, bottom, right and left.</li>
+         </ul>
          </div>
        </section>
        
-       <section>
+       <section  style="border: 1px solid black">
+         <h3>Absolute Positioning</h3>
          <p>The "absolute" value will take the element out of the normal flow and position it in relation to the window (or the closest non-static element).</p>
 <pre><code class = "html">
   .top{
     position: absolute; 
-    top: 10px; 
+    top: -40px; 
     right: 10px; 
     background-color: yellow
   }
 </code></pre>
 <pre><code class = "html">
-  .top{
+  .bottom{
     position: absolute; 
-    bottom: 10px; 
+    bottom: -40px; 
     left:60px; 
     background-color: green
   }
 </code></pre>
+         <div>
          <div style="position: absolute; top: -40px; right: 10px; 
            background-color: yellow; color:black">
           Up here
@@ -161,10 +180,23 @@
          background-color: green">
           Down here
          </div>
+         </div>
        </section>
-       
        <section>
-         <p>The z-index property specifies the stack order of positioned elements, in the case that they are overlapping. The element with highest z-index goes on top.</p>
+       	<h3>Example: Absolute Positioning</h3>
+       	<div class="left left-align" style="width: 45%;">
+       	<p>Here's an example of an image with a caption absolutely positioned over top of it.</p>
+       	<br/>
+       	<p>The containing div has a position of relative, and the caption has a position of absolute.</p>
+       	</div>
+       	<div class="right" style="width: 45%;">
+       		<img src="images/example-absolute.png" style="border: none; box-shadow: none;"/>
+       	</div>
+       </section>
+       <section>
+       <h3>Z-index</h3>
+         <p class="left-align">When you use positioning to move elements out of the normal flow of content, elements can overlap. You can change the order of overlapping with z-index.</p>
+         <p class="left-align">The element with highest z-index goes on top.</p>
 <pre><code class ="html">
   .bottom{
     position: absolute; 
@@ -187,40 +219,61 @@
         <div style="position: absolute; bottom: -15px; left:60px; 
           background-color: green; z-index: 2; "> Top </div>
        </section>
-       
+       <section>
+       	<h3>Let's Develop it!</h3>
+       	<p>Let's add some positioning.</p>
+       	<p>Let's create a div that contains an image and a caption, and position the caption absolutely overtop the image.</p>
+       	
+       </section>
        <!-- Float-->
        <section>
          <h3>Float</h3>
          <div class = "left-align">
-           <p>An element can be pushed to the right or the left, allowing others to wrap around it.</p>
-            <p>Text and other content will ﬂow around a floated element.</p>
-            <p>You can specify a) whether an element is floated or not, and b) which side it ﬂoats on.</p>
+          	<ul>
+          	<li>"Floating" an element takes it in the normal flow, as far to the left or right of it's containing element as possible.</li>
+          	<li>Any other elements, such as paragraphs or lists, will wrap around the floated element.</li>
+          	<li>Always specify a width when floating an element, otherwise the element is likely to take up the whole page and not appear floated.</li>
+            <li>You can specify a) whether an element is floated or not, and b) which side it ﬂoats on.</li>
+          	</ul>
          </div>
        </section>
-       
+       <!--example float-->
+       <section>
+       <h3>Float: Example</h3>
+       <p>Below a &lt;blockquote> is floated to the left, allowing text to wrap around it on the right</p>
+       <img src="images/example-floatbq.png" alt="example float" />
+       </section>
        <section>
          <h3>Float</h3>
 <pre><code class ="html">
   .float{
     float:left;
-    width:50px;
+    width:200px;
     background:yellow;
   }
 </code></pre>
-        <div style ="float:left;width:50px;background:yellow; color:black">
-          hi<br/>
-          hi<br/>
-          hi<br/>
+        <div style ="float:left; text-align: left;width:200px;background:yellow; color:black; padding: 10px;">
+          <small>Hi, I'm a yellow box with black text.<br/>
+          I like to hang out on the left side.</small><br/>
         </div>
         <div class = "left-align">Not floating element</div>
         <div class = "left-align">Not floating element</div>
+         <div class = "left-align">Not floating element with wrapping Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
        </section>
        
+       <section>
+       <h3>Using floats to place elements side by side</h3>	
+       <p>If you want two block level elements to be side by side, you need to float both elements. One left, and one right.</p>
+       <img src="images/example-float-column.png" />
+       </section>
        <!-- Clear-->
        <section>
          <h3>Clear</h3>
-         <p>Specifies which side of an element ﬂoats are not allowed.</p>
-         <p>Clearing both sides makes sure ﬂoats don’t ﬂow past the clear element.</p>
+         <ul>
+         <li>Clearing tells the element on which side (right, left, both) other elements <strong>cannot</strong> appear. </li>
+         <li>If you had an image floated left, and you did not want the paragraph to appear next to it, you would add <strong>clear: left;</strong> to the paragraph.</li>
+         <li>Clearing both sides makes sure ﬂoats don’t ﬂow past the clear element.</li>
+         </ul>
 <pre><code class = "html">
   clear: right;
   clear: left;
@@ -236,28 +289,25 @@
      width:50px;
      background:yellow;
    }
-   .clear{
-     clear:both
+   .clear-left{
+     clear:left
    }
  </code></pre>
-         <div style ="float:left;width:50px;background:yellow; color:black">
+         <div style ="float:left;width:50px;background:yellow; color:black; ">
            hi<br/>
            hi<br/>
            hi<br/>
          </div>
          <div class = "left-align">Not floating element</div>
-         <div class = "clear"></div>
          <div class = "left-align">Not floating element</div>
+         <div class = "left-align" style="clear: left;">None floating element with a class of <strong>.clear-left</strong></div>
         </section>
         
         <!-- Exercise-->
        <section>
          <h3>Let's Develop It</h3>
-         <p>Add layout positioning!</h3>
-          <p>Absolutely position an image to the top right</p>
-          <p>Add a header, two columns and a footer through floating</p>
-       </section>
-       <!-- Question-->
+         <p>Let's float our side bar and content areas.</p>
+       </section>       <!-- Question-->
         <section>
           <h2>Questions?</h2>
           <div style = "font-size:1200%; height:100%; margin-top:30%" class ="blue">?
@@ -288,7 +338,7 @@
 				history: true,
 
 				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
 
 				// Optional libraries used to extend on reveal.js
 				dependencies: [
