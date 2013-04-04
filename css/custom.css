@@ -14,6 +14,10 @@ p.credit{
 	font-size: 12px;
 }
 
+.reveal section img {
+	max-height: 75%;
+}
+
   
 /*
  * Hide only visually, but have it available for screenreaders: h5bp.com/v
