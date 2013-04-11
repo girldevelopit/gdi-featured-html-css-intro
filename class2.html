@@ -87,53 +87,71 @@
 		</section>
 
         <!-- What is CSS-->
-        <section>
-          <h3>CSS: What is it?</h3>
-          <p>CSS = <span class="green">C</span>ascading <span class="green">S</span>tyle <span class="green">S</span>heets</p>
-          <p>CSS is a "style sheet language" that lets you style the elements on your page.</p>
-          <p>CSS is works in conjunction with HTML, but is not HTML itself.</p>
+		<section>
+			<section>
+			  <h3>CSS: What is it?</h3>
+			  <p>CSS = <span class="green">C</span>ascading <span class="green">S</span>tyle <span class="green">S</span>heets</p>
+			  <p>CSS is a "style sheet language" that lets you style the elements on your page.</p>
+			  <p>CSS is works in conjunction with HTML, but is not HTML itself.</p>
+			</section>
+			
+			<section>
+			  <h3>CSS: What can it do?</h3>
+			  <p>All colored text, position, and size</p>
+			  <img src = "images/homepage-view.png">
+			</section>
+			
+			<section>
+			  <h3>CSS: What does it look like?</h3>
+			  <img src = "images/homepage-css.png">
+			</section>
         </section>
-        
-        <section>
-          <h3>CSS: What can it do?</h3>
-          <p>All colored text, position, and size</p>
-          <img src = "images/homepage-view.png">
-        </section>
-        
-        <section>
-          <h3>CSS: What does it look like?</h3>
-          <img src = "images/homepage-css.png">
-        </section>
-        
+		
         <!-- The CSS Rule-->
-        <section>
-        	<h3>The CSS Rule</h3>
-        	<img src="images/cssrule.png" alt="The CSS Rule" style="border: none; box-shadow: none;"/>
-        </section>
-        <section>
-          <h3>The CSS Rule</h3>
+		<section>
+			<section>
+				<h3>The CSS Rule</h3>
+				<img src="images/cssrule.png" alt="The CSS Rule" style="border: none; box-shadow: none;"/>
+			</section>
+			<section>
+			  <h3>The CSS Rule</h3>
 <pre><code class = "html">
 selector {
-  property: value;
+   property: value;
 }
 </code></pre>
-          <div class = "left-align">
-            <p>A block of CSS code is a rule.</p>
-            <p>The rule starts with a selector.</p>
-            <p>It has sets of properties and values.</p>
-            <p>A property-value pair is a declaration.</p>
-          </div>
-        </section>
+			  <div class = "left-align">
+				<p>A block of CSS code is a rule.</p>
+				<p>The rule starts with a selector.</p>
+				<p>It has sets of properties and values.</p>
+				<p>A property-value pair is a declaration.</p>
+			  </div>
+			</section>
+		</section>
+		
+		<!-- ID vs Class-->
+        <section>
+        <h3>IDs vs. Classes</h3>
+			<div class = "left-align">
+			  <span class = "yellow">ID</span> -- Should only apply to one element on a webpage. I.E. A webpage only has one footer.
+			  <p>The "#" is how you tell CSS "this is an id."</p>
+			</div>
+			<div class = "left-align">
+			  <span class = "yellow">Class</span> -- Lots of elements can have the same class. I.E. There can be many warning on one webpage.
+			  <p>The "." is how you tell CSS "this is a class name."</p>
+			</div>
+		</section>  
         
         <!-- CSS Syntax -->
-        <section>
-          <h3>CSS Syntax</h3>
-          <div class = "left-align">
-            <p>Declarations:  Property and value of style you plan use on HTML element. </p>
-          <p>Declarations end with a semicolon</p>
-          <p>Declaration groups are surrounded by curly brackets.</p>
-          </div>
-          
+		<section>
+			<section>
+			  <h3>CSS Syntax</h3>
+			  <div class = "left-align">
+				<p>Declarations:  Property and value of style you plan use on HTML element. </p>
+			  <p>Declarations end with a semicolon</p>
+			  <p>Declaration groups are surrounded by curly brackets.</p>
+			  </div>
+			  
 <pre><code class = "html">
 selector {
   property: value;
@@ -191,19 +209,7 @@ img {
 </code></pre>
          <p>The associated HTML.</p>
 			  </section>
-        
-        <!-- ID vs Class-->
-        <section>
-        <h3>IDs vs. Classes</h3>
-        <div class = "left-align">
-          <span class = "yellow">ID</span> -- Should only apply to one element on a webpage. I.E. A webpage only has one footer.
-          <p>The "#" is how you tell CSS "this is an id."</p>
-        </div>
-        <div class = "left-align">
-          <span class = "yellow">Class</span> -- Lots of elements can have the same class. I.E. There can be many warning on one webpage.
-          <p>The "." is how you tell CSS "this is a class name."</p>
-        </div>
-      </section>  
+		       
       
         <!-- Selector position-->
         <section>
@@ -219,8 +225,10 @@ p em {
 </code></pre>
         <p>The associated HTML.</p>
       </section>
+</section>  
         
         <!-- Multiple values -->
+	<section>
         <section>
         <h3>Property Values</h3>
         <p>Each property can have one or more comma separated values.</p>
@@ -314,8 +322,10 @@ p {
 }
 </code></pre>
         </section>
+	</section>
       
         <!-- Connecting HTML to CSS-->
+	<section>
         <section>
           <h3>Connecting CSS to HTML</h3>
           <p class = "green">3 ways</p>
@@ -377,6 +387,7 @@ p {
             <li>Try using ids and classes to change specific elements</li>
           </ul>
         </section>
+	</section>
         
         <!-- Cascading-->
         <section>
