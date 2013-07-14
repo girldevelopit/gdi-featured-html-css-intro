@@ -28,6 +28,9 @@
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
+    <style>
+      code.html {font-size: 130%;}
+    </style>
 	</head>
 
 	<body>
@@ -39,8 +42,8 @@
 			  <section>
           <h2>Welcome!</h2>
           <p>Wifi Info</p>
-          <p><strong>Network:</strong> </p>
-          <p><strong>Password:</strong> </p>
+          <p><strong>Network:</strong> SGGuest</p>
+          <p><strong>Password:</strong> GridSend0909</p>
           <hr/>
           <div class="left-align">
             <p>If you have not done so already, please download Sublime Text 2.</p>
@@ -89,6 +92,7 @@
           <div class="left">
             <h4>Cara Jo Miller</h4>
             <ul>
+              <li>Moved to Colorado in March</li>
               <li>Lead UI Desiner at Simple Energy</li>
               <li>Founding member of Girl Develop It Detroit</li>
               <li>Co-Founder of GDI Boulder</li>
@@ -118,8 +122,8 @@
           <ul>
             <li>Who are you?</li>
             <li>What do you hope to get out of the class?</li>
-            <li>What is your favorite dinosaur?</li>
-            <img src="images/dinosaur.jpeg" />
+            <li>What's your favorite thing about Colorado?</li>
+            <img src="images/colorado-flag.jpg" style="width: 50%; margin: 20px auto; text-align: center;"/>
           </ul>
           </div>
         </section>
@@ -215,7 +219,7 @@
        <!-- Commenting out sublime text intro so teachers can choose whether or not to use sublime text in class-->
          <!-- intro to sublime text 2 -->
 
-        <section>
+        <!-- <section>
           <h3>Get Started: Sublime Text 2</h3>
           <p class="left"><strong>We'll be using Sublime Text 2 in class today.</strong></p>
           <ol>
@@ -231,7 +235,7 @@
               </ul>
             </li>
           </ol>
-        </section> 
+        </section>  -->
         <!-- Folder Structure -->
          <section>
           <h3>Get Started: Folder Structure</h3>
@@ -280,9 +284,9 @@
             <li class ="fragment"><p>A paragraph is your content</p></li>
             <li class = "fragment">
               <div style = "font-size: 80%">Putting your content into an HTML tag to make it look like a paragraph is Structure</div>
-              <pre><code class ="html">
-                &lt;p>A paragraph is your content&lt;/p>
-              </code></pre>
+<pre><code class ="html">
+&lt;p>A paragraph is your content&lt;/p>
+</code></pre>
           </li>
           <li class = "fragment">
             <div style = "font-size: 80%">Make the font of your paragraph blue and 18pt is presentation</div>
@@ -307,10 +311,12 @@
               <li>Marks the beginning &amp; end of an element</li>
                <li>Opening tag and Closing Tag
                <li>Tags contain characters that indicate the tags purpose</li>
-<pre><code class ="html">&lt;tagname>Stuff in the middle&lt;/tagname></code></pre>
+<pre><code class ="html">
+&lt;tagname>Stuff in the middle&lt;/tagname></code></pre>
               </li>
                <li>
-<pre><code class ="html">&lt;p> This is a sample paragraph.&lt;/p></code></pre>
+<pre><code class ="html">
+&lt;p> This is a sample paragraph.&lt;/p></code></pre>
               </li>
             </ul>
         </section>
@@ -992,7 +998,59 @@ p {
 }
 </code></pre>
         </section>
-      
+        <section>
+          <h3>Property: Background Image</h3>
+          <p>The background-image property allows you to apply an image to the background of elements.</p>
+<pre><code class="html">
+  body {
+    background-image: url(images/image.jpg);
+}
+</code></pre>
+      </section>
+      <section>
+        <h3>Property: Background-position</h3>
+        <p>To position your background image properly use the background-position property.</p>
+        <p>Use top, left, bottom &amp; right, values.</p>
+        <p>You can also use numerical values. Calculated from the top &amp; left.</p>
+<pre><code class="html">
+body {
+  background-position: top left;
+}
+body {
+  background-position: 50px 10px;
+}
+</code></pre>
+</section>
+<section>
+      <h3>Property: Background-repeat</h3>
+      <p>To set how and if the background will repeat, use the background-repeat property.</p>
+      <p><strong>Don't repeat</strong></p>
+<pre><code>
+body {
+  background-repeat: no-repeat;
+}
+</code></pre>
+      <p><strong>Repeat Horizontally</strong></p>
+<pre><code>
+body {
+  background-repeat: repeat-x;
+}
+</code></pre>
+      <p><strong>Repeat Vertically</strong></p>
+<pre><code>
+body {
+  background-repeat: repeat-y;
+}
+</code></pre>
+</section>
+<section>
+      <h3>Property: Background (shorthand)</h3>
+<pre><code>
+body {
+  background: url(images/image.jpg) no-repeat top left red;
+}
+</code></pre>
+</section>
         <!-- Font family-->
         <section>
           <h3>Property: Font-family</h3>
