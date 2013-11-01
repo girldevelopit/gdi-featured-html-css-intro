@@ -6,20 +6,20 @@
 
 		<title>Class 2 ~ HTML/CSS ~ Girl Develop IT</title>
 
-		<meta name="description" content="This is the official Girl Develop It Core HTML/CSS curriculum. It was developed through the contributions of Pamela Fox, Alexis Goldstein, Erin M. Kidwell, Izzy Johnston, and Jen Myers.
+		<meta name="description" content="This is the Hackademy Core HTML/CSS curriculum, based on the official Girl Develop It curriculum. The GDI curriculum was developed through the contributions of Pamela Fox, Alexis Goldstein, Erin M. Kidwell, Izzy Johnston, and Jen Myers.
 
     The course is meant to be taught in 4 or 6 two-hour sections. If you are teaching a 4 section course, you can ignore classes 5 and 6 without losing any impact or information. Each of the slides and practice files are customizable according to the needs of a given class or audience.">
-		<meta name="author" content="Girl Develop It">
+    <meta name="author" content="Hackademy">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 		<link rel="stylesheet" href="reveal/css/reveal.css">
-		<link rel="stylesheet" href="reveal/css/theme/gdidefault.css" id="theme">
+		<link rel="stylesheet" href="custom-css/hackademy.css" id="theme">
 
 		<!-- For syntax highlighting -->
-		<!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
-		<!-- dark editor--><link rel="stylesheet" href="reveal/lib/css/dark.css">
+    <!-- light editor--><link rel="stylesheet" href="reveal/lib/css/light.css">
+    <!-- dark editor<link rel="stylesheet" href="reveal/lib/css/dark.css">-->
 
 		<!-- If use the PDF print sheet so students can print slides-->
 		
@@ -38,7 +38,7 @@
 			<div class="slides">
 			  <!-- Opening slide -->
         <section>
-          <img src = "images/gdi_logo_badge.png">
+          <img src = "images/hackademy.png">
           <h3>Beginning HTML and CSS</h3>
           <h4>Class 2</h4>
         </section>
@@ -47,7 +47,7 @@
         <section>
           <h3>Welcome!</h3>
           <div class = "left-align">
-          <p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
+          <p>Hackademy is a social innovation venture teaching coding and technology literacy via face-to-face learning and community mentorship. We are committed to providing an open and welcoming environment for all, particularly those groups who have traditionally faced barriers in entering technical fields.</p>
           <p class ="green">Some "rules"</p>
           <ul>
             <li>We are here for you!</li>
@@ -61,10 +61,10 @@
         <!-- Role of HTML v. CSS-->
         <section>
           <h3>Anatomy of a website</h3>
-          <div class = "blue"> Your Content</div>
-          <div><span class = "blue">+ HTML: </span>Structure</div>
-          <div><span class = "blue">+ CSS: </span>Presentation</div>
-          <div class = "blue">= Your Website</div>
+          <div class = "green"> Your Content</div>
+          <div><span class = "green">+ HTML: </span>Structure</div>
+          <div><span class = "green">+ CSS: </span>Presentation</div>
+          <div class = "green">= Your Website</div>
           <p>A website is a way to present your content to the world, using HTML and CSS to present that content &amp; make it look good.</p>
         </section>
 
@@ -79,7 +79,7 @@
         <section>
           <h3>CSS: What can it do?</h3>
           <p>All colored text, position, and size</p>
-          <img src = "images/homepage-view.png">
+          <img src = "images/hackademysite.png">
         </section>
         
         <section>
@@ -94,8 +94,7 @@
         </section>
         <section>
           <h3>The CSS Rule</h3>
-<pre><code class = "html">
-selector {
+<pre><code class = "html">selector {
   property: value;
 }
 </code></pre>
@@ -116,8 +115,7 @@ selector {
           <p>Declaration groups are surrounded by curly brackets.</p>
           </div>
           
-<pre><code class = "html">
-selector {
+<pre><code class = "html">selector {
   property: value;
   property: value;
   property: value;
@@ -128,14 +126,12 @@ selector {
         <!-- Selectors elements-->
         <section>
 			  <h3>Selector: Element</h3>
-<pre><code class = "html">
-p {
+<pre><code class = "html">p {
   property: value;
 }
 </code></pre>
       <p>Selects all paragraph elements.</p>
-<pre><code class = "html">
-img {
+<pre><code class = "html">img {
   property: value;
 }
 </code></pre>
@@ -145,31 +141,26 @@ img {
         <!-- Selectors ID-->
         <section>
 			    <h3>Selector: ID</h3>
-<pre><code class = "html">
-#footer {
+<pre><code class = "html">#footer {
   property: value;
 }
 </code></pre>
           <p>Selects all elements with an id of "footer".</p>
           
-<pre><code class = "html">
-&lt;p id="footer">Copyright 2011&lt;/p>
-</code></pre>
+<pre><code class = "html">&lt;p id="footer">Copyright 2011&lt;/p></code></pre>
          <p>The associated HTML.</p>
 			  </section>
         
         <!-- Selectors Class-->
         <section>
 			    <h3>Selector: Class</h3>
-<pre><code class = "html">
-.warning {
+<pre><code class = "html">.warning {
   color: red;
 }
 </code></pre>
           <p>Selects all elements with a class of "warning".</p>
 
-<pre><code class = "html">
-&lt;p class="warning">Run away!&lt;/p>
+<pre><code class = "html">&lt;p class="warning">Run away!&lt;/p>
 </code></pre>
          <p>The associated HTML.</p>
 			  </section>
@@ -190,14 +181,12 @@ img {
         <!-- Selector position-->
         <section>
         <h3>Selector: Position</h3>
-<pre><code class = "html">
-p em {
+<pre><code class = "html">p em {
   color: yellow;
 }
 </code></pre>
        <p>Selects all em elements that are within a paragraph</p>
-<pre><code class = "html">
-&lt;p>This is &lt;em>important.&lt;/em>&lt;/p>
+<pre><code class = "html">&lt;p>This is &lt;em>important.&lt;/em>&lt;/p>
 </code></pre>
         <p>The associated HTML.</p>
       </section>
@@ -206,8 +195,7 @@ p em {
         <section>
         <h3>Property Values</h3>
         <p>Each property can have one or more comma separated values.</p>
-<pre><code class = "html">
-p{
+<pre><code class = "html">p {
   color: white;
   background-color: red;
   font-family: Arial, sans-serif;
@@ -219,8 +207,7 @@ p{
         <section>
           <h3>Property: Color</h3>
           <p>The color property changes the color of the text.</p>
-<pre><code class = "html">
-p {
+<pre><code class = "html">p {
   color: red;
   color: #ff0000;
   color: rgb(255, 0, 0);
@@ -229,7 +216,7 @@ p {
         <p>Color name</p>
         <p>Hexadecimal value</p>
         <p>RGB value</p>
-        <p><small>The 17 standard colors are: <font color="aqua" style="background:black;">aqua</font>, black, <font color="blue">blue</font>, <font color="fuchsia">fuchsia</font>, <font color="gray">gray</font>, <font color="grey">grey</font>, <font color="green">green</font>, <font color="lime">lime</font>, <font color="maroon">maroon</font>, <font color="navy">navy</font>, <font color="olive">olive</font>, <font color="purple">purple</font>, <font color="red">red</font>, <font color="silver" style="background:black;">silver</font>, <font color="teal">teal</font>, <font color="white" style="background:black;">white</font>, and <font color="yellow" style="background:black;">yellow</font>.</small></p>
+        <p><small>The 17 standard colors are: <font color="aqua" style="background:black;">aqua</font>, black, <font color="green">blue</font>, <font color="fuchsia">fuchsia</font>, <font color="gray">gray</font>, <font color="grey">grey</font>, <font color="green">green</font>, <font color="lime">lime</font>, <font color="maroon">maroon</font>, <font color="navy">navy</font>, <font color="olive">olive</font>, <font color="purple">purple</font>, <font color="red">red</font>, <font color="silver" style="background:black;">silver</font>, <font color="teal">teal</font>, <font color="white" style="background:black;">white</font>, and <font color="yellow" style="background:black;">yellow</font>.</small></p>
 
         </section>
         
@@ -237,8 +224,7 @@ p {
         <section>
           <h3>Property: Background-color</h3>
           <p>The background-color property changes the color of the background.</p>
-<pre><code class = "html">
-p {
+<pre><code class = "html">p {
   background-color: black;
   background-color: #000000;
   background-color: rgb(0,0,0);
@@ -250,8 +236,7 @@ p {
         <section>
           <h3>Property: Font-family</h3>
           <p>The font-family property deﬁnes which font is used.</p>
-<pre><code class = "html">
-p {
+<pre><code class = "html">p {
   font-family: "Times New Roman";
   font-family: serif;
   font-family: "Arial", sans-serif;
@@ -266,8 +251,7 @@ p {
         <section>
           <h3>Property: Font-size</h3>
           <p>The font-size property speciﬁes the size of the font.</p>
-<pre><code class = "html">
-p {
+<pre><code class = "html">p {
   font-size: 12px;
   font-size: 1.5em;
   font-size: 100%;
@@ -281,8 +265,7 @@ p {
         <!-- Fonts-->
         <section>
           <h3>Property: Fonts (shorthand)</h3>
-<pre><code class = "html">
-p {
+<pre><code class = "html">p {
   font-style: italic;
   font-weight: bold;
   font-size: 10px;
@@ -290,8 +273,7 @@ p {
 }
 </code></pre>
           OR
-<pre><code class = "html">
-p {
+<pre><code class = "html">p {
   font: italic bold 10px sans-serif;
 }
 </code></pre>
@@ -309,9 +291,7 @@ p {
         <!-- Inline -->
         <section>
           <h3>Connecting CSS to HTML: Inline</h3>
-<pre><code class = "html">
-  &lt;p style="color:red">Some text.&lt;/p>
-</code></pre>
+<pre><code class = "html">&lt;p style="color:red">Some text.&lt;/p></code></pre>
           <p>Uses the HTML attribute style.</p>
           <p>Difficult to use in large projects</p>
           <p>Not preferred.</p>
@@ -320,8 +300,7 @@ p {
         <!-- Embedded -->
         <section>
           <h3>Connecting CSS to HTML: Embedded</h3>
-<pre><code class = "html">
-&lt;head>
+<pre><code class = "html">&lt;head>
   &lt;style type="text/css">
     p {
       color: blue;
@@ -338,8 +317,7 @@ p {
         <!-- External-->
         <section>
           <h3>Connecting CSS to HTML: Linked</h3>
-<pre><code class = "html">
-&lt;head>
+<pre><code class = "html">&lt;head>
   &lt;link rel="stylesheet" type="text/css" href="style.css">
 &lt;/head>
 </code></pre>
@@ -364,15 +342,14 @@ p {
         <section>
           <h3>Cascading</h3>
           <p>Styles "cascade" down until changed</p>
-<pre><code class = "html">
-p{
+<pre><code class = "html">p {
   color:blue;
   font-family: 'Helvetica';
 }
-.red{
+.red {
   color:red;
 }
-#special{
+#special {
   font-family: Arial;
 }
 </code></pre>
@@ -403,14 +380,14 @@ p{
        <!-- Question-->
         <section>
           <h2>Questions?</h2>
-          <div style = "font-size:1200%; height:100%; margin-top:30%" class ="blue">?
+          <div style = "font-size:1200%; height:100%; margin-top:30%" class ="green">?
             <div class ="clear"></div></div>
         </section>
       </div>
       
       <footer>
         <div class="copyright">
-          HTML/CSS ~ Girl Develop It ~
+          Curriculum originally developed by <a href="girldevelopit.com">Girl Develop It</a>
           <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
         </div>
       </footer>
