@@ -17,7 +17,7 @@ a:active {
 
 body {
 	margin: auto;
-	width: 1000px;
+	width: 800px;
 }
 
 .header {
@@ -32,17 +32,15 @@ body {
 	border-width: 10px;
 	border-style: solid;
 	border-color: #666666;
-	float:left;
 }
 
 #sidebar {
 	width: 200px;
-	height: 1430px;
-	float:right;
+	height: 400px;
 }
 
 .sidebar {
-	margin: 20px;
+	margin: 10px;
 	padding: 20px;
 	border-width: 4px;
 	border-style: dashed;
@@ -53,19 +51,12 @@ body {
 	margin: 10px;
 	padding: 20px;
 	background-color: #dddddd;
-	clear: right;
-	clear: left;
-	clear: both;
 }
 
 .caption {
 	position: absolute; 
     bottom: 20px; 
-    left: 246px; 
+    left: 346px; 
     width: 598px;
     background-color: #dddddd;
-}
-
-.clear-left{
-     clear:left
 }

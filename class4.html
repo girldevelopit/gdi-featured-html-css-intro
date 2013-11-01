@@ -44,7 +44,6 @@
         
         <!-- Welcome-->
         <section>
-          <section>
           <h3>Welcome!</h3>
           <div class = "left-align">
           <p>Hackademy is a social innovation venture teaching coding and technology literacy via face-to-face learning and community mentorship. We are committed to providing an open and welcoming environment for all, particularly those groups who have traditionally faced barriers in entering technical fields.</p>
@@ -70,14 +69,12 @@
        <section>
          <h3>Static Positioning</h3>
          <p>In normal flow, inline boxes flow from left to right, wrapping to next line when needed.</p>
-<pre><code class = "html">
-&lt;img src="images/cookie1.png"/>
+<pre><code class = "html">&lt;img src="images/cookie1.png"/>
 &lt;img src="images/cookie2.png"/>
 &lt;img src="images/cookie3.png"/>
 ...
 &lt;img src="images/cookie2.png"/>
 &lt;img src="images/cookie3.png"/>
-
 </code></pre>
 <img src="images/cookie1.png"/>
 <img src="images/cookie2.png"/>
@@ -92,10 +89,9 @@
        <section>
          <h3>Static Positioning</h3>
          <p>In normal flow, block boxes flow from top to bottom, making a new line after every box.</p>
-<pre><code class ="html">
- &lt;p>Greetings&lt;/p>
- &lt;p>Hello&lt;/p>
- &lt;p>Hi there!&lt;/p>
+<pre><code class ="html">&lt;p>Greetings&lt;/p>
+&lt;p>Hello&lt;/p>
+&lt;p>Hi there!&lt;/p>
 </code></pre>
         <div class ="left-align">
           <p>Greetings</p>
@@ -121,14 +117,13 @@
          <h3>Relative Positioning</h3>
          <p>The "relative" value will still put the element in the normal flow, but then offset it according to top/left/right/bottom properties.</p>
 
-<pre><code class = "html">
-  .relative{
+<pre><code class = "html">.relative {
     position: relative; 
     left: 80px; 
     top: 20px;
     height: 100px; 
     background-color: yellow;
-  }
+}
 </code></pre>
  <div style="border:2px solid black;">
  <div style="position: relative; left: 80px; top: 20px;
@@ -155,21 +150,19 @@
        <section  style="border: 1px solid black">
          <h3>Absolute Positioning</h3>
          <p>The "absolute" value will take the element out of the normal flow and position it in relation to the window (or the closest non-static element).</p>
-<pre><code class = "html">
-  .top{
+<pre><code class = "html">.top {
     position: absolute; 
     top: -40px; 
     right: 10px; 
     background-color: yellow
-  }
+}
 </code></pre>
-<pre><code class = "html">
-  .bottom{
+<pre><code class = "html">.bottom {
     position: absolute; 
     bottom: -40px; 
     left:60px; 
     background-color: green
-  }
+}
 </code></pre>
          <div>
          <div style="position: absolute; top: -40px; right: 10px; 
@@ -195,24 +188,22 @@
        </section>
        <section>
        <h3>Z-index</h3>
-         <p class="left-align">When you use positioning to move elements out of the normal flow of content, elements can overlap. You can change the order of overlapping with z-index.</p>
+         <p class="left-align">When you use positioning to move elements out of the normal flow of content, elements can overlap. You can change the order of overlap with z-index.</p>
          <p class="left-align">The element with highest z-index goes on top.</p>
-<pre><code class ="html">
-  .bottom{
+<pre><code class ="html">.bottom {
     position: absolute; 
     bottom: 10px; 
     left:60px; 
     background-color: yellow;
-  }
+}
 </code></pre>
-<pre><code class ="html">
-  .top{
+<pre><code class ="html">.top {
     position: absolute; 
     bottom: 15px; 
     left:60px; 
     background-color: green; 
     z-index: 2;
-  }
+}
 </code></pre>
         <div style="position: absolute; bottom: -20px; left:60px; 
           background-color: yellow; color:black"> Bottom </div>
@@ -245,12 +236,11 @@
        </section>
        <section>
          <h3>Float</h3>
-<pre><code class ="html">
-  .float{
+<pre><code class ="html">.float{
     float:left;
     width:200px;
     background:yellow;
-  }
+}
 </code></pre>
         <div style ="float:left; text-align: left;width:200px;background:yellow; color:black; padding: 10px;">
           <small>Hi, I'm a yellow box with black text.<br/>
@@ -274,25 +264,22 @@
          <li>If you had an image floated left, and you did not want the paragraph to appear next to it, you would add <strong>clear: left;</strong> to the paragraph.</li>
          <li>Clearing both sides makes sure ﬂoats don’t ﬂow past the clear element.</li>
          </ul>
-<pre><code class = "html">
-  clear: right;
-  clear: left;
-  clear: both;
+<pre><code class = "html">clear: right;
+clear: left;
+clear: both;
 </code></pre>
        </section> 
        
        <section>
           <h3>Clear</h3>
- <pre><code class ="html">
-   .float{
+ <pre><code class ="html">.float{
      float:left;
      width:50px;
      background:yellow;
-   }
-   .clear-left{
+}
+.clear-left{
      clear:left
-   }
- </code></pre>
+}</code></pre>
          <div style ="float:left;width:50px;background:yellow; color:black; ">
            hi<br/>
            hi<br/>
@@ -310,7 +297,7 @@
        </section>       <!-- Question-->
         <section>
           <h2>Questions?</h2>
-          <div style = "font-size:1200%; height:100%; margin-top:30%" class ="blue">?
+          <div style = "font-size:1200%; height:100%; margin-top:30%" class ="green">?
             <div class ="clear"></div></div>
         </section>
       
