@@ -37,7 +37,7 @@
 			<div class="slides">
 			  <!-- Opening slide -->
         <section>
-          <img src = "images/gdi_logo_badge.png">
+          <img src = "images/hackademy.png">
           <h3>Beginning HTML and CSS</h3>
           <h4>Class 3</h4>
         </section>
@@ -128,16 +128,14 @@
         
         <section>
           <h3>Grouping elements with div, cont.</h3>
-<pre><code class = "html">
-.align-right{
+<pre><code class = "html">.align-right{
   text-align:right;
   color: purple; 
   font-weight: bold;
 }
 </code></pre>
 
-<pre><code class ="html">
-&lt;div class="align-right">
+<pre><code class ="html">&lt;div class="align-right">
   &lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit&lt;/p>
   &lt;p>Sed do eiusmod tempor incididunt ut labore et dolore.&lt;/p> 
 &lt;/div>
@@ -234,92 +232,81 @@ a:link
         <!-- Box model-->
         <section>
           <h3>Box Model</h3>
-          <img src ="images/box-model.png"/>
+          <img src ="images/box-model.png" class="box"/>
         </section>
         
         <!-- Padding -->
         <section>
           <h3>Padding</h3>
           <p>Space between the border and the content</p>
-          <img src ="images/box-model.png"/>
+          <img src ="images/box-model.png" class="box"/>
         </section>
         <section>
           <h3>Padding</h3>
           <p>Space between the border and the content</p>
           <p>Adds to the total width of the box.</p>
-          <img src ="images/box-model-padding.png"/>
+          <img src ="images/box-model-padding.png" class="box"/>
         </section>
         
         <section>
           <h3>Padding</h3>
           15 pixels on all sides
-<pre><code class ="html">
-padding: 15px;
+<pre><code class ="html">padding: 15px;
 </code></pre>
           10 pixels on top only
-<pre><code class ="html">
-padding-top: 10px;
+<pre><code class ="html">padding-top: 10px;
 </code></pre>
           10 on top, 5 on right, 3 on bottom, 5 on left
-<pre><code class ="html">
-padding: 10px 5px 3px 5px;
+<pre><code class ="html">padding: 10px 5px 3px 5px;
 </code></pre>  
         </section>
        
         <section>
           <h3>Padding</h3>
           <p>Four values<p>
-<pre><code class = "html">
-  padding: top right bottom left;
+<pre><code class = "html">padding: top right bottom left;
 </code></pre>
           <p>Two values</p>
-<pre><code class = "html">
-  padding: top/bottom right/left;
+<pre><code class = "html">padding: top/bottom right/left;
 </code></pre>
           <p>One value</p>
-<pre><code class = "html">
-  padding: all;
+<pre><code class = "html">padding: all;
 </code></pre>
         </section>
        
         <section>
           <h3>Padding</h3>
-<pre><code class ="html">
-  padding: 10px 20px 30px 40px;
+<pre><code class ="html">padding: 10px 20px 30px 40px;
 </code></pre>
-        <img src ="images/box-model-padding2.png"/>
+        <img src ="images/box-model-padding2.png" class="box"/>
         </section>
        
         <!-- Border-->
         <section>
           <h3>Border</h3>
           <p>The edge around the box, specified as "thickness, style, color."</p>
-          <img src ="images/box-model-border.png">
+          <img src ="images/box-model-border.png" class="box"/>
         </section>
         
         <section>
           <h3>Border</h3>
           <p>A solid red border</p>
-<pre><code class = "html">
-  border: 1px solid #ff0000;
+<pre><code class = "html">border: 1px solid #ff0000;
 </code></pre>
           <p>A thick dotted black top border</p>
-<pre><code class ="html">
-  border-top: 4px dotted #000000;
+<pre><code class ="html">border-top: 4px dotted #000000;
 </code></pre>
           <p>Two diﬀerent border styles</p>
-<pre><code class ="html">
-  border-top: 1px solid #ff0000;
-  border-bottom: 4px dotted #000000;
+<pre><code class ="html">border-top: 1px solid #ff0000;
+border-bottom: 4px dotted #000000;
 </code></pre>
         </section>
        
         <section>
           <h3>Border - Other Properties</h3>
-<pre><code class ="html">
-  border-width: 10px;
-  border-style: dashed;
-  border-color: #666666;
+<pre><code class ="html">border-width: 10px;
+border-style: dashed;
+border-color: #666666;
 </code></pre>
           <p>You can specify each property separately, or all three together.</p>
         </section>
@@ -328,22 +315,19 @@ padding: 10px 5px 3px 5px;
         <section>
           <h3>Margin</h3>
           <p>The transparent area around the box that separates it from other elements.</p>
-          <img src ="images/box-model-margin.png"/>
+          <img src ="images/box-model-margin.png" class="box"/>
         </section>
         
         <section>
           <h3>Margin</h3>
           <p>15 pixels on all sides</p>
-<pre><code class = "html">
-  margin: 15px;
+<pre><code class = "html">margin: 15px;
 </code></pre>
           <p>10 on top, 5 on right, 3 on bottom, 5 on left</p>
-<pre><code class ="html">
-  margin: 10px 5px 3px 5px;
+<pre><code class ="html">margin: 10px 5px 3px 5px;
 </code></pre>
           <p>10 pixels on top</p>
-<pre><code class = "html">
-  margin-top: 10px;
+<pre><code class = "html">margin-top: 10px;
 </code></pre>
         </section>
         
@@ -351,15 +335,13 @@ padding: 10px 5px 3px 5px;
           <h3>Auto Margin</h3>
           <p>If a margin is set to auto on a box that has width, it will take up as much space as possible.</p>
           <p>CENTERED</p>
-<pre><code class ="html">
-  margin: auto;
-  width: 300px;
+<pre><code class ="html">margin: auto;
+width: 300px;
 </code></pre>
           <p>FLUSH-RIGHT</p>
-<pre><code class = "html">
-  margin-left: auto;
-  margin-right: 5px;
-  width: 300px;
+<pre><code class = "html">margin-left: auto;
+margin-right: 5px;
+width: 300px;
 </code></pre>
         </section>
         
