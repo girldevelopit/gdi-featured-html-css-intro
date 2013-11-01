@@ -18,8 +18,8 @@
 		<link rel="stylesheet" href="custom-css/hackademy.css" id="theme">
 
 		<!-- For syntax highlighting -->
-		<!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
-		<!-- dark editor--><link rel="stylesheet" href="reveal/lib/css/dark.css">
+		<!-- light editor--><link rel="stylesheet" href="reveal/lib/css/light.css">
+		<!-- dark editor<link rel="stylesheet" href="reveal/lib/css/dark.css">-->
 
 		<!-- If use the PDF print sheet so students can print slides-->
 		<link rel="stylesheet" href="reveal/css/print/pdf.css" type="text/css" media="print">
@@ -60,7 +60,7 @@
         <section>
           <h3>Welcome!</h3>
           <div class = "left-align">
-          <p class = "blue">Tell us about yourself.</p>
+          <p class = "green">Tell us about yourself.</p>
           <ul>
             <li>Who are you?</li>
             <li>What do you hope to get out of the class?</li>
@@ -212,10 +212,10 @@
         <!-- Roles of HTML v CSS -->
         <section>
           <h3>Anatomy of a website</h3>
-          <div class = "blue"> Your Content</div>
-          <div><span class = "blue">+ HTML: </span>Structure</div>
-          <div><span class = "blue">+ CSS: </span>Presentation</div>
-          <div class = "blue">= Your Website</div>
+          <div class = "green">Your Content</div>
+          <div><span class = "green">+ HTML: </span>Structure</div>
+          <div><span class = "green">+ CSS: </span>Presentation</div>
+          <div class = "green">= Your Website</div>
           <p>A website is a way to present your content to the world, using HTML and CSS to present that content &amp; make it look good.</p>
         </section>
         
@@ -223,16 +223,14 @@
           <h3>Anatomy of a website</h3>
           <div class = "yellow"> Concrete example</div>
           <ul>
-            <li class ="fragment"><p>A paragraph is your content</p></li>
-            <li class = "fragment">
+            <li><p>A paragraph is your content</p></li>
+            <li>
               <div style = "font-size: 80%">Putting your content into an HTML tag to make it look like a paragraph is Structure</div>
-              <pre><code class ="html">
-                &lt;p>A paragraph is your content&lt;/p>
-              </code></pre>
+              <pre><code class ="html">&lt;p>A paragraph is your content&lt;/p></code></pre>
           </li>
-          <li class = "fragment">
+          <li>
             <div style = "font-size: 80%">Make the font of your paragraph blue and 18pt is presentation</div>
-            <p class ="blue">A paragraph is your content</p>
+            <p class ="green">A paragraph is your content</p>
           </li>
         </section>
         
@@ -240,15 +238,15 @@
         <section>
          <h3>Anatomy of an HTML element</h3>
          <ul>
-           <li class = "fragment">
-             <strong class="blue">Element</strong>
+           <li>
+             <strong class="green">Element</strong>
              <ul>
                <li>An individual component of HTML</li>
                <li>Paragraph, heading, table, list, div, link, image, etc.</li>
               </ul>
           </li>
-          <li class = "fragment">
-            <strong class="blue">Tag</strong>
+          <li>
+            <strong class="green">Tag</strong>
             <ul>
               <li>Marks the beginning &amp; end of an element</li>
                <li>Opening tag and Closing Tag
@@ -256,7 +254,7 @@
 <pre><code class ="html">&lt;tagname>Stuff in the middle&lt;/tagname></code></pre>
               </li>
                <li>
-<pre><code class ="html">&lt;p> This is a sample paragraph.&lt;/p></code></pre>
+<pre><code class ="html">&lt;p>This is a sample paragraph.&lt;/p></code></pre>
               </li>
             </ul>
         </section>
@@ -268,22 +266,21 @@
         <section>
          <h3>Anatomy of an HTML element</h3>
          <ul>
-           <li class = "fragment">
-             <strong class="blue">Container Element</strong>
+           <li>
+             <strong class="green">Container Element</strong>
              <ul>
                <li>An element that can contain other elements or 
                content</li>
                <li>A paragraph (&lt;p>) contains text</li>
               </ul>
           </li>
-          <li class = "fragment">
-            <strong class="blue">Stand Alone Element</strong>
+          <li>
+            <strong class="green">Stand Alone Element</strong>
             <ul>
               <li>An element that cannot contain anything else</li>
               <li>
 <pre><code class = "html">&lt;br/>
-&lt;img/> 
-</code></pre>
+&lt;img/></code></pre>
               </li>
             </ul>
         </section>
@@ -291,16 +288,16 @@
 		<section>
 			<h3>Anatomy of an HTML element</h3>
 			<ul>
-				<li class = "fragment">
-					<strong class="blue">Attribute</strong>
+				<li>
+					<strong class="green">Attribute</strong>
 					<ul>
 						<li>Provides additional information about the HTML element</li>
 						<li>Class, ID, language, style, identity, source</li>
 						<li>Placed inside an opening tag, before the right angle bracket.</li>
 					</ul>
 				</li>
-				<li class="fragment">
-					<strong class="blue">Value</strong>
+				<li>
+					<strong class="green">Value</strong>
 					<ul>
 					<li>Value is the value assigned to a given attribute.</li>
 					<li>Values must be contained inside quotation marks.</li>
@@ -344,19 +341,18 @@
         <section>
           <h3>Head and Body Tags</h3>
           <div class = "left-align">
-            <p class = "fragment"><span class="green">Head:</span> The head contains the title of the page &amp; meta information about the page. Meta information is not visible to the user, but has many purposes One of which is to tell search engines about your page, who created it, and a description. </p>
-            <p class = "fragment"><span class="green">Body:</span> The body contains the actual content of the page. Everything that is contained in the body is visible to the user.</p>
+            <p ><span class="green">Head:</span> The head contains the title of the page &amp; meta information about the page. Meta information is not visible to the user, but has many purposes One of which is to tell search engines about your page, who created it, and a description. </p>
+            <p ><span class="green">Body:</span> The body contains the actual content of the page. Everything that is contained in the body is visible to the user.</p>
           </div>
         </section>
         <!--example of head and body tags-->
         <section>
         	<h3>Head and Body Tags: Example</h3>
-        	<img src="images/example-headbody.png" alt="example of head and body" />
+        	<img src="images/headbody.png" alt="example of head and body" />
         </section>
         <section>
           <h3>Head and Body Tags</h3>
-          <pre><code class = "html">
-            &lt;!DOCTYPE html>
+          <pre><code class = "html">&lt;!DOCTYPE html>
             &lt;html>
                &lt;head>
                 &lt;title>Title of the page &lt;/title>
@@ -541,20 +537,20 @@
         	<h3>Relative vs. Absolute paths for links & images</h3>
         	<ul>
         		<li>
-        		<strong class="blue">Relative</strong>
+        		<strong class="green">Relative</strong>
         			<ul>
         				<li>Relative paths change depending upon the page the link is on.
         					<ul>
-        						<li><small>Links within the same directory need no path information. <code class="blue">"filename.jpg"</code></small></li>
-        						<li><small>Subdirectories are listed without preceding slashes. <code class="blue">"images/filename.jpg"</code></small></li>
+        						<li><small>Links within the same directory need no path information. <code class="green">"filename.jpg"</code></small></li>
+        						<li><small>Subdirectories are listed without preceding slashes. <code class="green">"images/filename.jpg"</code></small></li>
         					</ul>
         				</li>
         			</ul>
         		</li>
         		<li>
-        			<strong class="blue">Absolute</strong>
+        			<strong class="green">Absolute</strong>
     				<ul>
-    					<li>Absolute paths refer to a specific location of a file, including the domain. <small><code class="blue">"http://www.girldevelopit.com/chapters/detroit"</code></small></li>
+    					<li>Absolute paths refer to a specific location of a file, including the domain. <small><code class="green">"http://www.girldevelopit.com/chapters/detroit"</code></small></li>
     					</li>
     					<li>Typically used when pointing to a link that is not within your own domain.</li>
     				</ul>
@@ -574,13 +570,13 @@
           <p>Images have three components</p>
           <ul>
             <li>Tag: &lt;img/></li>
-            <li>Src attribute: "http://girldevelopit.com/assets/pink-logo.png"</li>
-            <li>Alt attribute: "Girl Develop It logo"</li>
+            <li>Src attribute: "http://hackademy.ca/images/hackademy.png"</li>
+            <li>Alt attribute: "Hackademy logo"</li>
           </ul>
 <pre><code>
-&lt;img src ="http://girldevelopit.com/assets/pink-logo.png" alt = "Girl Develop It Logo"/>
+&lt;img src ="http://hackademy.ca/images/hackademy.png" alt = "Hackademy Logo"/>
 </code></pre>
-<img src ="http://girldevelopit.com/assets/pink-logo.png" alt = "Girl Develop It Logo"/>
+<img src ="http://hackademy.ca/images/hackademy.png" alt = "Hackademy Logo"/>
           <p><small>* Notice: This tag is our first example of a stand-alone or "self-closing" element.</small></p>
 
         </section>
@@ -754,7 +750,7 @@
         </section>        <!-- -->
         <section>
           <h2>Questions?</h2>
-          <div style = "font-size:1200%; height:100%; margin-top:40%" class ="blue">?
+          <div style = "font-size:1200%; height:100%; margin-top:40%" class ="green">?
             <div class ="clear"></div></div>
         </section>
 			</div>
