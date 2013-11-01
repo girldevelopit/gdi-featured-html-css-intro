@@ -1,0 +1,29 @@
+p {
+	color: blue;
+	font-family: 'Helvetica';
+}
+
+ul li {
+	color: red;
+}
+
+ol li {
+	color: green;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	background-color: #00ff00;
+	font-family: 'Helvetica';
+}
+
+p a {
+	color: red;
+}
+
+.highlight {
+	background-color: yellow;
+}
+
+#squeaky_mouse {
+	background-color: #cccccc;
+}

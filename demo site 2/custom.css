@@ -1,0 +1,71 @@
+.yellow {
+  background-color:yellow;
+}
+
+a:link {
+	color:#FF0000;
+} /* unvisited link */
+a:visited {
+	color:#ff55ff;
+} /* visited link */
+a:hover {
+	color:#FF00FF;
+} /* mouse over link */
+a:active {
+	color:#0000FF;
+} /* selected link */
+
+body {
+	margin: auto;
+	width: 1000px;
+}
+
+.header {
+	margin: 10px;
+	padding: 20px;
+	background-color: #dddddd;
+}
+
+.content {
+	margin: 20px;
+	padding: 20px;
+	border-width: 10px;
+	border-style: solid;
+	border-color: #666666;
+	float:left;
+}
+
+#sidebar {
+	width: 200px;
+	height: 1430px;
+	float:right;
+}
+
+.sidebar {
+	margin: 20px;
+	padding: 20px;
+	border-width: 4px;
+	border-style: dashed;
+	border-color: #666666;
+}
+
+.footer {
+	margin: 10px;
+	padding: 20px;
+	background-color: #dddddd;
+	clear: right;
+	clear: left;
+	clear: both;
+}
+
+.caption {
+	position: absolute; 
+    bottom: 20px; 
+    left: 246px; 
+    width: 598px;
+    background-color: #dddddd;
+}
+
+.clear-left{
+     clear:left
+}

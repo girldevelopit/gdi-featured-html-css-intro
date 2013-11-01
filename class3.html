@@ -6,29 +6,28 @@
 
 		<title>Class 3 ~ HTML/CSS ~ Girl Develop IT</title>
 
-		<meta name="description" content="This is the official Girl Develop It Core HTML/CSS curriculum. It was developed through the contributions of Pamela Fox, Alexis Goldstein, Erin M. Kidwell, Izzy Johnston, and Jen Myers.
+		<meta name="description" content="This is the Hackademy Core HTML/CSS curriculum, based on the official Girl Develop It curriculum. The GDI curriculum was developed through the contributions of Pamela Fox, Alexis Goldstein, Erin M. Kidwell, Izzy Johnston, and Jen Myers.
 
     The course is meant to be taught in 4 or 6 two-hour sections. If you are teaching a 4 section course, you can ignore classes 5 and 6 without losing any impact or information. Each of the slides and practice files are customizable according to the needs of a given class or audience.">
-		<meta name="author" content="Girl Develop It">
+    <meta name="author" content="Hackademy">
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<link rel="stylesheet" href="reveal/css/reveal.css">
-		<link rel="stylesheet" href="reveal/css/theme/gdidefault.css" id="theme">
+    <link rel="stylesheet" href="reveal/css/reveal.css">
+    <link rel="stylesheet" href="custom-css/hackademy.css" id="theme">
 
-		<!-- For syntax highlighting -->
-		<!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
-		<!-- dark editor--><link rel="stylesheet" href="reveal/lib/css/dark.css">
+    <!-- For syntax highlighting -->
+    <!-- light editor--><link rel="stylesheet" href="reveal/lib/css/light.css">
+    <!-- dark editor<link rel="stylesheet" href="reveal/lib/css/dark.css">-->
 
-		<!-- If use the PDF print sheet so students can print slides-->
-		
-		<link rel="stylesheet" href="reveal/css/print/pdf.css" type="text/css" media="print">
+    <!-- If use the PDF print sheet so students can print slides-->
+    <link rel="stylesheet" href="reveal/css/print/pdf.css" type="text/css" media="print">
 
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
 
 	<body>
 
@@ -38,7 +37,7 @@
 			<div class="slides">
 			  <!-- Opening slide -->
         <section>
-          <img src = "images/gdi_logo_badge.png">
+          <img src = "images/hackademy.png">
           <h3>Beginning HTML and CSS</h3>
           <h4>Class 3</h4>
         </section>
@@ -47,7 +46,7 @@
         <section>
           <h3>Welcome!</h3>
           <div class = "left-align">
-          <p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
+          <p>Hackademy is a social innovation venture teaching coding and technology literacy via face-to-face learning and community mentorship. We are committed to providing an open and welcoming environment for all, particularly those groups who have traditionally faced barriers in entering technical fields.</p>
           <p class ="green">Some "rules"</p>
           <ul>
             <li>We are here for you!</li>
@@ -72,17 +71,17 @@
         <section>
           <h3>Inline vs Block</h3>
           <div class = "left" style="width: 50%; text-align: left;">
-            <div class = "fragment">
+            <div>
               <p>So far, we have mostly seen <span class="green">"block"</span> elements</p>
               <p>They appear on the next line, like paragraphs</p>
             </div> 
             <br/><br/>
-            <div class = "fragment">
+            <div>
               <p>There are also <span class="green">"inline"</span> elements</p>
               <p>They appear on the same line that they are written on.</p>
             </div>
           </div>
-          <div class="right fragment">
+          <div class="right">
           	<img src="images/example-blockinline.png" alt="example of inline and block elements" />
           </div>
         </section>
@@ -129,16 +128,14 @@
         
         <section>
           <h3>Grouping elements with div, cont.</h3>
-<pre><code class = "html">
-.align-right{
+<pre><code class = "html">.align-right{
   text-align:right;
   color: purple; 
   font-weight: bold;
 }
 </code></pre>
 
-<pre><code class ="html">
-&lt;div class="align-right">
+<pre><code class ="html">&lt;div class="align-right">
   &lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit&lt;/p>
   &lt;p>Sed do eiusmod tempor incididunt ut labore et dolore.&lt;/p> 
 &lt;/div>
@@ -235,92 +232,81 @@ a:link
         <!-- Box model-->
         <section>
           <h3>Box Model</h3>
-          <img src ="images/box-model.png"/>
+          <img src ="images/box-model.png" class="box"/>
         </section>
         
         <!-- Padding -->
         <section>
           <h3>Padding</h3>
           <p>Space between the border and the content</p>
-          <img src ="images/box-model.png"/>
+          <img src ="images/box-model.png" class="box"/>
         </section>
         <section>
           <h3>Padding</h3>
           <p>Space between the border and the content</p>
           <p>Adds to the total width of the box.</p>
-          <img src ="images/box-model-padding.png"/>
+          <img src ="images/box-model-padding.png" class="box"/>
         </section>
         
         <section>
           <h3>Padding</h3>
           15 pixels on all sides
-<pre><code class ="html">
-padding: 15px;
+<pre><code class ="html">padding: 15px;
 </code></pre>
           10 pixels on top only
-<pre><code class ="html">
-padding-top: 10px;
+<pre><code class ="html">padding-top: 10px;
 </code></pre>
           10 on top, 5 on right, 3 on bottom, 5 on left
-<pre><code class ="html">
-padding: 10px 5px 3px 5px;
+<pre><code class ="html">padding: 10px 5px 3px 5px;
 </code></pre>  
         </section>
        
         <section>
           <h3>Padding</h3>
           <p>Four values<p>
-<pre><code class = "html">
-  padding: top right bottom left;
+<pre><code class = "html">padding: top right bottom left;
 </code></pre>
           <p>Two values</p>
-<pre><code class = "html">
-  padding: top/bottom right/left;
+<pre><code class = "html">padding: top/bottom right/left;
 </code></pre>
           <p>One value</p>
-<pre><code class = "html">
-  padding: all;
+<pre><code class = "html">padding: all;
 </code></pre>
         </section>
        
         <section>
           <h3>Padding</h3>
-<pre><code class ="html">
-  padding: 10px 20px 30px 40px;
+<pre><code class ="html">padding: 10px 20px 30px 40px;
 </code></pre>
-        <img src ="images/box-model-padding2.png"/>
+        <img src ="images/box-model-padding2.png" class="box"/>
         </section>
        
         <!-- Border-->
         <section>
           <h3>Border</h3>
           <p>The edge around the box, specified as "thickness, style, color."</p>
-          <img src ="images/box-model-border.png">
+          <img src ="images/box-model-border.png" class="box"/>
         </section>
         
         <section>
           <h3>Border</h3>
           <p>A solid red border</p>
-<pre><code class = "html">
-  border: 1px solid #ff0000;
+<pre><code class = "html">border: 1px solid #ff0000;
 </code></pre>
           <p>A thick dotted black top border</p>
-<pre><code class ="html">
-  border-top: 4px dotted #000000;
+<pre><code class ="html">border-top: 4px dotted #000000;
 </code></pre>
           <p>Two diﬀerent border styles</p>
-<pre><code class ="html">
-  border-top: 1px solid #ff0000;
-  border-bottom: 4px dotted #000000;
+<pre><code class ="html">border-top: 1px solid #ff0000;
+border-bottom: 4px dotted #000000;
 </code></pre>
         </section>
        
         <section>
           <h3>Border - Other Properties</h3>
-<pre><code class ="html">
-  border-width: 10px;
-  border-style: dashed;
-  border-color: #666666;
+<pre><code class ="html">border-width: 10px;
+border-style: dashed;
+border-color: #666666;
 </code></pre>
           <p>You can specify each property separately, or all three together.</p>
         </section>
@@ -329,22 +315,19 @@ padding: 10px 5px 3px 5px;
         <section>
           <h3>Margin</h3>
           <p>The transparent area around the box that separates it from other elements.</p>
-          <img src ="images/box-model-margin.png"/>
+          <img src ="images/box-model-margin.png" class="box"/>
         </section>
         
         <section>
           <h3>Margin</h3>
           <p>15 pixels on all sides</p>
-<pre><code class = "html">
-  margin: 15px;
+<pre><code class = "html">margin: 15px;
 </code></pre>
           <p>10 on top, 5 on right, 3 on bottom, 5 on left</p>
-<pre><code class ="html">
-  margin: 10px 5px 3px 5px;
+<pre><code class ="html">margin: 10px 5px 3px 5px;
 </code></pre>
           <p>10 pixels on top</p>
-<pre><code class = "html">
-  margin-top: 10px;
+<pre><code class = "html">margin-top: 10px;
 </code></pre>
         </section>
         
@@ -352,15 +335,13 @@ padding: 10px 5px 3px 5px;
           <h3>Auto Margin</h3>
           <p>If a margin is set to auto on a box that has width, it will take up as much space as possible.</p>
           <p>CENTERED</p>
-<pre><code class ="html">
-  margin: auto;
-  width: 300px;
+<pre><code class ="html">margin: auto;
+width: 300px;
 </code></pre>
           <p>FLUSH-RIGHT</p>
-<pre><code class = "html">
-  margin-left: auto;
-  margin-right: 5px;
-  width: 300px;
+<pre><code class = "html">margin-left: auto;
+margin-right: 5px;
+width: 300px;
 </code></pre>
         </section>
         
@@ -393,7 +374,7 @@ padding: 10px 5px 3px 5px;
 		</section>
         <section>
           <h2>Questions?</h2>
-          <div style = "font-size:1200%; height:100%; margin-top:30%" class ="blue">?
+          <div style = "font-size:1200%; height:100%; margin-top:30%" class ="green">?
             <div class ="clear"></div></div>
         </section>
       
@@ -401,7 +382,7 @@ padding: 10px 5px 3px 5px;
       
       <footer>
         <div class="copyright">
-          HTML/CSS ~ Girl Develop It ~
+          Curriculum originally developed by <a href="girldevelopit.com">Girl Develop It</a>
           <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
         </div>
       </footer>
