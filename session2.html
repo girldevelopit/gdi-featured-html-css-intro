@@ -1,0 +1,689 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Class 3 ~ HTML/CSS ~ Girl Develop IT</title>
+
+		<meta name="description" content="This is the official Girl Develop It Core HTML/CSS curriculum. It was developed through the contributions of Pamela Fox, Alexis Goldstein, Erin M. Kidwell, Izzy Johnston, and Jen Myers.
+
+    The course is meant to be taught in 4 or 6 two-hour sections. If you are teaching a 4 section course, you can ignore classes 5 and 6 without losing any impact or information. Each of the slides and practice files are customizable according to the needs of a given class or audience.">
+		<meta name="author" content="Girl Develop It">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="reveal/css/reveal.css">
+		<link rel="stylesheet" href="reveal/css/theme/gdilight.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
+		<!-- dark editor--><link rel="stylesheet" href="reveal/lib/css/light.css">
+
+		<!-- If use the PDF print sheet so students can print slides-->
+		
+		<link rel="stylesheet" href="reveal/css/print/pdf.css" type="text/css" media="print">
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide-->
+			<div class="slides">
+			  <!-- Opening slide -->
+        <section>
+          <img src = "images/gdi_logo_badge.png">
+          <h3>Beginning HTML and CSS</h3>
+          <h4>Session 2</h4>
+        </section>
+        
+        <!-- Welcome-->
+       <!--  <section>
+          <h3>Welcome!</h3>
+          <div class = "left-align">
+          <p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
+          <p class ="green">Some "rules"</p>
+          <ul>
+            <li>We are here for you!</li>
+            <li>Every question is important</li>
+            <li>Help each other</li>
+            <li>Have fun</li>
+          </ul>
+          </div>
+        </section> -->
+        
+         <section>
+        	<h3>What we'll be making today</h3>
+        	<div class="left" style="width: 45%;">
+        		<p>Today we will be making a site from scratch using divs and spans to create a header, footer, sidebar and a content area.</p>
+        	</div>
+        	<div class="right" style="width: 45%;">
+        		<img src="images/session2site.png">
+        	</div>
+        </section>
+        
+        <!-- Inline vs. block-->
+        <section>
+          <h3>Inline vs Block</h3>
+          <div class = "left" style="width: 50%; text-align: left;">
+            <div class = "fragment">
+              <p>So far, we have mostly seen <span class="green">"block"</span> elements</p>
+              <p>They appear on the next line, like paragraphs</p>
+            </div> 
+            <br/><br/>
+            <div class = "fragment">
+              <p>There are also <span class="green">"inline"</span> elements</p>
+              <p>They appear on the same line that they are written on.</p>
+            </div>
+          </div>
+          <div class="right fragment">
+          	<img src="images/example-blockinline.png" alt="example of inline and block elements" />
+          </div>
+        </section>
+        <!-- Inline v block again-->
+        <section>
+          <h3>Block &amp; Inline Elements,</h3>
+          <ul>
+            <li>CSS divides HTML into two types: inline and block.</li>
+            <li>After block elements, browsers render a new line.</li>
+            <li>Inline elements: img, a, br, em, strong</li>
+            <li>Block elements: p, h1, ul, li, almost everything else</li>
+          </ul>
+        </section>
+        <section> 
+        	<h3>Element: Div</h3>
+        		<ul>
+	        		<li>Block level element. Each new div is rendered on a new line.</li>
+	        		<li>A division, or section of content within an HTML page.</li>
+	        		<li>Used to group elements to format them with CSS.</li>
+	        		<li>Apply IDs and Classes to divs to control their styles with CSS.</li>
+        		</ul>
+<pre><code>&lt;div>
+   &lt;p>Content&lt;p>
+   &lt;p>Content&lt;p>
+&lt;/div></code></pre>
+<pre><code>&lt;div id="header">
+   &lt;h1>Main Heading&lt;h1>
+&lt;/div></code></pre>
+<pre><code>&lt;div class="sub-content">
+   &lt;p>Some more content&lt;p>
+&lt;/div></code></pre>
+        </section>
+  <!-- Div continued-->
+        <section>
+          <h3>Grouping elements with div</h3>
+          <div class = "left-align">
+          <ul>
+          <li>The div tag is used everywhere to group elements together into sections.</li>
+          <li>For example, what if we want the first 2 paragraphs of a section to be right-aligned, purple & bold, but we don't want any other paragraphs to be right-aligned?</li>
+          <li>We would wrap them in a div element to style them differently.</li>
+          </ul>
+           </div>
+        </section> 
+        
+        <section>
+          <h3>Grouping elements with div, cont.</h3>
+<pre><code class = "html">
+.align-right{
+  text-align:right;
+  color: purple; 
+  font-weight: bold;
+}
+</code></pre>
+
+<pre><code class ="html">
+&lt;div class="align-right">
+  &lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit&lt;/p>
+  &lt;p>Sed do eiusmod tempor incididunt ut labore et dolore.&lt;/p> 
+&lt;/div>
+&lt;p>Magna aliqua. Ut enim ad minim veniam.&lt;/p> 
+&lt;p>Quis nostrud exercitation ullamco.&lt;/a>
+</code></pre>
+<div style = "text-align:right;font-weight: bold; font-size: 70%;" class = "green">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+  <p>Sed do eiusmod tempor incididunt ut labore et dolore.</p>
+</div>
+<div class = "left-align" style="font-size: 70%;">
+<p>Magna aliqua. Ut enim ad minim veniam.</p>
+<p>Quis nostrud exercitation ullamco.</a>
+
+</div>
+        </section> 
+        <section>
+          <h3>Let's Develop It</h3>
+         <p class="left-align">Let's create a site using divs to separate content into different sections on our page.</p>
+         <p class="left-align">Create a header, content area, sidebar, and a footer.</p>         
+        </section> 
+        <section>
+        	<h3>Element: Span</h3>
+        	<ul>
+        	<li>Inline element. Each new span is rendered next to each other &amp; only wraps when it reaches the edge of the containing element.</li>
+        	<li>Can be used to apply styles to text inline so as not to break the flow of content.</li>
+        	</ul>
+        </section>     
+        <!-- Span -->
+        <section>
+          <h3>Span</h3>
+          <p>Span is used to apply a specific style inline</p>
+          
+<pre><code class ="html">
+.yellow{
+  color:yellow;
+}
+</code></pre>
+
+<pre><code class ="html">
+&lt;p>Paragraph with &lt;span class ="yellow">yellow&lt;/span> text.&lt;/p>
+</code></pre>
+
+<p>Paragraph with <span class ="yellow">yellow</span> text.</p>
+        </section>
+        <!-- Exercise-->
+         <section>
+          <h3>Let's Develop It</h3>
+         <p>Let's add some spans to our content to help highlight some text. </p>
+        </section>      
+        <!-- Pseudo class-->
+        <section>
+          <h3>Pseudo-classes, more CSS for links</h3>
+          <div class ="left left-align" style="width:50%">
+          <p>Changing the format of a link when you hover over it is accomplished by using pseudo-classes.</p>
+          <br/>
+          <p>CSS pseudo-classes are used to add special effects to some selectors.</p>
+          </div>
+          Syntax:	
+<pre><code class ="html">
+selector:pseudo-class
+{
+  property:value;	
+}
+</code></pre>
+          Example:
+<pre><code class ="html">
+a:link
+{
+  text-decoration: none;
+}
+</code></pre>
+        </section>
+        
+        <!-- Pseudo class-->
+        <section>
+          <h3>Pseudo-classes, more CSS for links</h3>
+<pre><code class ="html">
+  a:link	{color:#FF0000;} /* unvisited link */
+  a:visited	{color:#00FF00;} /* visited link */
+  a:hover	{color:#FF00FF;} /* mouse over link */
+  a:active	{color:#0000FF;} /* selected link */
+</code></pre>
+          <p>Note: a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective!</p>
+          <p>Note: a:active MUST come after a:hover in the CSS definition in order to be effective!</p>
+        </section>
+       
+        <!-- Exercise-->
+        <section>
+          <h3>Let's Develop It</h3>
+          <p>Add pseudo classes to your links</p>
+        </section>
+        
+        <!-- Box model-->
+        <section>
+          <h3>Box Model</h3>
+          <img src ="images/box-model.png"/>
+        </section>
+        
+        <!-- Padding -->
+        <section>
+          <h3>Padding</h3>
+          <p>Space between the border and the content</p>
+          <img src ="images/box-model.png"/>
+        </section>
+        <section>
+          <h3>Padding</h3>
+          <p>Space between the border and the content</p>
+          <p>Adds to the total width of the box.</p>
+          <img src ="images/box-model-padding.png"/>
+        </section>
+        
+        <section>
+          <h3>Padding</h3>
+          15 pixels on all sides
+<pre><code class ="html">
+padding: 15px;
+</code></pre>
+          10 pixels on top only
+<pre><code class ="html">
+padding-top: 10px;
+</code></pre>
+          10 on top, 5 on right, 3 on bottom, 5 on left
+<pre><code class ="html">
+padding: 10px 5px 3px 5px;
+</code></pre>  
+        </section>
+       
+        <section>
+          <h3>Padding</h3>
+          <p>Four values<p>
+<pre><code class = "html">
+  padding: top right bottom left;
+</code></pre>
+          <p>Two values</p>
+<pre><code class = "html">
+  padding: top/bottom right/left;
+</code></pre>
+          <p>One value</p>
+<pre><code class = "html">
+  padding: all;
+</code></pre>
+        </section>
+       
+        <section>
+          <h3>Padding</h3>
+<pre><code class ="html">
+  padding: 10px 20px 30px 40px;
+</code></pre>
+        <img src ="images/box-model-padding2.png"/>
+        </section>
+       
+        <!-- Border-->
+        <section>
+          <h3>Border</h3>
+          <p>The edge around the box, specified as "thickness, style, color."</p>
+          <img src ="images/box-model-border.png">
+        </section>
+        
+        <section>
+          <h3>Border</h3>
+          <p>A solid red border</p>
+<pre><code class = "html">
+  border: 1px solid #ff0000;
+</code></pre>
+          <p>A thick dotted black top border</p>
+<pre><code class ="html">
+  border-top: 4px dotted #000000;
+</code></pre>
+          <p>Two diﬀerent border styles</p>
+<pre><code class ="html">
+  border-top: 1px solid #ff0000;
+  border-bottom: 4px dotted #000000;
+</code></pre>
+        </section>
+       
+        <section>
+          <h3>Border - Other Properties</h3>
+<pre><code class ="html">
+  border-width: 10px;
+  border-style: dashed;
+  border-color: #666666;
+</code></pre>
+          <p>You can specify each property separately, or all three together.</p>
+        </section>
+       
+        <!-- Margin -->
+        <section>
+          <h3>Margin</h3>
+          <p>The transparent area around the box that separates it from other elements.</p>
+          <img src ="images/box-model-margin.png"/>
+        </section>
+        
+        <section>
+          <h3>Margin</h3>
+          <p>15 pixels on all sides</p>
+<pre><code class = "html">
+  margin: 15px;
+</code></pre>
+          <p>10 on top, 5 on right, 3 on bottom, 5 on left</p>
+<pre><code class ="html">
+  margin: 10px 5px 3px 5px;
+</code></pre>
+          <p>10 pixels on top</p>
+<pre><code class = "html">
+  margin-top: 10px;
+</code></pre>
+        </section>
+        
+        <section>
+          <h3>Auto Margin</h3>
+          <p>If a margin is set to auto on a box that has width, it will take up as much space as possible.</p>
+          <p>CENTERED</p>
+<pre><code class ="html">
+  margin: auto;
+  width: 300px;
+</code></pre>
+          <p>FLUSH-RIGHT</p>
+<pre><code class = "html">
+  margin-left: auto;
+  margin-right: 5px;
+  width: 300px;
+</code></pre>
+        </section>
+        
+        <!-- Exercise-->
+        <!-- Exercise -->
+		<section>
+			<h3>Let's Develop it!</h3>
+			<p>Let's add some padding, borders, and margins to our divs.</p>
+			<p>Let's center our entire document in the browser.</p>
+		</section>
+        <!-- Width-->
+		<section>
+			<h3>Property: Width</h3>
+			<p>Sets the width of an element.</p>
+			<p>Does not include padding or borders, remember these add to the width.</p>
+		</section>
+		<!-- height-->
+		<section>
+			<h3>Property: Height</h3>
+			<p>Sets the height of an element.</p>
+			<p>Does not include padding or borders, remember these add to the width.</p>
+		</section>
+		<!-- Exercise -->
+		<section>
+			<h3>Let's develop it!</h3>
+			<div class="left-align">
+				<p>Add a width &amp; height to our divs.</p>
+				<p>Use IDs to target each div with CSS</p>
+			</div>
+		</section>
+        <section>
+         <h3>Static Positioning</h3>
+         <div class = "left-align">
+         <p>HTML elements are positioned static by default.</p>
+         <p>Static elements are positioned in the normal ﬂow of the page</p>
+         <p>Static elements ignore top, bottom, right or left property specifications.</p>
+         </div>
+       </section>
+       
+       <section>
+         <h3>Static Positioning</h3>
+         <p>In normal flow, inline boxes flow from left to right, wrapping to next line when needed.</p>
+<pre><code class = "html">
+&lt;img src="images/cookie1.png"/>
+&lt;img src="images/cookie2.png"/>
+&lt;img src="images/cookie3.png"/>
+...
+&lt;img src="images/cookie2.png"/>
+&lt;img src="images/cookie3.png"/>
+
+</code></pre>
+<img src="images/cookie1.png"/>
+<img src="images/cookie2.png"/>
+<img src="images/cookie3.png"/>
+<img src="images/cookie1.png"/>
+<img src="images/cookie2.png"/>
+<img src="images/cookie3.png"/>
+<img src="images/cookie2.png"/>
+<img src="images/cookie3.png"/>
+       </section>
+       
+       <section>
+         <h3>Static Positioning</h3>
+         <p>In normal flow, block boxes flow from top to bottom, making a new line after every box.</p>
+<pre><code class ="html">
+ &lt;p>Greetings&lt;/p>
+ &lt;p>Hello&lt;/p>
+ &lt;p>Hi there!&lt;/p>
+</code></pre>
+        <div class ="left-align">
+          <p>Greetings</p>
+          <p>Hello</p>
+          <p>Hi there!</p>
+        </div>
+      </section>
+       
+       <!-- Relative Positioning-->
+       <section>
+         <h3>Relative Positioning</h3>
+         <div class = "left-align">
+         <ul>
+         <li>Takes the element out of the normal flow, allowing it to be moved to the top, left, right or bottom. </li>
+         <li>Does not affect the elements surrounding it.</li>
+         <li>Makes an element a "positioning context" in which to position other elements relative to it.</li>
+         <li>Relative positioning and absolute positioning are used together.</li>
+         </ul>
+         </div>
+       </section>
+       
+       <section>
+         <h3>Relative Positioning</h3>
+         <p>The "relative" value will still put the element in the normal flow, but then offset it according to top/left/right/bottom properties.</p>
+
+<pre><code class = "html">
+  .relative{
+    position: relative; 
+    left: 80px; 
+    top: 20px;
+    height: 100px; 
+    background-color: yellow;
+  }
+</code></pre>
+ <div style="border:2px solid black;">
+ <div style="position: relative; left: 80px; top: 20px;
+   height: 100px; background-color: yellow; color:black; text-align:left">
+   Hello, hi!
+ </div>
+ </div>
+       </section>
+       <!-- Absolute positioning-->
+       <section >
+         <h3>Absolute Positioning</h3>
+         <div class = "left-align">
+         <ul>
+         <li>Positions element outside of the normal flow.</li>
+         <li>An absolutely positioned element is offset from its container block, positioned relative.</li>
+         <li>Its container block is the first element that has a position other than static.</li>
+         <li>If no such element is found, the container block is &lt;html>.</li>
+         <li>Other elements act as if it's not there.</li>
+         <li>Determined by its oﬀset values in the properties top, bottom, right and left.</li>
+         </ul>
+         </div>
+       </section>
+       
+       <section  style="border: 1px solid black">
+         <h3>Absolute Positioning</h3>
+         <p>The "absolute" value will take the element out of the normal flow and position it in relation to the window (or the closest non-static element).</p>
+<pre><code class = "html">
+  .top{
+    position: absolute; 
+    top: -40px; 
+    right: 10px; 
+    background-color: yellow
+  }
+</code></pre>
+<pre><code class = "html">
+  .bottom{
+    position: absolute; 
+    bottom: -40px; 
+    left:60px; 
+    background-color: green
+  }
+</code></pre>
+         <div>
+         <div style="position: absolute; top: -40px; right: 10px; 
+           background-color: yellow; color:black">
+          Up here
+         </div>
+       <div style="position: absolute; bottom: -40px; left:60px; 
+         background-color: green">
+          Down here
+         </div>
+         </div>
+       </section>
+       <section>
+        <h3>Example: Absolute Positioning</h3>
+        <div class="left left-align" style="width: 45%;">
+        <p>Here's an example of an image with a caption absolutely positioned over top of it.</p>
+        <br/>
+        <p>The containing div has a position of relative, and the caption has a position of absolute.</p>
+        </div>
+        <div class="right" style="width: 45%;">
+          <img src="images/example-absolute.png" style="border: none; box-shadow: none;"/>
+        </div>
+       </section>
+       <section>
+       <h3>Z-index</h3>
+         <p class="left-align">When you use positioning to move elements out of the normal flow of content, elements can overlap. You can change the order of overlapping with z-index.</p>
+         <p class="left-align">The element with highest z-index goes on top.</p>
+<pre><code class ="html">
+  .bottom{
+    position: absolute; 
+    bottom: 10px; 
+    left:60px; 
+    background-color: yellow;
+  }
+</code></pre>
+<pre><code class ="html">
+  .top{
+    position: absolute; 
+    bottom: 15px; 
+    left:60px; 
+    background-color: green; 
+    z-index: 2;
+  }
+</code></pre>
+        <div style="position: absolute; bottom: -20px; left:60px; 
+          background-color: yellow; color:black"> Bottom </div>
+        <div style="position: absolute; bottom: -15px; left:60px; 
+          background-color: green; z-index: 2; "> Top </div>
+       </section>
+      <!--  <section>
+        <h3>Let's Develop it!</h3>
+        <p>Let's add some positioning.</p>
+        <p>Let's create a div that contains an image and a caption, and position the caption absolutely overtop the image.</p>
+        
+       </section> -->
+       <!-- Float-->
+       <section>
+         <h3>Float</h3>
+         <div class = "left-align">
+            <ul>
+            <li>"Floating" an element takes it in the normal flow, as far to the left or right of it's containing element as possible.</li>
+            <li>Any other elements, such as paragraphs or lists, will wrap around the floated element.</li>
+            <li>Always specify a width when floating an element, otherwise the element is likely to take up the whole page and not appear floated.</li>
+            <li>You can specify a) whether an element is floated or not, and b) which side it ﬂoats on.</li>
+            </ul>
+         </div>
+       </section>
+       <!--example float-->
+       <section>
+       <h3>Float: Example</h3>
+       <p>Below a &lt;blockquote> is floated to the left, allowing text to wrap around it on the right</p>
+       <img src="images/example-floatbq.png" alt="example float" />
+       </section>
+       <section>
+         <h3>Float</h3>
+<pre><code class ="html">
+  .float{
+    float:left;
+    width:200px;
+    background:yellow;
+  }
+</code></pre>
+        <div style ="float:left; text-align: left;width:200px;background:yellow; color:black; padding: 10px;">
+          <small>Hi, I'm a yellow box with black text.<br/>
+          I like to hang out on the left side.</small><br/>
+        </div>
+        <div class = "left-align">Not floating element</div>
+        <div class = "left-align">Not floating element</div>
+         <div class = "left-align">Not floating element with wrapping Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+       </section>
+       
+       <section>
+       <h3>Using floats to place elements side by side</h3> 
+       <p>If you want two block level elements to be side by side, you need to float both elements. One left, and one right.</p>
+       <img src="images/example-float-column.png" />
+       </section>
+       <!-- Clear-->
+       <section>
+         <h3>Clear</h3>
+         <ul>
+         <li>Clearing tells the element on which side (right, left, both) other elements <strong>cannot</strong> appear. </li>
+         <li>If you had an image floated left, and you did not want the paragraph to appear next to it, you would add <strong>clear: left;</strong> to the paragraph.</li>
+         <li>Clearing both sides makes sure ﬂoats don’t ﬂow past the clear element.</li>
+         </ul>
+<pre><code class = "html">
+  clear: right;
+  clear: left;
+  clear: both;
+</code></pre>
+       </section> 
+       
+       <section>
+          <h3>Clear</h3>
+ <pre><code class ="html">
+   .float{
+     float:left;
+     width:50px;
+     background:yellow;
+   }
+   .clear-left{
+     clear:left
+   }
+ </code></pre>
+         <div style ="float:left;width:50px;background:yellow; color:black; ">
+           hi<br/>
+           hi<br/>
+           hi<br/>
+         </div>
+         <div class = "left-align">Not floating element</div>
+         <div class = "left-align">Not floating element</div>
+         <div class = "left-align" style="clear: left;">Non-floating element with a class of <strong>.clear-left</strong></div>
+        </section>
+        
+        <!-- Exercise-->
+       <section>
+         <h3>Let's Develop It</h3>
+         <p>Let's float our side bar and content areas.</p>
+       </section>       <!-- Question-->
+        <section>
+          <h2>Questions?</h2>
+          <div style = "font-size:1200%; height:100%; margin-top:30%" class ="blue">?
+            <div class ="clear"></div></div>
+        </section>
+      </div>
+      
+      <footer>
+        <div class="copyright">
+          HTML/CSS ~ Girl Develop It ~
+          <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+        </div>
+      </footer>
+		</div>
+
+
+		<script src="reveal/lib/js/head.min.js"></script>
+		<script src="reveal/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
