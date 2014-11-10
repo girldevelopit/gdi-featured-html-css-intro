@@ -34,6 +34,7 @@
       .notes{display:none;}
     </style>
 
+
   </head>
   <body>
     <div class="reveal">
@@ -95,19 +96,15 @@
              </li>
              <li>
               <div class = "yellow">Development Toolkits</div>
-              <div>Inspect Element</div>
-              <div>Firefox - Firebug</div>
+              <div>Available in all major browsers</div>
+			  <div>Right Click -> Inspect Element</div>
              </li>
              <li>
               <div class="yellow">Search Engine</div>
               <div><a href="http://www.google.com">Google</a></div>
             </li>
           </ul>
-          <div class="notes">
-            <ul>
-              <li></li>
-            </ul>
-          </div>
+
         </section>
         <!-- Commenting out sublime text intro so teachers can choose whether or not to use sublime text in class-->
         <!-- intro to sublime text 2 -->
@@ -176,7 +173,7 @@
           <ul>
             <li class ="fragment"><p>HTML and CSS</p></li>
             <li class = "fragment">
-              <div style = "font-size: 80%">Putting your content into an HTML paragraph tag is <span class="yellow">Semantics"</span></div>
+              <div style = "font-size: 80%">Putting your content into an HTML paragraph tag is <span class="yellow">"Structure"</span></div>
               <pre><code class ="html">
                 &lt;p>This is your content&lt;/p>
               </code></pre>
@@ -333,11 +330,35 @@
           <p>Later we'll add some content to it!</p>
         </section>       
         
-
+        <section>
+         <h3>HTML Elements and Tags</h3>
+         <ul>
+           <li class = "fragment">
+             <strong class="blue">Element</strong>
+               <ul>
+                <li>An individual component of HTML</li>
+                <li>Paragraph, heading, table, list, div, link, image, etc.</li>
+              </ul>
+          </li>
+          <li class = "fragment">
+            <strong class="blue">Tag</strong>
+            <ul>
+              <li>Marks the beginning (opening tag) &amp; end (closing tag) of an element</li>
+              <li>Tags contain characters that indicate the element's meaning</li>
+              
+            </ul>
+          </li>
+          <li class = "fragment">
+             <strong class="blue">Attribute</strong>
+               <ul>
+                <li>Provide additional information for the tag</li>
+              </ul>
+          </li>
+        </section>
         <!-- HTML element-->
         <section>
          <h3>Types of HTML Elements</h3>
-         <ul>
+         <ul> 
            <li class = "fragment">
              <strong class="blue">Container Element</strong>
              <ul>
@@ -359,28 +380,7 @@
             </ul>
         </section>
 
-        <section>
-         <h3>HTML Elements and Tags</h3>
-         <ul>
-           <li class = "fragment">
-             <strong class="blue">Element</strong>
-               <ul>
-                <li>An individual component of HTML</li>
-                <li>Paragraph, heading, table, list, div, link, image, etc.</li>
-              </ul>
-          </li>
-          <li class = "fragment">
-            <strong class="blue">Tag</strong>
-            <ul>
-              <li>Marks the beginning (opening tag) &amp; end (closing tag) of an element</li>
-              <li>Tags contain characters that indicate the element's meaning</li>
-                <pre><code class ="html">&lt;tagname>Stuff in the middle&lt;/tagname></code></pre>
-              </li>
-              <li>
-                <pre><code class ="html">&lt;p>This is a sample paragraph.&lt;/p></code></pre>
-              </li>
-            </ul>
-        </section>
+        
 
         <!--anatomy of a tag -->
         <section>
@@ -396,7 +396,7 @@
         <section>
           <h3>Nesting</h3>
           <p>Elements "nest" inside one another</p>
-          <!--p><small>Nesting is what happens when you put other containing tags inside other containing tags. For example, you would put the &lt;p> inside of the &lt;body> tags. The &lt;p> is now nested inside the &lt;body></small></p-->
+
           <img src = "images/owls.jpg"/>
           
           <p style="margin-top:30px; ">Whichever element OPENS first CLOSES last</p>
