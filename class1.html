@@ -519,7 +519,29 @@
             <h3>Let's Develop It!</h3>
             <p class="left-align">Let's add some content to our site!</p>
             <p class="left-align">Add one of each level of heading with 1-2 short paragraphs of text below each heading.</p>
-            <p class="left-align">Add emphasis and importance to some text within a few paragraphs.</p> 
+            <p class="left-align">Add emphasis and importance to some text within a few paragraphs.</p>
+            <p><a href="http://www.randomtext.me/" >www.randomtext.me</a> for random text.</p>
+            <div style="float:left">
+              <ul style="list-style-type:none;">
+                <li>&lt;h1&gt;</li>
+                <li>&lt;h2&gt;</li>
+                <li>&lt;h3&gt;</li>
+              </ul>
+            </div>
+            <div style="float:left">
+              <ul style="list-style-type:none;">
+                <li>&lt;h4&gt;</li>
+                <li>&lt;h5&gt;</li>
+                <li>&lt;h6&gt;</li>
+              </ul>
+            </div>
+            <div style="float:left">
+              <ul style="list-style-type:none;">
+                <li>&lt;p&gt;</li>
+                <li>&lt;em&gt;</li>
+                <li>&lt;strong&gt;</li>
+              </ul>
+            </div>
         </section>
         <!-- Images-->
         <section>
@@ -533,8 +555,34 @@
 <pre><code>
 &lt;img src ="images/pink-logo.jpg" alt = "Girl Develop It Logo"/>
 </code></pre>
-<img src ="images/pink-logo.jpg" alt = "Girl Develop It Logo"/>
+<img src="images/pink-logo.jpg" alt="Girl Develop It Logo"/>
           <p><small>* Notice: This tag is our first example of an empty or "self-closing" element.</small></p>
+        </section>
+        <!-- relative & absolute links -->
+        <section>
+          <h3>URLS</h3>
+          <h4>Relative vs. Absolute Paths for Links & Images</h4>
+          <ul>
+            <li>
+            <strong class="blue">Relative</strong>
+              <ul>
+                <li>Relative paths change depending upon the page the link is on.
+                  <ul>
+                    <li><small>Links within the same directory need no path information. <code class="blue">"filename.jpg"</code></small></li>
+                    <li><small>Subdirectories are listed without preceding slashes. <code class="blue">"images/filename.jpg"</code></small></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <strong class="blue">Absolute</strong>
+            <ul>
+              <li>Absolute paths refer to a specific location of a file, including the domain. <small><code class="blue">"http://www.girldevelopit.com/chapters/detroit"</code></small></li>
+              </li>
+              <li>Typically used when pointing to a link that is not within your own domain.</li>
+            </ul>
+            </li> 
+          </ul>
         </section>
         <!-- Line Break-->
         <section>
@@ -568,24 +616,26 @@
         <section>
           <h3>Let's Develop It!</h3>
           <p>Let's add some images and line breaks to our page.</p>
-          <p>We can even turn our images into links by nesting the image in a link tag!</p>
+          
+          <ul>
+            <li>&lt;img src="" alt=""></li>
+            <li>&lt;br/></li>
         </section>
         <!-- Links-->
-        <section>
-          <h3>Element: Link</h3>
-          <p>Links have three components</p>
-          <ul>
-            <li>Tag: &lt;a>&lt;/a></li>
-            <li>Href attribute: "http://www.girldevelopit.com"</li>
-            <li>Title attribute: "Girl Develop It"</li>
-          </ul>
-<pre><code>
-&lt;a href="http://www.girldevelopit.com" title="Girl Develop It Homepage">GDI&lt;/a>
-</code></pre>
-        <p><a href="http://www.girldevelopit.com" rel="external" title="Girl Develop It Homepage">GDI</a></p>
-        <p>The &lt;a&gt; tag surrounds text or images to turn them into links</p>
-        </section>
-        
+         <section>
+            <h3>Element: Link </h3>
+            <p>Links have three components</p>
+            <ul>
+              <li>Tag</li>
+              <li>Href attribute</li>
+              <li>Title attribute</li>
+            </ul>
+          <pre><code>
+          &lt;a href="http://www.girldevelopit.com" title="Girl Develop It Homepage">GDI&lt;/a>
+          </code></pre>
+          <p><a href="http://www.girldevelopit.com" rel="external" title="Girl Develop It Homepage">GDI</a></p>
+          <p>The &lt;a&gt; tag surrounds text or images to turn them into links</p>
+        </section>        
         <!-- Link Attributes -->
         <section>
           <h3>Link Attributes</h3>
@@ -601,37 +651,36 @@
           <p><small>Link opens mail program by inserting <strong>mailto:</strong> directly before the email address.</small></p>
 
         </section>
-        <!-- relative & absolute links -->
         <section>
-          <h3>URLS</h3>
-          <h4>Relative vs. Absolute Paths for Links & Images</h4>
-          <ul>
-            <li>
-            <strong class="blue">Relative</strong>
-              <ul>
-                <li>Relative paths change depending upon the page the link is on.
-                  <ul>
-                    <li><small>Links within the same directory need no path information. <code class="blue">"filename.jpg"</code></small></li>
-                    <li><small>Subdirectories are listed without preceding slashes. <code class="blue">"images/filename.jpg"</code></small></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <strong class="blue">Absolute</strong>
-            <ul>
-              <li>Absolute paths refer to a specific location of a file, including the domain. <small><code class="blue">"http://www.girldevelopit.com/chapters/detroit"</code></small></li>
-              </li>
-              <li>Typically used when pointing to a link that is not within your own domain.</li>
-            </ul>
-            </li> 
-          </ul>
+          <h3>Element: Links as anchors</h3>
+
+          <p>Anchors bookmark a spot on the page</p>
+          <p>Links can navigate directly to anchors</p>
+
+        <pre><code>
+          &lt;a href="#anchor">Link to anchor tag&lt;/a>
+          .
+          .
+          .
+          &lt;a id="anchor">Actual anchor tag&lt;/a>
+        </code></pre>
         </section>
+       
+        
+        
+        
         <!-- Lets develop it-->
         <section class="hide-pdf">
           <h3>Let's Develop It</h3>
           <p>Let's add links to our site!</p>
           <p>Add links that open in the same window, a new window and link to an e-mail address.</p>
+          <p>
+            <ul>
+              <li>&lt;a href="" ></li>
+              <li>&lt;a href="" target="_blank"></li>
+              <li>&lt;a href="mailto:" ></li>
+            </ul>
+          </p>
         </section>
         
         <!-- Lists-->
@@ -682,9 +731,13 @@
           <h3>Let's Develop it!</h3>
           <p>Let's add one of each ordered and unordered lists to our page.</p>
           <p>We can make a list of links or even a list of images!</p>
+          <ul>
+            <li>&lt;ul></li>
+            <li>&lt;ol></li>
+            <li>&lt;li></li>
+          </ul>
         </section>
-        </section>
-        <!-- -->
+
 
 
         <!--Comments-->
