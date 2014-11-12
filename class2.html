@@ -80,16 +80,17 @@
             <div style="font-size:smaller;float:left">
               <ul style="list-style-type:none;">
               <li>&lt;!DOCTYPE html&gt;</li>
-              <li>&lt;html lang="en"&gt; ... &lt;/html&gt;</li>
+              <li>&lt;html lang="en"&gt;<br/>&lt;head>....&lt;/head><br/>&lt;body>...&lt;/body><br/>&lt;/html&gt;</li>
               <li>&lt;p&gt;A paragraph element contains text &lt;/p&gt;</li>
               <li>&lt;img src="images/homepage.png" alt="home page" /&gt;</li>
               <li> &lt;h1&gt;<span style="font-size:larger;color:red;font-weight:bold;">Heading 1</span>&lt;/h1&gt;</li>
               <li>&lt;em&gt;<em>Emphasized</em>&lt;/em&gt;</li>
               <li>&lt;strong&gt;<strong>Important</strong>&lt;/strong&gt;</li>
-              <li>"images/filename.jpg"</li>
-              <li>"http://www.girldevelopit.com/chapters/tri-cities"</li>
+              <li>Relative URLs: "images/filename.jpg"</li>
+              <li>Absolute URLS: "http://www.girldevelopit.com/chapters/tri-cities"</li>
               <li>&lt;a href="home.html" target="_blank">Link Text&lt;/a&gt;</li>
               <li>&lt;br&gt;</li>
+              <li>&lt;table>&lt;tr>&lt;td>&lt;/td>&lt;/tr>&lt;table></li>
               <li>&amp;gt;</li>
             </ul>
 
@@ -105,20 +106,21 @@
           <p>CSS = <span class="green">C</span>ascading <span class="green">S</span>tyle <span class="green">S</span>heets</p>
           <p>CSS is a "style sheet language" that lets you style the elements on your page.</p>
           <p>CSS works in conjunction with HTML, but is not HTML itself.</p>
+          <p>Cascading: Each successive style can over-rule any style before it</p>
         </section>
         
         <section>
           <h3>CSS: What can it do?</h3>
-          <p>All colored text, position, and size</p>
+          <p>Change color, spacing, position, and size</p>
           <img src = "images/homepage-view.png" height="460px">
         </section>
-
-		    <section>
+<!--Do we need this page? It is just a repeat of class 1 -->
+		    <!--section>
         <h3>Web Page Technologies</h3>
           <ul>
             <li class ="fragment"><p>HTML and CSS</p></li>
             <li class = "fragment">
-              <div style = "font-size: 80%">Putting your content into an HTML paragraph tag is <span class="yellow">"Semantics"</span></div>
+              <div style = "font-size: 80%">Putting your content into an HTML paragraph tag is <span class="yellow">"Structure"</span></div>
               <pre><code class ="html">
                 &lt;p>This is your content&lt;/p>
               </code></pre>
@@ -134,8 +136,28 @@
           </li>
           </ul>
             <p class ="fragment blue">This is your content</p>
+        </section-->
+        <section>
+          <h3>Attributes that aid CSS</h3>
+          <p>Optional attributes common to all HTML elements</p>
+          <ul>
+            <li><strong>id</strong> assigns a <em>unique</em> identifier to the element
+              <pre><code class="html">
+                &lt;p id="footer">Copyright 2011&lt;/p>
+              </code></pre>
+            </li>
+            <li><strong>class</strong> classifies an element, multiple elements can share a class. An element can have multiple classes.
+              <pre><code class="html">
+                &lt;p class="warning red">Run Away!&lt;/p>
+              </code></pre>
+            </li>
+            <!--li><strong>style</strong> assigns css directly to the element
+              <pre><code class="html">
+                &lt;p style="color:red;">Run Away!&lt;/p>
+              </code></pre>
+            </li-->
+          </ul>
         </section>
-        
         <section>
           <h3>CSS: What does it look like?</h3>
           <img src = "images/homepage-css.png" height="450px">
@@ -143,10 +165,11 @@
     
         <!-- The CSS Rule-->
         <section>
-        	<h3>The CSS Rule</h3>
+        	<h3>The CSS Rule Syntax</h3>
         	<img src="images/cssrule.png" alt="The CSS Rule" style="border: none; box-shadow: none;"/>
         </section>
-        <section>
+        <!-- Pages 7, 8, and 9 all say the same thing. I like 7 the best so am hiding 8 & 9 - Erin -->
+        <!--section>
           <h3>The CSS Rule</h3>
 <pre><code class = "html">
 selector {
@@ -159,10 +182,10 @@ selector {
             <p>It has sets of properties and values.</p>
             <p>A property-value pair is a declaration.</p>
           </div>
-        </section>
+        </section-->
         
         <!-- CSS Syntax -->
-        <section>
+        <!--section>
           <h3>CSS Syntax</h3>
           <div class = "left-align">
             <p>Declarations:  Property and value of style you plan use on HTML element. </p>
@@ -177,7 +200,7 @@ selector {
   property: value;
 }
 </code></pre>
-        </section>
+        </section-->
 
         <!-- Selectors elements-->
         <section>
@@ -199,6 +222,7 @@ img {
         <!-- Selectors ID-->
         <section>
 			    <h3>Selector: ID</h3>
+          <p>The "#" is how you tell CSS "this is an id."</p>
 <pre><code class = "html">
 #footer {
   property: value;
@@ -215,6 +239,7 @@ img {
         <!-- Selectors Class-->
         <section>
 			    <h3>Selector: Class</h3>
+          <p>The "." is how you tell CSS "this is a class name."</p>
 <pre><code class = "html">
 .warning {
   color: red;
@@ -228,8 +253,9 @@ img {
          <p>The associated HTML.</p>
 			  </section>
         
+        <!-- I broke the information in this slide up into the previous 4 slides -->
         <!-- ID vs Class-->
-        <section>
+        <!--section>
         <h3>IDs vs. Classes</h3>
         <div class = "left-align">
           <span class = "yellow">ID</span> -- Should only apply to one element on a webpage. I.E. A webpage only has one footer.
@@ -239,7 +265,7 @@ img {
           <span class = "yellow">Class</span> -- Many elements can have the same class. I.E. There can be many warnings on one webpage.
           <p>The "." is how you tell CSS "this is a class name."</p>
         </div>
-      </section>  
+      </section-->  
       
         <!-- Selector position-->
         <section>
@@ -255,9 +281,25 @@ p em {
 </code></pre>
         <p>The associated HTML.</p>
       </section>
-        
-        <!-- Multiple values -->
+        <!-- Selector grouping-->
         <section>
+        <h3>Selector: Grouping</h3>
+<pre><code class = "html">
+p, h1, h2 {
+  color: yellow;
+}
+</code></pre>
+       <p>Selects all paragraphs, header 1's <strong>and</strong> header 2's</p>
+<pre><code class = "html">
+&lt;p>I am yellow.&lt;/p>
+&lt;h1>So am I.&lt;/h1>
+&lt;h2>Me too!&lt;/h2>
+</code></pre>
+        <p>The associated HTML.</p>
+      </section>
+        <!-- this rule is unique to the font-family property so i'm moving it to that slide -->
+        <!-- Multiple values -->
+        <!--section>
         <h3>Property Values</h3>
         <p>Each property can have one or more comma separated values.</p>
 <pre><code class = "html">
@@ -267,7 +309,7 @@ p{
   font-family: Arial, sans-serif;
 }
 </code></pre>
-      </section>
+      </section-->
         
         <!-- Color-->
         <section>
@@ -281,8 +323,8 @@ p {
 }
 </code></pre>
         <p>Color name</p>
-        <p>Hexadecimal value</p>
-        <p>RGB value</p>
+        <p><a href="http://www.w3schools.com/cssref/css_colorsfull.asp" target="_blank">Hexadecimal value</a></p>
+        <p>RGB (Red Green Blue) value</p>
         <p><small>The 17 standard colors are: <font color="aqua" style="background:black;">aqua</font>, <font color="black">black</font>, <font color="blue">blue</font>, <font color="fuchsia">fuchsia</font>, <font color="gray">gray</font>, <font color="grey">grey</font>, <font color="green">green</font>, <font color="lime">lime</font>, <font color="maroon">maroon</font>, <font color="navy">navy</font>, <font color="olive">olive</font>, <font color="purple">purple</font>, <font color="red">red</font>, <font color="silver" style="background:black;">silver</font>, <font color="teal">teal</font>, <font color="white" style="background:black;">white</font>, and <font color="yellow" style="background:black;">yellow</font>.</small></p>
 
         </section>
@@ -313,7 +355,8 @@ p {
 </code></pre>
           <p>Specific font name</p>
           <p>Generic name</p>
-          <p>Comma-separated list</p>
+          <p>Comma-separated list with alternatives</p>
+          <img src="http://www.w3schools.com/css/serif.gif" alt="Serif vs Sans-serif fonts"/>
         </section>
       
         <!-- Font size -->
@@ -327,9 +370,9 @@ p {
   font-size: 100%;
 }
 </code></pre>
-          <p>Pixels</p>
-          <p>"em"</p>
-          <p>Percentage</p>
+          <p>Pixels - a dot on the computer screen</p>
+          <p>"em" - 1em is the current font size</p>
+          <p>Percentage </p>
         </section>
         
         <!-- Fonts-->
@@ -349,6 +392,7 @@ p {
   font: italic bold 10px sans-serif;
 }
 </code></pre>
+<p><a href="http://www.w3schools.com/css/css_font.asp" target="_blank"> Font Reference</a></p>
         </section>
       
         <!-- Connecting HTML to CSS-->
@@ -407,9 +451,13 @@ p {
         <section class="hide-pdf">
           <h3>Let's develop it</h3>
           <ul>
-            <li>Create a new .css file</li>
-            <li>Add a link to the file in the head of the portfolio made last time</li>
-            <li>Add styles to change the colors, background colors or fonts of different parts of the content</li>
+            <li>Start a new file in your text editor and save it to your html-site folder as style.css</li>
+            <li>Add a link to the file in the head of the index.html page made last time.
+            <pre><code class = "html">&lt;head>
+  &lt;link rel="stylesheet" type="text/css" href="style.css">
+&lt;/head>
+</code></pre></li>
+            <li>Add styles to change the colors, background colors and fonts of different parts of the content</li>
             <li>Try using ids and classes to change specific elements</li>
           </ul>
         </section>
@@ -417,39 +465,65 @@ p {
         <!-- Cascading-->
         <section>
           <h3>Cascading</h3>
-          <p>Styles "cascade" down until changed</p>
+          <p>Styles "cascade" down until and can overwrite eachother</p>
 <pre><code class = "html">
 p{
   color:blue;
-  font-family: 'Helvetica';
+}
+...
+p{
+  color:red;
+}
+
+</code></pre>
+
+<pre><code class = "html">
+  &lt;p>what color am I?&lt;/p>
+</code></pre>
+        </section>
+      <!-- Selector Specificity-->
+        <section>
+        <h3>Selector Priority/Specificity</h3>
+<p>The more specific a selector is the higher priority it will be given. </p>
+<ol>
+  <li>!important styles</li>
+  <li>inline styles</li>
+  <li>selecting with id</li>
+  <li>selecting with a class</li>
+  <li>selecting with a element name</li>
+</ol>
+<pre><code class = "html">
+p{
+  color:blue;
+}
+#special{
+  color:yellow;
 }
 .red{
   color:red;
 }
-#special{
-  font-family: Arial;
+.alwaysgreen{
+  color:green !important;
 }
+
 </code></pre>
 
 <pre><code class = "html">
-  &lt;p>Paragraph&lt;/p>
-  &lt;p class ="green">Paragraph&lt;/p>
-  &lt;p class ="red">Paragraph&lt;/p>
-  &lt;p class = "red" id ="special">Paragraph&lt;/p>
+  &lt;p>I am blue&lt;/p>
+  &lt;p class="red" style="color:orange;">I am orange!&lt;/p>
+  &lt;p class="alwaysgreen red" id ="special">I am ALWAYS Green&lt;/p>
+  &lt;p class="red" id="special">Yellow Paragraph&lt;/p>
 </code></pre>
-        </section>
-      
+              </section>
         <!-- Properties-->
         <section>
           <h3>CSS Properties</h3>
-          <p>Many CSS properties have self-explanatory names:</p>
+          <p>CSS properties we learned today:</p>
           <ul>
+            <li>color</li>
             <li>background-color</li>
             <li>font-family</li>
             <li>font-size</li>
-            <li>color</li>
-            <li>width</li>
-            <li>height</li>
           </ul>
           <p><a href = "https://developer.mozilla.org/en-US/docs/CSS/CSS_Reference">Comprehensive list of all CSS properties</a></p>
         </section>
