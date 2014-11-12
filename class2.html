@@ -74,30 +74,56 @@
           <p>A website a collection of web pages that present your content to the world.</p>
           <p>Use HTML and CSS to  organize that content &amp; make it look good.</p>
         </section>
-        <!-- Review -->
+        <!-- Review of first session -->
         <section>
           <h3>Review of First Session</h3>
             <div style="font-size:smaller;float:left">
               <ul style="list-style-type:none;">
-              <li>&lt;!DOCTYPE html&gt;</li>
-              <li>&lt;html lang="en"&gt; ... &lt;/html&gt;</li>
-              <li>&lt;p&gt;A paragraph element contains text &lt;/p&gt;</li>
-              <li>&lt;img src="images/homepage.png" alt="home page" /&gt;</li>
-              <li> &lt;h1&gt;<span style="font-size:larger;color:red;font-weight:bold;">Heading 1</span>&lt;/h1&gt;</li>
-              <li>&lt;em&gt;<em>Emphasized</em>&lt;/em&gt;</li>
-              <li>&lt;strong&gt;<strong>Important</strong>&lt;/strong&gt;</li>
-              <li>"images/filename.jpg"</li>
-              <li>"http://www.girldevelopit.com/chapters/tri-cities"</li>
-              <li>&lt;a href="home.html" target="_blank">Link Text&lt;/a&gt;</li>
-              <li>&lt;br&gt;</li>
-              <li>&amp;gt;</li>
+                <li class = "fragment">&lt;!DOCTYPE html&gt;</li>
+                <li class = "fragment">&lt;html lang="en"&gt; ... &lt;/html&gt;</li>
+                <li class = "fragment">&lt;head&gt;...&lt;/head&gt;</li>
+                <li class = "fragment">&lt;body&gt;...&lt;/body&gt;</li>
+                <li class="fragment">&lt;p&gt;...&lt;/p&gt;     &lt;img ... /&gt;</li>
+                <li class="fragment">&lt;img src="picture.jpg" ... /&gt;</li>
+                <li class = "fragment">&lt;p style="color:blue;&gt;</li>
+                <li class = "fragment">&lt;body&gt; &lt;p&gt;Paragraph nested in body element&lt;/p&gt;&lt;/body&gt;</li>
+              </ul>
+        </section>
+        <!-- Review of first session continued-->
+        <section>
+          <h3>Review of First Session (continued)</h3>
+            <div style="font-size:smaller;float:left">
+              <ul style="list-style-type:none;">
+              <li class = "fragment">&lt;p&gt;A paragraph element contains text &lt;/p&gt;</li>
+              <li class = "fragment">&lt;h1&gt;<span style="font-size:larger;color:red;font-weight:bold;">Heading 1</span>&lt;/h1&gt; </li>
+              <li class = "fragment">&lt;em&gt;<em>Emphasized</em>&lt;/em&gt;</li>
+              <li class = "fragment">&lt;strong&gt;<strong>Important</strong>&lt;/strong&gt;</li> 
+              <li class = "fragment">&lt;img src="myimage.jpg" width="640px" /&gt;</li>
+              <li class = "fragment">"images/filename.jpg"</li>
+              <li class = "fragment">"http://www.girldevelopit.com/chapters/tri-cities"</li>
+              <li class = "fragment">&lt;br&gt;</li> 
             </ul>
-
-
-
-
-
-
+        </section>
+        <!-- Review Continued -->
+        <section>
+          <h3>Review of First Session (continued)</h3>
+            <div style="font-size:smaller;float:left">
+              <ul style="list-style-type:none;"> 
+              <li class = "fragment">&lt;a href="home.html" target="_blank">External Link Text&lt;/a&gt;</li>
+              <li class = "fragment">&lt;a href="#home>Same Page Anchor Text&lt;/a&gt;</li>
+              <li class = "fragment">&lt;ul&gt;  &lt;li&gt; &lt;/li&gt; &lt;/ul&gt; <ul><li>Unordered</li></ul></li>
+              <li class = "fragment">&lt;ol&gt;  &lt;li&gt; &lt;/li&gt; &lt;/ol&gt; <ol><li>Unordered</li></ol></li>
+              <li class = "fragment">&lt;!-- Commented out --&gt;</li>
+              <li class = "fragment">&lt;table&gt;&lt;tr&gt;&lt;td&gt;Data&lt;/td&gt;&lt;td&gt;Data&lt;/td&gt;&lt;/tr&gt;&lt;table&gt;</li>
+              <li class = "fragment"><table style="border: 1px solid">
+              <tr> 
+                <td style="border: 1px solid">Data</td>
+                <td style="border: 1px solid">Data</td>
+              </tr>
+            </table></li>
+              <li class = "fragment">&amp;gt; - &gt;    &amp;lt; - &lt;   &amp;copy - &copy;</li>
+            </ul>
+            
         </section>
         <!-- What is CSS-->
         <section>
@@ -138,15 +164,27 @@
         
         <section>
           <h3>CSS: What does it look like?</h3>
-          <img src = "images/homepage-css.png" height="450px">
+          <img src = "images/examplecss.png" height="450px">
         </section>
     
         <!-- The CSS Rule-->
         <section>
         	<h3>The CSS Rule</h3>
-        	<img src="images/cssrule.png" alt="The CSS Rule" style="border: none; box-shadow: none;"/>
+        	<img src="images/cssrule.png" alt="The CSS Rule" style="border: none; box-shadow: none;" height="360px" />
+          
+          <pre><code class = "html">
+selector {
+  property: value;
+}
+</code></pre>
+          <!--div class = "left-align">
+            <p>A block of CSS code is a rule.</p>
+            <p>The rule starts with a selector.</p>
+            <p>It has sets of properties and values.</p>
+            <p>A property-value pair is a declaration.</p>
+          </div -->
         </section>
-        <section>
+        <!--section>
           <h3>The CSS Rule</h3>
 <pre><code class = "html">
 selector {
@@ -159,24 +197,25 @@ selector {
             <p>It has sets of properties and values.</p>
             <p>A property-value pair is a declaration.</p>
           </div>
-        </section>
+        </section -->
         
         <!-- CSS Syntax -->
         <section>
           <h3>CSS Syntax</h3>
-          <div class = "left-align">
-            <p>Declarations:  Property and value of style you plan use on HTML element. </p>
-          <p>Declarations end with a semicolon</p>
-          <p>Declaration groups are surrounded by curly brackets.</p>
-          </div>
-          
 <pre><code class = "html">
 selector {
   property: value;
   property: value;
   property: value;
 }
-</code></pre>
+</code></pre>     
+          <div class = "left-align">
+            <p>Declarations:  Property and value of style you plan use on HTML element. </p>
+          <p>Declarations end with a semicolon</p>
+          <p>Declaration groups are surrounded by curly brackets.</p>
+          </div>
+          
+
         </section>
 
         <!-- Selectors elements-->
@@ -232,12 +271,12 @@ img {
         <section>
         <h3>IDs vs. Classes</h3>
         <div class = "left-align">
-          <span class = "yellow">ID</span> -- Should only apply to one element on a webpage. I.E. A webpage only has one footer.
-          <p>The "#" is how you tell CSS "this is an id."</p>
+          <span class = "yellow">ID</span> -- Should only apply to <strong>one</strong> element on a webpage. In other words, a webpage only has one footer.
+          <p>The "<strong>#</strong>" is how you tell CSS "this is an id."</p>
         </div>
         <div class = "left-align">
-          <span class = "yellow">Class</span> -- Many elements can have the same class. I.E. There can be many warnings on one webpage.
-          <p>The "." is how you tell CSS "this is a class name."</p>
+          <span class = "yellow">Class</span> -- Many elements can have the same class. There can be many warnings on one webpage.
+          <p>The "<strong>.</strong>" is how you tell CSS "this is a class name."</p>
         </div>
       </section>  
       
@@ -246,7 +285,7 @@ img {
         <h3>Selector: Position</h3>
 <pre><code class = "html">
 p em {
-  color: yellow;
+  color: orange;
 }
 </code></pre>
        <p>Selects all em elements that are within a paragraph</p>
@@ -254,6 +293,8 @@ p em {
 &lt;p>This is &lt;em>important.&lt;/em>&lt;/p>
 </code></pre>
         <p>The associated HTML.</p>
+        <p>This is <em style="color:orange">important.</em></p>
+</code></pre>
       </section>
         
         <!-- Multiple values -->
