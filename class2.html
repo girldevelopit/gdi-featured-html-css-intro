@@ -77,7 +77,7 @@
         <!-- Review of first session -->
         <section>
           <h3>Review of First Session</h3>
-            <div style="font-size:smaller;float:left">
+            <div style="float:left">
               <ul style="list-style-type:none;">
                 <li class = "fragment">&lt;!DOCTYPE html&gt;</li>
                 <li class = "fragment">&lt;html lang="en"&gt; ... &lt;/html&gt;</li>
@@ -92,7 +92,7 @@
         <!-- Review of first session continued-->
         <section>
           <h3>Review of First Session (continued)</h3>
-            <div style="font-size:smaller;float:left">
+            <div style="float:left">
               <ul style="list-style-type:none;">
               <li class = "fragment">&lt;p&gt;A paragraph element contains text &lt;/p&gt;</li>
               <li class = "fragment">&lt;h1&gt;<span style="font-size:larger;color:red;font-weight:bold;">Heading 1</span>&lt;/h1&gt; </li>
@@ -107,7 +107,7 @@
         <!-- Review Continued -->
         <section>
           <h3>Review of First Session (continued)</h3>
-            <div style="font-size:smaller;float:left">
+            <div style="float:left">
               <ul style="list-style-type:none;"> 
               <li class = "fragment">&lt;a href="home.html" target="_blank">External Link Text&lt;/a&gt;</li>
               <li class = "fragment">&lt;a href="#home>Same Page Anchor Text&lt;/a&gt;</li>
@@ -131,25 +131,23 @@
           <p>CSS = <span class="green">C</span>ascading <span class="green">S</span>tyle <span class="green">S</span>heets</p>
           <p>CSS is a "style sheet language" that lets you style the elements on your page.</p>
           <p>CSS works in conjunction with HTML, but is not HTML itself.</p>
+          <p>Cascading: Each successive style can over-rule any style before it</p>
         </section>
         
         <section>
           <h3>CSS: What can it do?</h3>
-          <p>All colored text, position, and size</p>
+          <p>Change color, spacing, position, and size</p>
           <img src = "images/homepage-view.png" height="460px">
         </section>
 
 		    <section>
         <h3>Web Page Technologies</h3>
-          <ul>
-            <li class ="fragment"><p>HTML and CSS</p></li>
-            <li class = "fragment">
+          
+            <p>HTML and CSS</p></li>
               <div style = "font-size: 80%">Putting your content into an HTML paragraph tag is <span class="yellow">"Semantics"</span></div>
               <pre><code class ="html">
                 &lt;p>This is your content&lt;/p>
               </code></pre>
-          </li>
-          <li class = "fragment">
             <div style = "font-size: 80%">Using CSS to make the font of your paragraph blue and 18 pt is <span class="yellow">"Presentation"</span></div>
              <pre><code class ="html">
                 p {
@@ -157,9 +155,23 @@
                  font-size:18pt;
                   }
               </code></pre>
-          </li>
+            <p class ="blue">This is your content</p>
+          </section>
+        <section>
+          <h3>HTML Attributes that Aid CSS</h3>
+          <p>Optional attributes common to all HTML elements</p>
+          <ul>
+            <li><strong>id</strong> assigns a <em>unique</em> identifier to the element
+              <pre><code class="html">
+                &lt;p id="footer">Copyright 2011&lt;/p>
+              </code></pre>
+            </li>
+            <li><strong>class</strong> classifies an element, multiple elements can share a class. An element can have multiple classes.
+              <pre><code class="html">
+                &lt;p class="warning red">Run Away!&lt;/p>
+              </code></pre>
+            </li>
           </ul>
-            <p class ="fragment blue">This is your content</p>
         </section>
         
         <section>
@@ -202,6 +214,7 @@ selector {
         <!-- CSS Syntax -->
         <section>
           <h3>CSS Syntax</h3>
+          <p>In a CSS document or in the head element in a html document</p>
 <pre><code class = "html">
 selector {
   property: value;
@@ -209,12 +222,10 @@ selector {
   property: value;
 }
 </code></pre>     
-          <div class = "left-align">
-            <p>Declarations:  Property and value of style you plan use on HTML element. </p>
-          <p>Declarations end with a semicolon</p>
-          <p>Declaration groups are surrounded by curly brackets.</p>
-          </div>
-          
+          <p>Inline for a particular tag</p>
+<pre><code class = "html">          
+&lt;p style="property:value;property:value"&gt;Text&lt;/p&gt;
+</code></pre>
 
         </section>
 
@@ -228,32 +239,59 @@ p {
 </code></pre>
       <p>Selects all paragraph elements.</p>
 <pre><code class = "html">
-img {
+img, p, h1 {
   property: value;
 }
 </code></pre>
-        <p>Selects all image elements.</p>
+        <p>Selects all image, paragraph, and h1 elements.</p>
+
+     <pre><code class = "html">
+* {
+  property: value;
+}
+</code></pre> 
+      <p>Universal selector - every element in the document!</p>  
         </section>
-        
+         <!-- Selector grouping-->
+        <section>
+        <h3>Selector: Grouping</h3>
+<pre><code class = "html">
+p, h1, h2 {
+  color: orange;
+}
+</code></pre>
+       <p>Selects all paragraphs, header 1's <strong>and</strong> header 2's</p>
+<pre><code class = "html">
+&lt;p&gt;I am orange.&lt;/p&gt;
+&lt;h1&gt;So am I.&lt;/h1&gt;
+&lt;h2&gt;Me too!&lt;/h2&gt;
+</code></pre>
+<p  style="color:orange" >I am yellow</p>
+<h1 style="color:orange">So am I</h1>
+<h2 style="color:orange">Me too!</h2>
+      </section>
         <!-- Selectors ID-->
         <section>
 			    <h3>Selector: ID</h3>
+          <p>The "#" is how you tell CSS "this is an id."</p>
 <pre><code class = "html">
 #footer {
-  property: value;
+  color: gray;
 }
 </code></pre>
           <p>Selects all elements with an id of "footer".</p>
           
+         <p>Example of associated HTML.</p>
 <pre><code class = "html">
-&lt;p id="footer">Copyright 2011&lt;/p>
+&lt;p id="footer"&gt;Copyright 2011&lt;/p&gt;
 </code></pre>
-         <p>The associated HTML.</p>
+<p style="color:gray">Copyright 2011</p>
 			  </section>
         
         <!-- Selectors Class-->
         <section>
 			    <h3>Selector: Class</h3>
+          <p>The "." is how you tell CSS "this is a class name."</p>
 <pre><code class = "html">
 .warning {
   color: red;
@@ -262,13 +300,41 @@ img {
           <p>Selects all elements with a class of "warning".</p>
 
 <pre><code class = "html">
-&lt;p class="warning">Run away!&lt;/p>
+&lt;p class="warning">Run away!&lt;/p&gt;
+
+&lt;p&gt;&lt;span class="warning"&gt;Run&lt;/span&gt; away!&lt;/p&gt;
+
 </code></pre>
-         <p>The associated HTML.</p>
+         <p>Examples of associated HTML</p>
 			  </section>
-        
-        <!-- ID vs Class-->
         <section>
+        <h3>Selector: Multiple Classes</h3>
+<pre><code class = "html">
+.warning {
+  color: red;
+}
+.urgent {
+  font-style: italic;
+}
+.warning.urgent {
+  background: silver;
+} 
+</code></pre>
+
+<pre><code class = "html">
+&lt;p class="warning urgent">Run away!&lt;/p&gt;
+
+&lt;p class="warning">&gt;&lt;span class="urgent"&gt;Run&lt;/span&gt; away! &lt;/p&gt;
+
+</code></pre>
+<p>Examples of associated HTML</p>
+<p style="color:red;font-style:italic;background:silver;">Run away!</p>
+<p style="color:red"><span style="font-style: italic;">Run</span> away!</p>
+         
+        </section>
+        <!-- I broke the information in this slide up into the previous 4 slides -->
+        <!-- ID vs Class-->
+        <!--section>
         <h3>IDs vs. Classes</h3>
         <div class = "left-align">
           <span class = "yellow">ID</span> -- Should only apply to <strong>one</strong> element on a webpage. In other words, a webpage only has one footer.
@@ -278,7 +344,7 @@ img {
           <span class = "yellow">Class</span> -- Many elements can have the same class. There can be many warnings on one webpage.
           <p>The "<strong>.</strong>" is how you tell CSS "this is a class name."</p>
         </div>
-      </section>  
+      </section-->  
       
         <!-- Selector position-->
         <section>
@@ -287,18 +353,24 @@ img {
 p em {
   color: orange;
 }
+
 </code></pre>
-       <p>Selects all em elements that are within a paragraph</p>
+       <p>Selects all em elements that are <strong>within</strong> a paragraph</p>
 <pre><code class = "html">
-&lt;p>This is &lt;em>important.&lt;/em>&lt;/p>
+
+&lt;p&gt;This is &lt;em>important&lt;/em>.&lt;/p&gt;
+
+&lt;ul&gt;&lt;li&gt;This is &lt;em>important&lt;/em>.&lt;/li&gt;&lt;/ul&gt;
 </code></pre>
-        <p>The associated HTML.</p>
-        <p>This is <em style="color:orange">important.</em></p>
-</code></pre>
-      </section>
-        
+        <p>Example of associated HTML.</p>
+        <p>This is <em style="color:orange">important</em>.</p>
+        <ul><li>This is <em>important</em>.</li></ul>
+        </section>
+
+       
+        <!-- this rule is unique to the font-family property so i'm moving it to that slide -->
         <!-- Multiple values -->
-        <section>
+        <!--section>
         <h3>Property Values</h3>
         <p>Each property can have one or more comma separated values.</p>
 <pre><code class = "html">
@@ -308,9 +380,9 @@ p{
   font-family: Arial, sans-serif;
 }
 </code></pre>
-      </section>
+      </section-->
         
-        <!-- Color-->
+       <!-- Color-->
         <section>
           <h3>Property: Color</h3>
           <p>The color property changes the color of the text.</p>
@@ -322,15 +394,15 @@ p {
 }
 </code></pre>
         <p>Color name</p>
-        <p>Hexadecimal value</p>
-        <p>RGB value</p>
+        <p><a href="http://www.w3schools.com/cssref/css_colorsfull.asp" target="_blank">Hexadecimal value</a></p>
+        <p>RGB (Red Green Blue) value</p>
         <p><small>The 17 standard colors are: <font color="aqua" style="background:black;">aqua</font>, <font color="black">black</font>, <font color="blue">blue</font>, <font color="fuchsia">fuchsia</font>, <font color="gray">gray</font>, <font color="grey">grey</font>, <font color="green">green</font>, <font color="lime">lime</font>, <font color="maroon">maroon</font>, <font color="navy">navy</font>, <font color="olive">olive</font>, <font color="purple">purple</font>, <font color="red">red</font>, <font color="silver" style="background:black;">silver</font>, <font color="teal">teal</font>, <font color="white" style="background:black;">white</font>, and <font color="yellow" style="background:black;">yellow</font>.</small></p>
 
         </section>
         
         <!-- Background color-->
         <section>
-          <h3>Property: Background-color</h3>
+          <h3>Property: Background-Color</h3>
           <p>The background-color property changes the color of the background.</p>
 <pre><code class = "html">
 p {
@@ -343,7 +415,7 @@ p {
       
         <!-- Font family-->
         <section>
-          <h3>Property: Font-family</h3>
+          <h3>Property: Font-Family</h3>
           <p>The font-family property deﬁnes which font is used.</p>
 <pre><code class = "html">
 p {
@@ -354,12 +426,13 @@ p {
 </code></pre>
           <p>Specific font name</p>
           <p>Generic name</p>
-          <p>Comma-separated list</p>
+          <p>Comma-separated list with alternatives</p>
+          <img src="http://www.w3schools.com/css/serif.gif" alt="Serif vs Sans-serif fonts"/>
         </section>
       
         <!-- Font size -->
         <section>
-          <h3>Property: Font-size</h3>
+          <h3>Property: Font-Size</h3>
           <p>The font-size property speciﬁes the size of the font.</p>
 <pre><code class = "html">
 p {
@@ -368,9 +441,9 @@ p {
   font-size: 100%;
 }
 </code></pre>
-          <p>Pixels</p>
-          <p>"em"</p>
-          <p>Percentage</p>
+          <p>Pixels - a dot on the computer screen</p>
+          <p>"em" - 1em is the current font size</p>
+          <p>Percentage - percentage of the overall real estate</p>
         </section>
         
         <!-- Fonts-->
@@ -390,6 +463,7 @@ p {
   font: italic bold 10px sans-serif;
 }
 </code></pre>
+<p><a href="http://www.w3schools.com/css/css_font.asp" target="_blank"> Font Reference</a></p>
         </section>
       
         <!-- Connecting HTML to CSS-->
@@ -446,11 +520,15 @@ p {
       
         <!-- Exercise-->
         <section class="hide-pdf">
-          <h3>Let's develop it</h3>
+          <h3>Let's Develop It!</h3>
           <ul>
-            <li>Create a new .css file</li>
-            <li>Add a link to the file in the head of the portfolio made last time</li>
-            <li>Add styles to change the colors, background colors or fonts of different parts of the content</li>
+            <li>Start a new file in your text editor and save it to your html-site folder as style.css</li>
+            <li>Add a link to the file in the head of the index.html page made last time.
+            <pre><code class = "html">&lt;head>
+  &lt;link rel="stylesheet" type="text/css" href="style.css">
+&lt;/head>
+</code></pre></li>
+            <li>Add styles to change the colors, background colors and fonts of different parts of the content</li>
             <li>Try using ids and classes to change specific elements</li>
           </ul>
         </section>
@@ -458,43 +536,87 @@ p {
         <!-- Cascading-->
         <section>
           <h3>Cascading</h3>
-          <p>Styles "cascade" down until changed</p>
+          <p>Styles "cascade" down and can overwrite eachother</p>
 <pre><code class = "html">
 p{
   color:blue;
-  font-family: 'Helvetica';
+}
+...
+p{
+  color:red;
+}
+
+</code></pre>
+
+<pre><code class = "html">
+  &lt;p>what color am I?&lt;/p>
+</code></pre>
+        </section>
+      <!-- Selector Specificity-->
+        <section>
+        <h3>Selector Priority/Specificity</h3>
+<p style="font-size:smaller;">The more specific a selector is the higher its priority. </p>
+<ol style="font-size:smaller;">
+  <li>!important styles</li>
+  <li>inline styles</li>
+  <li>selecting with id</li>
+  <li>selecting with a class</li>
+  <li>selecting with a element name</li>
+</ol>
+<pre><code class = "html">
+p{
+  color:blue;
+}
+#special{
+  color:yellow;
 }
 .red{
   color:red;
 }
-#special{
-  font-family: Arial;
+.alwaysgreen{
+  color:green !important;
 }
 </code></pre>
 
 <pre><code class = "html">
-  &lt;p>Paragraph&lt;/p>
-  &lt;p class ="green">Paragraph&lt;/p>
-  &lt;p class ="red">Paragraph&lt;/p>
-  &lt;p class = "red" id ="special">Paragraph&lt;/p>
+  &lt;p>I am blue&lt;/p>
+  &lt;p class="red" style="color:orange;">I am orange!&lt;/p>
+  &lt;p class="alwaysgreen red" id ="special">I am ALWAYS Green&lt;/p>
+  &lt;p class="red" id="special">Yellow Paragraph&lt;/p>
 </code></pre>
         </section>
       
         <!-- Properties-->
         <section>
-          <h3>CSS Properties</h3>
-          <p>Many CSS properties have self-explanatory names:</p>
-          <ul>
-            <li>background-color</li>
-            <li>font-family</li>
-            <li>font-size</li>
-            <li>color</li>
-            <li>width</li>
-            <li>height</li>
+
+          <h3>Review</h3>
+          <ul style="list-style-type:none;">
+            <li>Use id and class attributes to help build selectors</li>
+            <li>Connect css to your page in multiple ways</li>
+            <li>Rules cascade in the order they are placed on the page.</li>
+            <li>Rules are applied based on the specificity.</li>
+            <li>CSS properties we learned today:</li>
+            <li>color
+              <ul  style="list-style-type:none;">
+                <li>background-color</li>
+                <li>font-family</li>
+                <li>font-size</li>
+              </ul>
+            </li>
           </ul>
-          <p><a href = "https://developer.mozilla.org/en-US/docs/CSS/CSS_Reference">Comprehensive list of all CSS properties</a></p>
+            <p><a href = "https://developer.mozilla.org/en-US/docs/CSS/CSS_Reference">Comprehensive list of all CSS properties</a></p>
         </section>
-        
+        <!-- Preview-->
+        <section>
+          <h2>Next Week</h2>
+          <h4>Monday:</h4>
+          <p>&lt;div> and &lt;span> tags</p>
+            <p>Box model (borders, margins, and padding)</p>
+            <p>width and height</p>
+          <h4>Wednesday:</h4>
+          <p>positioning elements</p>
+            <p>floating</p>
+        </section>
        <!-- Question-->
         <section>
           <h2>Questions?</h2>
