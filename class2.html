@@ -76,66 +76,163 @@
         </section>
         <!-- Review of first session -->
         <section>
-          <h3>Review of First Session</h3>
+          <h3>Review of First Session - Setting up an HTML Page</h3>
             <div style="float:left">
               <ul style="list-style-type:none;">
                 <li class = "fragment">&lt;!DOCTYPE html&gt;</li>
                 <li class = "fragment">&lt;html lang="en"&gt; ... &lt;/html&gt;</li>
                 <li class = "fragment">&lt;head&gt;...&lt;/head&gt;</li>
                 <li class = "fragment">&lt;body&gt;...&lt;/body&gt;</li>
-                <li class="fragment">&lt;p&gt;...&lt;/p&gt;     &lt;img ... /&gt;</li>
-                <li class="fragment">&lt;img src="picture.jpg" ... /&gt;</li>
-                <li class = "fragment">&lt;p style="color:blue;&gt;</li>
-                <li class = "fragment">&lt;body&gt; &lt;p&gt;Paragraph nested in body element&lt;/p&gt;&lt;/body&gt;</li>
               </ul>
         </section>
+
+        <!-- Review of first session continued--> 
+        <section>
+        <h3>Review  - Containing &amp; Empty Tags, Attributes</h3>
+            <div style="float:left">
+              <ul style="list-style-type:none;">
+                <li class = "fragment">&lt;p&gt;...&lt;/p&gt;
+                <li class = "fragment"> &lt;img ... /&gt;</li>
+                <li class = "fragment">&lt;img src="picture.jpg" ... /&gt;</li>
+                <li class = "fragment">&lt;p style="color:blue;"&gt;</li>
+             </ul>
+        </section>
+
+        <!-- Review of first session continued-->        
+        <section>
+         <h3>Review - Nesting</h3>
+            <div class="left-align">
+                  &lt;body&gt;<br>
+                   &nbsp;&nbsp;  &lt;p&gt;Paragraph nested in body element&lt;/p&gt;<br>
+                  &lt;/body&gt;</li>
+              </div>
+        </section>
+
         <!-- Review of first session continued-->
         <section>
-          <h3>Review of First Session (continued)</h3>
+          <h3>Review  - Text Tags</h3>
             <div style="float:left">
               <ul style="list-style-type:none;">
               <li class = "fragment">&lt;p&gt;A paragraph element contains text &lt;/p&gt;</li>
               <li class = "fragment">&lt;h1&gt;<span style="font-size:larger;color:red;font-weight:bold;">Heading 1</span>&lt;/h1&gt; </li>
               <li class = "fragment">&lt;em&gt;<em>Emphasized</em>&lt;/em&gt;</li>
-              <li class = "fragment">&lt;strong&gt;<strong>Important</strong>&lt;/strong&gt;</li> 
-              <li class = "fragment">&lt;img src="myimage.jpg" width="640px" /&gt;</li>
-              <li class = "fragment">"images/filename.jpg"</li>
-              <li class = "fragment">"http://www.girldevelopit.com/chapters/tri-cities"</li>
-              <li class = "fragment">&lt;br&gt;</li> 
+              <li class = "fragment">&lt;strong&gt;<strong>Important</strong>&lt;/strong&gt;</li>
+              <li class = "fragment">&lt;br&gt;</li>
             </ul>
+          </div>
+        </section>
+          <!-- Review Continued -->
+        <section>
+          <h3>Review - URLs &amp; Links</h3>
+            <div style="float:left">
+              <ul style="list-style-type:none;">                              
+                <li class = "fragment">&lt;img src="myimage.jpg" width="640px" /&gt;</li>
+                <li class = "fragment">"images/filename.jpg"</li>
+                <li class = "fragment">"http://www.girldevelopit.com/chapters/tri-cities"</li>
+                <li class = "fragment" style="font-size: smaller;">&lt;a href="home.html" target="_blank">External Link Text&lt;/a&gt;</li>
+                <li class = "fragment">&lt;a href="#home>Same Page Anchor Text&lt;/a&gt;</li>
+            </ul>
+          </div>
         </section>
         <!-- Review Continued -->
         <section>
-          <h3>Review of First Session (continued)</h3>
+          <h3>Review - Lists</h3>
             <div style="float:left">
               <ul style="list-style-type:none;"> 
-              <li class = "fragment">&lt;a href="home.html" target="_blank">External Link Text&lt;/a&gt;</li>
-              <li class = "fragment">&lt;a href="#home>Same Page Anchor Text&lt;/a&gt;</li>
-              <li class = "fragment">&lt;ul&gt;  &lt;li&gt; &lt;/li&gt; &lt;/ul&gt; <ul><li>Unordered</li></ul></li>
-              <li class = "fragment">&lt;ol&gt;  &lt;li&gt; &lt;/li&gt; &lt;/ol&gt; <ol><li>Unordered</li></ol></li>
-              <li class = "fragment">&lt;!-- Commented out --&gt;</li>
-              <li class = "fragment">&lt;table&gt;&lt;tr&gt;&lt;td&gt;Data&lt;/td&gt;&lt;td&gt;Data&lt;/td&gt;&lt;/tr&gt;&lt;table&gt;</li>
-              <li class = "fragment"><table style="border: 1px solid">
+              <li class = "fragment">
+                <pre><code class ="html">
+&lt;ul&gt;  
+    &lt;li&gt;Unordered &lt;/li&gt;
+&lt;/ul&gt;     </pre></code>
+                <ul><li>Unordered</li></ul>
+              </li>
+              <li class = "fragment">
+                <pre><code class ="html">
+&lt;ol&gt;
+  &lt;li&gt;Ordered&lt;/li&gt;
+&lt;/ol&gt; 
+              </pre></code>
+              <ol>
+                <li>Unordered</li>
+              </ol>
+            </li>
+          </ul>
+        </div>
+        </section>
+        <!-- Review Continued -->
+        <section>
+          <h3>Review - Tables</h3>
+          <div class="align-left">
+<pre><code class="html">
+&lt;table&gt;
+&lt;tr&gt;
+    &lt;th&gt;Header 1 Col 1&lt;/th&gt;
+    &lt;th&gt;Header 1 Col 2&lt;/tj&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Row 1 Col 1&lt;/td&gt;
+    &lt;td&gt;Row 1 Col 2&lt;/td&gt;
+  &lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td&gt;Row 2 Col 1&lt;/td&gt;
+    &lt;td&gt;Row 2 Col 2&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;table&gt;
+</code></pre>
+            <table style="border: 1px solid">
               <tr> 
-                <td style="border: 1px solid">Data</td>
-                <td style="border: 1px solid">Data</td>
+                <th style="border: 1px solid">Header 1 Col 1</th>
+                <th style="border: 1px solid">Header 1 Col 2</th>
               </tr>
-            </table></li>
-              <li class = "fragment">&amp;gt; - &gt;    &amp;lt; - &lt;   &amp;copy - &copy;</li>
-            </ul>
-            
+              <tr> 
+                <td style="border: 1px solid">Row 1 Col 1</td>
+                <td style="border: 1px solid">Row 1 Col 2</td>
+              </tr>
+              <tr> 
+                <td style="border: 1px solid">Row 2 Col 1</td>
+                <td style="border: 1px solid">Row 2 Col 2</td>
+              </tr>
+            </table>
+          </dev>
+        </section>
+        <!-- Review Continued -->
+        <section>
+          <h3>Review - Comment &amp; Special Characters</h3>
+            <div style="float:left">
+              <ul style="list-style-type:none;"> 
+               <li class = "fragment">&lt;!-- Commented out --&gt;</li> 
+               <li class = "fragment">
+                 <ul style="list-style-type:none;">
+                    <li>&amp;gt; = &gt;</li>
+                    <li>&amp;lt; = &lt;</li>
+                   <li>&amp;amp; = &amp;</li>
+                 </ul>
+                </li>
+              </ul>
+            </div>   
         </section>
         <!-- What is CSS-->
         <section>
-          <h3>CSS: What is it?</h3>
+          <h3>CSS: What Is It?</h3>
           <p>CSS = <span class="green">C</span>ascading <span class="green">S</span>tyle <span class="green">S</span>heets</p>
           <p>CSS is a "style sheet language" that lets you style the elements on your page.</p>
           <p>CSS works in conjunction with HTML, but is not HTML itself.</p>
-          <p>Cascading: Each successive style can over-rule any style before it</p>
+          <div class="left-align">
+            <p>Cascading: </p>
+            <ul><li>Inheritance</li> 
+              <li>Conflict resolution
+              <ul>
+                <li>Last Rule</li>
+                <li>Specificity</li>
+                <li>Important</li>
+              </ul>
+              </li>
+            <ul>
+          </div>
         </section>
         
         <section>
-          <h3>CSS: What can it do?</h3>
+          <h3>CSS: What Can It Do?</h3>
           <p>Change color, spacing, position, and size</p>
           <img src = "images/homepage-view.png" height="460px">
         </section>
@@ -214,19 +311,58 @@ selector {
         <!-- CSS Syntax -->
         <section>
           <h3>CSS Syntax</h3>
-          <p>In a CSS document or in the head element in a html document</p>
+          <div class="left-align">  
+            <p>In a CSS document or in the head element in a html document</p>
 <pre><code class = "html">
 selector {
   property: value;
   property: value;
   property: value;
 }
-</code></pre>     
-          <p>Inline for a particular tag</p>
+</code></pre> 
+            <p>Inline for a particular tag</p>
 <pre><code class = "html">          
 &lt;p style="property:value;property:value"&gt;Text&lt;/p&gt;
 </code></pre>
+          </div>
+        </section>
+        <!-- Getting started -->
+        <section>
+          <h3>Adding CSS to an HTML</h3>
+          <div class="left-align">
+<pre><code class = "html">
+&lt;head>
+  &lt;style type="text/css">
+    p {
+      color: blue;
+      font-size: 12px;
+    }
+  &lt;/style>
+&lt;/head>
+</code></pre>
+          <p>Inside &lt;head&gt; element.</p>
+          <p>Uses &lt;style&gt; tag.</p>
+          <p>Can only be used in one html file</p>
+        </div>
+        </section>
 
+      <!-- Exercise-->
+        <section class="hide-pdf">
+          <h3>Let's Develop It!</h3>
+          <ul>
+            <li>Open you html file from last class in your text editor.</li>
+            <li>Add the following code inside the &lt;head&gt; element</li>
+          </ul>
+<pre><code class = "html">
+&lt;head>
+  &lt;style type="text/css">
+    p {
+      color: blue;
+      font-size: 12px;
+    }
+  &lt;/style>
+&lt;/head>
+</pre></code>
         </section>
 
         <!-- Selectors elements-->
@@ -269,7 +405,7 @@ p, h1, h2 {
 <p  style="color:orange" >I am yellow</p>
 <h1 style="color:orange">So am I</h1>
 <h2 style="color:orange">Me too!</h2>
-      </section>
+        </section>
         <!-- Selectors ID-->
         <section>
 			    <h3>Selector: ID</h3>
@@ -345,7 +481,7 @@ p, h1, h2 {
           <p>The "<strong>.</strong>" is how you tell CSS "this is a class name."</p>
         </div>
       </section-->  
-      
+
         <!-- Selector position-->
         <section>
         <h3>Selector: Position</h3>
@@ -367,7 +503,12 @@ p em {
         <ul><li>This is <em>important</em>.</li></ul>
         </section>
 
-       
+    <!-- Develop it -->
+        <section>
+          <h3>Let's Develop It!</h3>
+          <p>Let's add some class and id attributes</p>
+          <p>Now style them!</p>
+        </section>      
         <!-- this rule is unique to the font-family property so i'm moving it to that slide -->
         <!-- Multiple values -->
         <!--section>
@@ -412,6 +553,12 @@ p {
 }
 </code></pre>
         </section>
+        <section>
+          <h3>Let's Develop It!</h3>
+          <p>Color can really bring your pages to life!</p>
+          <p>Let's add some forground and background color</p>
+        </section>      
+   
       
         <!-- Font family-->
         <section>
@@ -523,13 +670,14 @@ p {
           <h3>Let's Develop It!</h3>
           <ul>
             <li>Start a new file in your text editor and save it to your html-site folder as style.css</li>
-            <li>Add a link to the file in the head of the index.html page made last time.
-            <pre><code class = "html">&lt;head>
+            <li>Add a link to the file in the head of the index.html page made last time.</li>
+            <pre><code class = "html">
+&lt;head&gt;
   &lt;link rel="stylesheet" type="text/css" href="style.css">
 &lt;/head>
 </code></pre></li>
-            <li>Add styles to change the colors, background colors and fonts of different parts of the content</li>
-            <li>Try using ids and classes to change specific elements</li>
+            <li>Move the CSS you already created to the external file </li>
+            <li>Check your work. Did the styling stay the same?</li>
           </ul>
         </section>
         
