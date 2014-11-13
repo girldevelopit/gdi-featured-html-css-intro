@@ -253,7 +253,18 @@
             </li>
         </ul>
         </section>
-        <!-- Getting started -->
+        <!-- Connecting CSS -->
+        <!-- Inline -->
+        <section>
+          <h3>Adding CSS directly to an element</h3>
+<pre><code class = "html">
+  &lt;p style="color:red">Some text.&lt;/p>
+</code></pre>
+          <p>Uses the HTML attribute style.</p>
+          <p>Difficult to use in large projects</p>
+          <p>Not preferred.</p>
+        </section>
+        <!-- embedded -->
         <section>
           <h3>Adding CSS to an HTML Page</h3>
           <div class="left-align">
@@ -278,10 +289,8 @@
           <h3>Let's Develop It!</h3>
           <ul>
             <li>Open you html file from last class in your text editor.</li>
-            <li>Add the following code inside the &lt;head&gt; element</li>
-          </ul>
-<pre><code class = "html">
-&lt;head>
+            <li>Add the following code inside the &lt;head&gt; element.
+              <pre><code class = "html">&lt;head>
   &lt;style type="text/css">
     p {
       color: blue;
@@ -290,6 +299,13 @@
   &lt;/style>
 &lt;/head>
 </pre></code>
+</li>
+            <li>Make one of your paragraphs red.
+              <pre><code class = "html">
+  &lt;p style="color:red">Some text.&lt;/p>
+</code></pre></li>
+          </ul>
+
         </section>
 
         <!-- Selectors elements-->
@@ -315,24 +331,7 @@ img, p, h1 {
 </code></pre> 
       <p>Universal selector - every element in the document!</p>  
         </section>
-         <!-- Selector grouping-->
-        <section>
-        <h3>Selector: Grouping</h3>
-<pre><code class = "html">
-p, h1, h2 {
-  color: orange;
-}
-</code></pre>
-       <p>Selects all paragraphs, header 1's <strong>and</strong> header 2's</p>
-<pre><code class = "html">
-&lt;p&gt;I am orange.&lt;/p&gt;
-&lt;h1&gt;So am I.&lt;/h1&gt;
-&lt;h2&gt;Me too!&lt;/h2&gt;
-</code></pre>
-<p  style="color:orange" >I am yellow</p>
-<h1 style="color:orange">So am I</h1>
-<h2 style="color:orange">Me too!</h2>
-        </section>
+         
         <!-- Selectors ID-->
         <section>
 			    <h3>Selector: ID</h3>
@@ -440,6 +439,7 @@ p {
         <p><a href="http://www.w3schools.com/cssref/css_colorsfull.asp" target="_blank">Hexadecimal value</a></p>
         <p>RGB (Red Green Blue) value</p>
         <p><small>The 17 standard colors are: <font color="aqua" style="background:black;">aqua</font>, <font color="black">black</font>, <font color="blue">blue</font>, <font color="fuchsia">fuchsia</font>, <font color="gray">gray</font>, <font color="grey">grey</font>, <font color="green">green</font>, <font color="lime">lime</font>, <font color="maroon">maroon</font>, <font color="navy">navy</font>, <font color="olive">olive</font>, <font color="purple">purple</font>, <font color="red">red</font>, <font color="silver" style="background:black;">silver</font>, <font color="teal">teal</font>, <font color="white" style="background:black;">white</font>, and <font color="yellow" style="background:black;">yellow</font>.</small></p>
+        <a href="http://www.w3schools.com/cssref/css_colornames.asp" target="_blank">140 predefined color names</a>
 
         </section>
         
@@ -455,11 +455,7 @@ p {
 }
 </code></pre>
         </section>
-        <section>
-          <h3>Let's Develop It!</h3>
-          <p>Color can really bring your pages to life!</p>
-          <p>Let's add some forground and background color</p>
-        </section>      
+             
    
       
         <!-- Font family-->
@@ -514,29 +510,35 @@ p {
 </code></pre>
 <p><a href="http://www.w3schools.com/css/css_font.asp" target="_blank"> Font Reference</a></p>
         </section>
-      
+      <section>
+          <h3>Let's Develop It!</h3>
+          <p>Color can really bring your pages to life!</p>
+          <p>Let's add some forground and background color</p>
+          <p>Play with different font settings of your paragraphs</p>
+          <pre><code class = "html">
+p {
+  color:aqua, black, blue, fuchsia, gray, green, lime, maroon, navy, olive, orange, purple, red, silver, teal, white, or yellow;
+  background-color:aqua, black, blue, fuchsia, gray, green, lime, maroon, navy, olive, orange, purple, red, silver, teal, white, or yellow;
+  font-style: italic or normal;
+  font-weight: lighter or normal or bold or bolder or #;
+  font-size: #px;
+  font-family: sans-serif or serif;
+}
+</code></pre>
+        </section> 
         <!-- Connecting HTML to CSS-->
-        <section>
+        <!--section>
           <h3>Connecting CSS to HTML</h3>
           <p class = "green">3 ways</p>
           <p>"Inline"</p>
           <p>"Embedded"</p>
           <p>"External"</p>
-        </section>
+        </section-->
       
-        <!-- Inline -->
-        <section>
-          <h3>Connecting CSS to HTML: Inline</h3>
-<pre><code class = "html">
-  &lt;p style="color:red">Some text.&lt;/p>
-</code></pre>
-          <p>Uses the HTML attribute style.</p>
-          <p>Difficult to use in large projects</p>
-          <p>Not preferred.</p>
-        </section>
+        
         
         <!-- Embedded -->
-        <section>
+        <!--section>
           <h3>Connecting CSS to HTML: Embedded</h3>
 <pre><code class = "html">
 &lt;head>
@@ -551,7 +553,7 @@ p {
           <p>Inside &lt;head> element.</p>
           <p>Uses &lt;style> tag.</p>
           <p>Can only be used in one html file</p>
-        </section>
+        </section-->
         
         <!-- External-->
         <section>
@@ -572,13 +574,13 @@ p {
           <h3>Let's Develop It!</h3>
           <ul>
             <li>Start a new file in your text editor and save it to your html-site folder as style.css</li>
-            <li>Add a link to the file in the head of the index.html page made last time.</li>
+            <li>Add a link to the file in the head of your index.html page.</li>
             <pre><code class = "html">
 &lt;head&gt;
   &lt;link rel="stylesheet" type="text/css" href="style.css">
 &lt;/head>
 </code></pre></li>
-            <li>Move the CSS you already created to the external file </li>
+            <li>Move the CSS you already created to the external file (DO NOT copy the &lt;style> tags) </li>
             <li>Check your work. Did the styling stay the same?</li>
           </ul>
         </section>
@@ -645,11 +647,13 @@ p{
             <li>Rules cascade in the order they are placed on the page.</li>
             <li>Rules are applied based on the specificity.</li>
             <li>CSS properties we learned today:</li>
-            <li>color
               <ul  style="list-style-type:none;">
+                <li>color
                 <li>background-color</li>
                 <li>font-family</li>
                 <li>font-size</li>
+                <li>font-weight</li>
+                <li>font-style</li>
               </ul>
             </li>
           </ul>
