@@ -237,25 +237,8 @@
           <img src = "images/homepage-view.png" height="460px">
         </section>
 
-		    <section>
-        <h3>Web Page Technologies</h3>
-          
-            <p>HTML and CSS</p></li>
-              <div style = "font-size: 80%">Putting your content into an HTML paragraph tag is <span class="yellow">"Semantics"</span></div>
-              <pre><code class ="html">
-                &lt;p>This is your content&lt;/p>
-              </code></pre>
-            <div style = "font-size: 80%">Using CSS to make the font of your paragraph blue and 18 pt is <span class="yellow">"Presentation"</span></div>
-             <pre><code class ="html">
-                p {
-                 color:blue; 
-                 font-size:18pt;
-                  }
-              </code></pre>
-            <p class ="blue">This is your content</p>
-          </section>
         <section>
-          <h3>HTML Attributes that Aid CSS</h3>
+          <h3>Attributes That Aid CSS</h3>
           <p>Optional attributes common to all HTML elements</p>
           <ul>
             <li><strong>id</strong> assigns a <em>unique</em> identifier to the element
@@ -268,67 +251,11 @@
                 &lt;p class="warning red">Run Away!&lt;/p>
               </code></pre>
             </li>
-          </ul>
-        </section>
-        
-        <section>
-          <h3>CSS: What does it look like?</h3>
-          <img src = "images/examplecss.png" height="450px">
-        </section>
-    
-        <!-- The CSS Rule-->
-        <section>
-        	<h3>The CSS Rule</h3>
-        	<img src="images/cssrule.png" alt="The CSS Rule" style="border: none; box-shadow: none;" height="360px" />
-          
-          <pre><code class = "html">
-selector {
-  property: value;
-}
-</code></pre>
-          <!--div class = "left-align">
-            <p>A block of CSS code is a rule.</p>
-            <p>The rule starts with a selector.</p>
-            <p>It has sets of properties and values.</p>
-            <p>A property-value pair is a declaration.</p>
-          </div -->
-        </section>
-        <!--section>
-          <h3>The CSS Rule</h3>
-<pre><code class = "html">
-selector {
-  property: value;
-}
-</code></pre>
-          <div class = "left-align">
-            <p>A block of CSS code is a rule.</p>
-            <p>The rule starts with a selector.</p>
-            <p>It has sets of properties and values.</p>
-            <p>A property-value pair is a declaration.</p>
-          </div>
-        </section -->
-        
-        <!-- CSS Syntax -->
-        <section>
-          <h3>CSS Syntax</h3>
-          <div class="left-align">  
-            <p>In a CSS document or in the head element in a html document</p>
-<pre><code class = "html">
-selector {
-  property: value;
-  property: value;
-  property: value;
-}
-</code></pre> 
-            <p>Inline for a particular tag</p>
-<pre><code class = "html">          
-&lt;p style="property:value;property:value"&gt;Text&lt;/p&gt;
-</code></pre>
-          </div>
+        </ul>
         </section>
         <!-- Getting started -->
         <section>
-          <h3>Adding CSS to an HTML</h3>
+          <h3>Adding CSS to an HTML Page</h3>
           <div class="left-align">
 <pre><code class = "html">
 &lt;head>
@@ -347,7 +274,7 @@ selector {
         </section>
 
       <!-- Exercise-->
-        <section class="hide-pdf">
+        <section >
           <h3>Let's Develop It!</h3>
           <ul>
             <li>Open you html file from last class in your text editor.</li>
@@ -416,8 +343,7 @@ p, h1, h2 {
 }
 </code></pre>
           <p>Selects all elements with an id of "footer".</p>
-          
-         <p>Example of associated HTML.</p>
+          <p>Example of associated HTML.</p>
 <pre><code class = "html">
 &lt;p id="footer"&gt;Copyright 2011&lt;/p&gt;
 </code></pre>
@@ -434,6 +360,7 @@ p, h1, h2 {
 }
 </code></pre>
           <p>Selects all elements with a class of "warning".</p>
+         <p>The associated HTML:</p>
 
 <pre><code class = "html">
 &lt;p class="warning">Run away!&lt;/p&gt;
@@ -463,24 +390,11 @@ p, h1, h2 {
 &lt;p class="warning">&gt;&lt;span class="urgent"&gt;Run&lt;/span&gt; away! &lt;/p&gt;
 
 </code></pre>
-<p>Examples of associated HTML</p>
-<p style="color:red;font-style:italic;background:silver;">Run away!</p>
-<p style="color:red"><span style="font-style: italic;">Run</span> away!</p>
-         
+          <p>Examples of associated HTML</p>
+          <p style="color:red;font-style:italic;background:silver;">Run away!</p>
+          <p style="color:red"><span style="font-style: italic;">Run</span> away!</p>
+                   
         </section>
-        <!-- I broke the information in this slide up into the previous 4 slides -->
-        <!-- ID vs Class-->
-        <!--section>
-        <h3>IDs vs. Classes</h3>
-        <div class = "left-align">
-          <span class = "yellow">ID</span> -- Should only apply to <strong>one</strong> element on a webpage. In other words, a webpage only has one footer.
-          <p>The "<strong>#</strong>" is how you tell CSS "this is an id."</p>
-        </div>
-        <div class = "left-align">
-          <span class = "yellow">Class</span> -- Many elements can have the same class. There can be many warnings on one webpage.
-          <p>The "<strong>.</strong>" is how you tell CSS "this is a class name."</p>
-        </div>
-      </section-->  
 
         <!-- Selector position-->
         <section>
@@ -491,6 +405,7 @@ p em {
 }
 
 </code></pre>
+
        <p>Selects all em elements that are <strong>within</strong> a paragraph</p>
 <pre><code class = "html">
 
@@ -509,19 +424,6 @@ p em {
           <p>Let's add some class and id attributes</p>
           <p>Now style them!</p>
         </section>      
-        <!-- this rule is unique to the font-family property so i'm moving it to that slide -->
-        <!-- Multiple values -->
-        <!--section>
-        <h3>Property Values</h3>
-        <p>Each property can have one or more comma separated values.</p>
-<pre><code class = "html">
-p{
-  color: white;
-  background-color: red;
-  font-family: Arial, sans-serif;
-}
-</code></pre>
-      </section-->
         
        <!-- Color-->
         <section>
@@ -580,7 +482,7 @@ p {
         <!-- Font size -->
         <section>
           <h3>Property: Font-Size</h3>
-          <p>The font-size property speciﬁes the size of the font.</p>
+            <p>The font-size property speciﬁes the size of the font.</p>
 <pre><code class = "html">
 p {
   font-size: 12px;
@@ -588,9 +490,9 @@ p {
   font-size: 100%;
 }
 </code></pre>
-          <p>Pixels - a dot on the computer screen</p>
-          <p>"em" - 1em is the current font size</p>
-          <p>Percentage - percentage of the overall real estate</p>
+            <p>Pixels - a dot on the computer screen</p>
+            <p>"em" - 1em is the current font size</p>
+            <p>Percentage - percentage of the overall real estate</p>
         </section>
         
         <!-- Fonts-->
@@ -666,7 +568,7 @@ p {
         </section>
       
         <!-- Exercise-->
-        <section class="hide-pdf">
+        <section>
           <h3>Let's Develop It!</h3>
           <ul>
             <li>Start a new file in your text editor and save it to your html-site folder as style.css</li>
@@ -703,8 +605,8 @@ p{
       <!-- Selector Specificity-->
         <section>
         <h3>Selector Priority/Specificity</h3>
-<p style="font-size:smaller;">The more specific a selector is the higher its priority. </p>
-<ol style="font-size:smaller;">
+<p>The more specific a selector is the higher priority it will be given. </p>
+<ol>
   <li>!important styles</li>
   <li>inline styles</li>
   <li>selecting with id</li>
@@ -724,6 +626,7 @@ p{
 .alwaysgreen{
   color:green !important;
 }
+
 </code></pre>
 
 <pre><code class = "html">
@@ -732,11 +635,9 @@ p{
   &lt;p class="alwaysgreen red" id ="special">I am ALWAYS Green&lt;/p>
   &lt;p class="red" id="special">Yellow Paragraph&lt;/p>
 </code></pre>
-        </section>
-      
+              </section>
         <!-- Properties-->
         <section>
-
           <h3>Review</h3>
           <ul style="list-style-type:none;">
             <li>Use id and class attributes to help build selectors</li>
@@ -752,7 +653,7 @@ p{
               </ul>
             </li>
           </ul>
-            <p><a href = "https://developer.mozilla.org/en-US/docs/CSS/CSS_Reference">Comprehensive list of all CSS properties</a></p>
+          <p><a href = "https://developer.mozilla.org/en-US/docs/CSS/CSS_Reference">Comprehensive list of all CSS properties</a></p>
         </section>
         <!-- Preview-->
         <section>
