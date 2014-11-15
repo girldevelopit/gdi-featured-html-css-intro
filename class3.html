@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Class 3 ~ HTML/CSS ~ Girl Develop IT</title>
+		<title>Class 3 ~ HTML/CSS ~ Girl Develop It Tri-Cities</title>
 
 		<meta name="description" content="This is the official Girl Develop It Core HTML/CSS curriculum. It was developed through the contributions of Pamela Fox, Alexis Goldstein, Erin M. Kidwell, Izzy Johnston, and Jen Myers.
 
@@ -15,7 +15,7 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 		<link rel="stylesheet" href="reveal/css/reveal.css">
-		<link rel="stylesheet" href="reveal/css/theme/gdidefault.css" id="theme">
+		<link rel="stylesheet" href="reveal/css/theme/gdilight.css" id="theme">
 
 		<!-- For syntax highlighting -->
 		<!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
@@ -28,6 +28,9 @@
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
+    <style type="text/css">
+      .notes{display:none;}
+    </style>
 	</head>
 
 	<body>
@@ -38,8 +41,8 @@
 			<div class="slides">
 			  <!-- Opening slide -->
         <section>
-          <img src = "images/gdi_logo_badge.png">
-          <h3>Beginning HTML and CSS</h3>
+          <img src = "images/gdi-tricities.jpg" width="360" height="360">
+          <h3>Build Your Own Website: <br />Intro to HTML and CSS</h3>
           <h4>Class 3</h4>
         </section>
         
@@ -47,27 +50,39 @@
         <section>
           <h3>Welcome!</h3>
           <div class = "left-align">
-          <p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
-          <p class ="green">Some "rules"</p>
-          <ul>
-            <li>We are here for you!</li>
-            <li>Every question is important</li>
-            <li>Help each other</li>
-            <li>Have fun</li>
-          </ul>
+            <p>Girl Develop It is here to help you learn software through accessible mentorship and affordable hands-on instruction.</p>
+            <p class ="pink">Some "rules"</p>
+            <ul>
+              <li>Use us as resources</li>
+              <li>Ask every question</li>
+              <li>Help each other</li>
+              <li>Have fun</li>
+            </ul>
+          </div>
+          <div>
+            <p style="margin-top:30px;"><a href="http://gdi-tri-cities.github.io/gdi-core-html-css/">http://gdi-tri-cities.github.io/gdi-core-html-css/</a></p>
           </div>
         </section>
         
          <section>
-        	<h3>What we'll be making today</h3>
+        	<h3>What We'll Be Developing Today</h3>
         	<div class="left" style="width: 45%;">
-        		<p>Today we will be making a site from scratch using divs and spans to create a header, footer, sidebar and a content area.</p>
+        		<p>Today we will be creating a site from scratch using divs and spans to create a header, footer, sidebar and a content area.</p>
         	</div>
         	<div class="right" style="width: 45%;">
-        		<img src="images/session2site.png">
+        		<img src="images/session2site.png" height="480px">
         	</div>
         </section>
-        
+       <section>
+          <h3>The CSS Rule</h3>
+          <img src="images/cssrule.png" alt="The CSS Rule" style="border: none; box-shadow: none;" height="360px" />
+           
+           <pre><code class = "html">
+ selector {
+   property: value;
+ }
+ </code></pre>
+         </section>
         <!-- Inline vs. block-->
         <section>
           <h3>Inline vs Block</h3>
@@ -92,84 +107,74 @@
           <ul>
             <li>CSS divides HTML into two types: inline and block.</li>
             <li>After block elements, browsers render a new line.</li>
-            <li>Inline elements: img, a, br, em, strong</li>
+            <li>Inline elements: img, a, em, strong</li>
             <li>Block elements: p, h1, ul, li, almost everything else</li>
           </ul>
         </section>
         <section> 
         	<h3>Element: Div</h3>
-        		<ul>
-	        		<li>Block level element. Each new div is rendered on a new line.</li>
-	        		<li>A division, or section of content within an HTML page.</li>
-	        		<li>Used to group elements to format them with CSS.</li>
-	        		<li>Apply IDs and Classes to divs to control their styles with CSS.</li>
-        		</ul>
-<pre><code>&lt;div>
-   &lt;p>Content&lt;p>
-   &lt;p>Content&lt;p>
-&lt;/div></code></pre>
-<pre><code>&lt;div id="header">
-   &lt;h1>Main Heading&lt;h1>
-&lt;/div></code></pre>
-<pre><code>&lt;div class="sub-content">
-   &lt;p>Some more content&lt;p>
-&lt;/div></code></pre>
+<pre><code> 
+&lt;div id="header"&gt;
+    &lt;h1&gt;Loren Ipsum&lt;h1&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code>
+&lt;div class="sub-content"&gt;
+   &lt;p&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit&lt;/p&gt;
+   &lt;p&gt;Sed do eiusmod tempor incididunt ut labore et dolore.&lt;/p&gt;
+&lt;/div&gt;    
+&lt;div&gt;
+   &lt;p&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit&lt;/p&gt;
+   &lt;p&gt;Sed do eiusmod tempor incididunt ut labore et dolore.&lt;/p&gt; &lt;p&gt;
+   &lt;p&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit&lt;/p&gt;
+   &lt;p&gt;Sed do eiusmod tempor incididunt ut labore et dolore.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
         </section>
   <!-- Div continued-->
         <section>
-          <h3>Grouping elements with div</h3>
-          <div class = "left-align">
-          <ul>
-          <li>The div tag is used everywhere to group elements together into sections.</li>
-          <li>For example, what if we want the first 2 paragraphs of a section to be right-aligned, purple & bold, but we don't want any other paragraphs to be right-aligned?</li>
-          <li>We would wrap them in a div element to style them differently.</li>
-          </ul>
-           </div>
-        </section> 
-        
-        <section>
-          <h3>Grouping elements with div, cont.</h3>
+          <h3>Adding CSS to the Sections</h3>
+
 <pre><code class = "html">
-.align-right{
+#header {
+  font-size: 24px;
+  font-weight:bold;
+  color: pink;
+}
+.sub-content{
   text-align:right;
   color: purple; 
   font-weight: bold;
 }
 </code></pre>
-
-<pre><code class ="html">
-&lt;div class="align-right">
-  &lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit&lt;/p>
-  &lt;p>Sed do eiusmod tempor incididunt ut labore et dolore.&lt;/p> 
-&lt;/div>
-&lt;p>Magna aliqua. Ut enim ad minim veniam.&lt;/p> 
-&lt;p>Quis nostrud exercitation ullamco.&lt;/a>
-</code></pre>
-<div style = "text-align:right;font-weight: bold; font-size: 70%;" class = "green">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-  <p>Sed do eiusmod tempor incididunt ut labore et dolore.</p>
-</div>
-<div class = "left-align" style="font-size: 70%;">
-<p>Magna aliqua. Ut enim ad minim veniam.</p>
-<p>Quis nostrud exercitation ullamco.</a>
-
-</div>
+          <div style="font-size:16px;font-weight:bold;color: pink;"><h1>Ipsum lorem</h1></div>
+          <div style = "text-align:right;font-weight: bold; font-size: 70%;" class = "green">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+            <p>Sed do eiusmod tempor incididunt ut labore et.</p>
+          </div>
+          <div class = "left-align" style="font-size: 70%;">
+            <p>Magna aliqua. Ut enim ad minim veniam.</p>
+            <p>Quis nostrud exercitation ullamco.</p>
+          </div>
         </section> 
         <section>
           <h3>Let's Develop It</h3>
-         <p class="left-align">Let's create a site using divs to separate content into different sections on our page.</p>
-         <p class="left-align">Create a header, content area, sidebar, and a footer.</p>         
+          <div class="left-align">
+         <p>Let's create a web page using divs to separate content into different sections on our page.</p>
+         <p>Create a header, content area, sidebar, and a footer.</p>
+         <p>Create some CSS to give it character!         
         </section> 
         <section>
-        	<h3>Element: Span</h3>
-        	<ul>
-        	<li>Inline element. Each new span is rendered next to each other &amp; only wraps when it reaches the edge of the containing element.</li>
-        	<li>Can be used to apply styles to text inline so as not to break the flow of content.</li>
-        	</ul>
-        </section>     
+          <h3>Positioning</p>
+            <p>CSS provides an number of schemes to position elements on the page</p>
+            <p>Position rules can have a number of values.</p>
+            <p>When add</p>
+
+        </section>
+     
         <!-- Span -->
         <section>
-          <h3>Span</h3>
+          <h3>Element: Span</h3>
           <p>Span is used to apply a specific style inline</p>
           
 <pre><code class ="html">
