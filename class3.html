@@ -30,6 +30,10 @@
 		<![endif]-->
     <style type="text/css">
       .notes{display:none;}
+      .reveal .slides{
+        top:0%;
+        margin-top:0px;
+      }
     </style>
 	</head>
 
@@ -244,11 +248,7 @@ a:link
         </section>
         
         <!-- Padding -->
-        <section>
-          <h3>Padding</h3>
-          <p>Space between the border and the content</p>
-          <img src ="images/box-model.png"/>
-        </section>
+      
         <section>
           <h3>Padding</h3>
           <p>Space between the border and the content</p>
@@ -258,35 +258,27 @@ a:link
         
         <section>
           <h3>Padding</h3>
-          15 pixels on all sides
-<pre><code class ="html">
+          15 pixels on all sides:
+<pre><code class ="html">padding: all;
 padding: 15px;
 </code></pre>
-          10 pixels on top only
-<pre><code class ="html">
-padding-top: 10px;
+          10 pixels each side, assigned individually:
+<pre><code class ="html">padding-top: 10px;
+padding-left: 10px;
+padding-right: 10px;
+padding-bottom: 10px;
 </code></pre>
-          10 on top, 5 on right, 3 on bottom, 5 on left
-<pre><code class ="html">
+          10 on top, 5 on right, 3 on bottom, 5 on left:
+<pre><code class ="html">padding: top right bottom left;
 padding: 10px 5px 3px 5px;
-</code></pre>  
+</code></pre> 
+<p>10 on top & bottom, 5 on the sides</p>
+<pre><code class = "html">padding: top/bottom right/left;
+padding: 10px 5px;
+</code></pre> 
         </section>
        
-        <section>
-          <h3>Padding</h3>
-          <p>Four values<p>
-<pre><code class = "html">
-  padding: top right bottom left;
-</code></pre>
-          <p>Two values</p>
-<pre><code class = "html">
-  padding: top/bottom right/left;
-</code></pre>
-          <p>One value</p>
-<pre><code class = "html">
-  padding: all;
-</code></pre>
-        </section>
+       
        
         <section>
           <h3>Padding</h3>
@@ -305,29 +297,29 @@ padding: 10px 5px 3px 5px;
         
         <section>
           <h3>Border</h3>
-          <p>A solid red border</p>
+          <p>Make all the borders solid red:</p>
 <pre><code class = "html">
   border: 1px solid #ff0000;
 </code></pre>
-          <p>A thick dotted black top border</p>
+          <p>Assign each border individually:</p>
 <pre><code class ="html">
-  border-top: 4px dotted #000000;
+  border-top: 1px solid #000000;
+  border-bottom: 2px dotted #000000;
+  border-left: 3px dashed #000000;
+  border-right: 4px ridge #000000;
 </code></pre>
-          <p>Two diﬀerent border styles</p>
+<p>Assign each attribute individually:</p>
 <pre><code class ="html">
-  border-top: 1px solid #ff0000;
-  border-bottom: 4px dotted #000000;
+  border-width: 10px 
+  border-style: dotted;
+  border-color: #000000;
 </code></pre>
         </section>
        
         <section>
-          <h3>Border - Other Properties</h3>
-<pre><code class ="html">
-  border-width: 10px;
-  border-style: dashed;
-  border-color: #666666;
-</code></pre>
-          <p>You can specify each property separately, or all three together.</p>
+          <h3>Border Styles</h3>
+<img src="images/border-styles.jpg" alt="Border style examples" style="border:none;"/>
+<a href="http://www.w3schools.com/css/css_border.asp" target="_blank">More on borders</a>
         </section>
        
         <!-- Margin -->
@@ -339,17 +331,22 @@ padding: 10px 5px 3px 5px;
         
         <section>
           <h3>Margin</h3>
-          <p>15 pixels on all sides</p>
-<pre><code class = "html">
-  margin: 15px;
+          <p>15 pixels on all sides:</p>
+<pre><code class = "html">  margin: 15px;
 </code></pre>
-          <p>10 on top, 5 on right, 3 on bottom, 5 on left</p>
-<pre><code class ="html">
+          <p>Each side assigned individually:</p>
+<pre><code class = "html">  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+</code></pre>
+          <p>Assign each side in one line</p>
+<pre><code class ="html">  margin: top right bottom left
   margin: 10px 5px 3px 5px;
 </code></pre>
-          <p>10 pixels on top</p>
-<pre><code class = "html">
-  margin-top: 10px;
+<p>Assign top & bottom together, and sides together</p>
+<pre><code class ="html">  margin: top/bottom right/left
+  margin: 10px 5px;
 </code></pre>
         </section>
         
@@ -367,6 +364,7 @@ padding: 10px 5px 3px 5px;
   margin-right: 5px;
   width: 300px;
 </code></pre>
+<img src="images/auto-margins.jpg" alt="Auto margins example" style="border:none;"/>
         </section>
         
         <!-- Exercise-->
@@ -380,13 +378,17 @@ padding: 10px 5px 3px 5px;
 		<section>
 			<h3>Property: Width</h3>
 			<p>Sets the width of an element.</p>
-			<p>Does not include padding or borders, remember these add to the width.</p>
+      <pre><code class = "html">  width: 300px;
+</code></pre>
+      <img src="images/box-model-width.png" alt="Box Model Width"/>
 		</section>
 		<!-- height-->
 		<section>
 			<h3>Property: Height</h3>
 			<p>Sets the height of an element.</p>
-			<p>Does not include padding or borders, remember these add to the width.</p>
+      <pre><code class = "html">  height: 300px;
+</code></pre>
+      <img src="images/box-model-height.png" alt="Box Model Height"/>
 		</section>
 		<!-- Exercise -->
 		<section>
