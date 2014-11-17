@@ -33,6 +33,9 @@
         top:0%;
         margin-top:0px;
       }
+      .reveal code.long{
+          max-height:none;
+      }
     </style>
 	</head>
 
@@ -66,7 +69,68 @@
             <p style="margin-top:30px;"><a href="http://gdi-tri-cities.github.io/gdi-core-html-css/">http://gdi-tri-cities.github.io/gdi-core-html-css/</a></p>
           </div>
         </section>
-        
+        <!-- Review of first session -->
+        <section>
+          <h3>Review - HTML Page Layout</h3>
+              <pre><code class="html long">&lt;!DOCTYPE html>
+&lt;html lang="en"> 
+  &lt;head>
+    &lt;title>Page Title&lt;/title>
+    &lt;link rel="stylesheet" type="text/css" href="style.css"/>
+    &lt;style type="text/css">&lt;/style>
+  &lt;/head>
+  &lt;body>
+    &lt;p>...&lt;/p>
+    &lt;img src="picture.jpg" alt="alternate text"/>
+    &lt;h1>Heading 1&lt;/h1>
+    &lt;em>Emphasized&lt;/em>
+    &lt;strong>Important&lt;/strong>
+    &lt;br/>
+    &lt;a href="url">Link&lt;/a>
+    &lt;ul>
+      &lt;li>unordered list item&lt;/li>
+    &lt;/ul>
+    &lt;ol>
+      &lt;li>ordered list item&lt;/li>
+    &lt;/ol>
+    &lt;table>
+      &lt;tr>
+        &lt;td>&lt;/td>
+      &lt;/tr>
+    &lt;/table>
+  &lt;/body>
+&lt;/html> </code></pre>
+        </section>
+        <section>
+          <h3>Review - The CSS Rule</h3>
+          <img src="images/cssrule.png" alt="The CSS Rule" style="border: none; box-shadow: none;" height="360px" />
+          
+         </section>
+         <section>
+            <h3>Review - Selectors and properties</h3>
+
+            <div class="left">
+              <p>Types of selectors</p>
+               <ul>
+                <li>p</li>
+                <li>p a</li>
+                <li>p, h1, a</li>
+                <li>#identifier</li>
+                <li>.classname</li>
+               </ul>
+            </div>
+            <div class="right">
+              <p>Properties</p>
+               <ul>
+                <li>color</li>
+                <li>background-color</li>
+                <li>font-family</li>
+                <li>font-size</li>
+                <li>font-style</li>
+                <li>font-weight</li>
+               </ul>
+            </div>
+         </section>
          <section>
         	<h3>What We'll Be Developing Today</h3>
         	<div class="left" style="width: 45%;">
@@ -76,16 +140,7 @@
         		<img src="images/session2site.png" height="480px">
         	</div>
         </section>
-       <section>
-          <h3>The CSS Rule</h3>
-          <img src="images/cssrule.png" alt="The CSS Rule" style="border: none; box-shadow: none;" height="360px" />
-           
-           <pre><code class = "html">
- selector {
-   property: value;
- }
- </code></pre>
-         </section>
+       
         <!-- Inline vs. block-->
         <section>
           <h3>Inline vs Block</h3>
@@ -280,12 +335,12 @@ padding: 10px 5px;
        
        
         <section>
-          <h3>Padding</h3>
+          <h3>Padding</h3>p                                                                                                                                
 <pre><code class ="html">
   padding: 10px 20px 30px 40px;
 </code></pre>
         <img src ="images/box-model-padding2.png"/>
-        </section>
+        </section>                    
        
         <!-- Border-->
         <section>
