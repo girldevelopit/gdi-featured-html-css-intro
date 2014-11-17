@@ -41,12 +41,12 @@ div#header, div#footer{
 div#content{
 	background-color: #fff;
 	padding: 10px;
-	width: 60%;
+	/*width: 60%;*/
 }
 div#sidebar{
-	width: 35%;
+	/*width: 35%;*/
 	background-color: yellow;
-	float: right;
+	/*float: right; we haven't learned this yet*/
 }
 
 .center{

@@ -133,12 +133,9 @@
          </section>
          <section>
         	<h3>What We'll Be Developing Today</h3>
-        	<div class="left" style="width: 45%;">
-        		<p>Today we will be creating a site from scratch using divs and spans to create a header, footer, sidebar and a content area.</p>
-        	</div>
-        	<div class="right" style="width: 45%;">
-        		<img src="images/session2site.png" height="480px">
-        	</div>
+        		<p>Today we will be creating a standard page layout using divs and spans to create a header, footer, navigation, and content area.</p>
+
+        		<img src="images/class3exercise.jpg">
         </section>
        
         <!-- Inline vs. block-->
@@ -216,31 +213,32 @@
         </section> 
         <section>
           <h3>Let's Develop It</h3>
-          <div class="left-align">
-         <p>Let's create a web page using divs to separate content into different sections on our page.</p>
-         <p>Create a header, content area, sidebar, and a footer.</p>
-         <p>Create some CSS to give it character!  </p>
-         </div>
-         <pre><code class="html">&lt;!DOCTYPE html>
+          <div class="left-align ">
+         <p>Start a new web page with the below layout.</p>
+         <p>Add some content and CSS to give it character!  </p>
+         <pre style="margin:0px;"><code class="html">&lt;!DOCTYPE html>
 &lt;html lang="en"> 
   &lt;head>
-    &lt;style type="text/css">...&lt;/style>
+    &lt;link rel="stylesheet" type="text/css" href="style.css"/>
   &lt;/head>
   &lt;body>
     &lt;div id="header">...&lt;/div>
-    &lt;div id="sidebar">...&lt;/div>
+    &lt;div id="navigation">...&lt;/div>
     &lt;div id="content">...&lt;/div>
     &lt;div id="footer">...&lt;/div>
   &lt;/body>
-&lt;/html></code></pre>       
-        </section> 
-        <section>
+&lt;/html></code></pre>
+</div>
+          
+        </section>
+        <!-- not sure what this section is for. Couldn't find it looking at the history of checkins so don't know when it was added. --> 
+        <!--section>
           <h3>Positioning</p>
             <p>CSS provides an number of schemes to position elements on the page</p>
             <p>Position rules can have a number of values.</p>
             <p>When add</p>
 
-        </section>
+        </section-->
      
         <!-- Span -->
         <section>
@@ -270,7 +268,7 @@
           <div class ="left left-align" style="width:50%">
           <p>Changing the format of a link when you hover over it is accomplished by using pseudo-classes.</p>
           <br/>
-          <p>CSS pseudo-classes are used to add special effects to some selectors.</p>
+          <p>CSS pseudo-classes are used to select tags in a certain state.</p>
           </div>
           Syntax:	
 <pre><code class ="html">
@@ -304,7 +302,14 @@ a:link
         <!-- Exercise-->
         <section>
           <h3>Let's Develop It</h3>
-          <p>Add pseudo classes to your links</p>
+          <p>Add a list of links to your navigation area</p>
+          <p>Style your links using psuedo classes</p>
+          <pre><code class ="html">  a {text-decoration: underline;}
+  a:link  {} /* unvisited link */
+  a:visited {} /* visited link */
+  a:hover {} /* mouse over link */
+  a:active  {} /* selected link */
+</code></pre>
         </section>
         
         <!-- Box model-->
@@ -343,13 +348,10 @@ padding: 10px 5px 3px 5px;
 padding: 10px 5px;
 </code></pre> 
         </section>
-       
-       
-       
+
         <section>
-          <h3>Padding</h3>p                                                                                                                                
-<pre><code class ="html">
-  padding: 10px 20px 30px 40px;
+          <h3>Padding</h3>                                
+<pre><code class ="html">  padding: 10px 20px 30px 40px;
 </code></pre>
         <img src ="images/box-model-padding2.png"/>
         </section>                    
@@ -385,7 +387,7 @@ padding: 10px 5px;
         <section>
           <h3>Border Styles</h3>
 <img src="images/border-styles.jpg" alt="Border style examples" style="border:none;"/>
-<a href="http://www.w3schools.com/css/css_border.asp" target="_blank">More on borders</a>
+<a href="http://www.w3schools.com/css/css_border.asp" target="_blank">Border definition</a>
         </section>
        
         <!-- Margin -->
@@ -420,25 +422,29 @@ padding: 10px 5px;
           <h3>Auto Margin</h3>
           <p>If a margin is set to auto on a box that has width, it will take up as much space as possible.</p>
           <p>CENTERED</p>
-<pre><code class ="html">
-  margin: auto;
+<pre><code class ="html">  margin: auto;
   width: 300px;
 </code></pre>
           <p>FLUSH-RIGHT</p>
-<pre><code class = "html">
-  margin-left: auto;
+<pre><code class = "html">  margin-left: auto;
   margin-right: 5px;
   width: 300px;
 </code></pre>
 <img src="images/auto-margins.jpg" alt="Auto margins example" style="border:none;"/>
         </section>
         
-        <!-- Exercise-->
         <!-- Exercise -->
 		<section>
 			<h3>Let's Develop it!</h3>
-			<p>Let's add some padding, borders, and margins to our divs.</p>
-			<p>Let's center our entire document in the browser.</p>
+			<p>Add some padding, borders, and margins to your divs.</p>
+			<p>Center your entire document in the browser.</p>
+      <pre><code class ="html">  margin: auto;
+  margin: top right bottom left;
+  border: width style color;
+  padding: top right bottom left;
+
+  &lt;div id="wrapper">...&lt;/div>
+</code></pre>
 		</section>
         <!-- Width-->
 		<section>
@@ -460,7 +466,7 @@ padding: 10px 5px;
 		<section>
 			<h3>Let's develop it!</h3>
 			<div class="left-align">
-				<p>Add a width &amp; height to our divs.</p>
+				<p>Add a width &amp; height to your divs.</p>
 				<p>Use IDs to target each div with CSS</p>
 			</div>
 		</section>
