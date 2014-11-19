@@ -15,7 +15,7 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 		<link rel="stylesheet" href="reveal/css/reveal.css">
-		<link rel="stylesheet" href="reveal/css/theme/gdidefault.css" id="theme">
+		<link rel="stylesheet" href="reveal/css/theme/gdilight.css" id="theme">
 
 		<!-- For syntax highlighting -->
 		<!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
@@ -24,7 +24,11 @@
 		<!-- If use the PDF print sheet so students can print slides-->
 		
 		<link rel="stylesheet" href="reveal/css/print/pdf.css" type="text/css" media="print">
-
+    <style type="text/css"  >
+.reveal code.long{
+          max-height:none;
+      }
+      </style>
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
@@ -57,7 +61,89 @@
           </ul>
           </div>
         </section>
-        
+        <!-- Review of first session -->
+        <section>
+          <h3>Review - HTML Page Layout</h3>
+              <pre><code class="html long">&lt;!DOCTYPE html>
+&lt;html lang="en"> 
+  &lt;head>
+    &lt;title>Page Title&lt;/title>
+    &lt;link rel="stylesheet" type="text/css" href="style.css"/>
+    &lt;style type="text/css">&lt;/style>
+  &lt;/head>
+  &lt;body>
+    &lt;p>...&lt;/p>
+    &lt;img src="picture.jpg" alt="alternate text"/>
+    &lt;h1>Heading 1&lt;/h1>
+    &lt;em>Emphasized&lt;/em>
+    &lt;strong>Important&lt;/strong>
+    &lt;br/>
+    &lt;a href="url">Link&lt;/a>
+    &lt;ul>
+      &lt;li>unordered list item&lt;/li>
+    &lt;/ul>
+    &lt;ol>
+      &lt;li>ordered list item&lt;/li>
+    &lt;/ol>
+    &lt;table>
+      &lt;tr>
+        &lt;td>&lt;/td>
+      &lt;/tr>
+    &lt;/table>
+
+  &lt;/body>
+&lt;/html> </code></pre>
+        </section>
+        <section>
+          <h3>Review - The CSS Rule</h3>
+          <img src="images/cssrule.png" alt="The CSS Rule" style="border: none; box-shadow: none;" height="360px" />
+          
+         </section>
+         <section>
+            <h3>Review - Selectors and properties</h3>
+
+            <div class="left">
+              <p>Types of selectors</p>
+               <ul>
+                <li>p</li>
+                <li>p a</li>
+                <li>p, h1, a</li>
+                <li>#identifier</li>
+                <li>.classname</li>
+               </ul>
+            </div>
+            <div class="right">
+              <p>Properties</p>
+               <ul>
+                <li>color</li>
+                <li>background-color</li>
+                <li>font-family</li>
+                <li>font-size</li>
+                <li>font-style</li>
+                <li>font-weight</li>
+               </ul>
+            </div>
+         </section>
+         <section>
+            <h3>Review - Class 3</h3>
+            <p>Div's and Spans</p>
+            <pre><code>    &lt;div>&lt;/div>
+    &lt;span>&lt;/span></code></pre>
+<p>pseudo-classes</p>
+  <pre><code>  a:link  {color:#FF0000;} /* unvisited link */
+  a:visited {color:#00FF00;} /* visited link */
+  a:hover {color:#FF00FF;} /* mouse over link */
+  a:active  {color:#0000FF;} /* selected link */
+            </code></pre>
+            <p>width & height</p>
+            <pre><code> width: 50px;
+ height: 50px; </code></pre>
+         </section>
+         <!-- Box model-->
+        <section>
+          <h3>Review - Box Model</h3>
+          <img src ="images/box-model.png"/>
+        </section>
         <section>
          <h3>Static Positioning</h3>
          <div class = "left-align">
