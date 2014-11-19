@@ -33,6 +33,9 @@
         top:0%;
         margin-top:0px;
       }
+      .reveal code.long{
+          max-height:none;
+      }
     </style>
 	</head>
 
@@ -65,6 +68,38 @@
           <div>
             <p style="margin-top:30px;"><a href="http://gdi-tri-cities.github.io/gdi-core-html-css/">http://gdi-tri-cities.github.io/gdi-core-html-css/</a></p>
           </div>
+        </section>
+        <!-- Review of first session -->
+        <section>
+          <h3>Review - HTML Page Layout</h3>
+              <pre><code class="html long">&lt;!DOCTYPE html>
+&lt;html lang="en"> 
+  &lt;head>
+    &lt;title>Page Title&lt;/title>
+    &lt;link rel="stylesheet" type="text/css" href="style.css"/>
+    &lt;style type="text/css">&lt;/style>
+  &lt;/head>
+  &lt;body>
+    &lt;p>...&lt;/p>
+    &lt;img src="picture.jpg" alt="alternate text"/>
+    &lt;h1>Heading 1&lt;/h1>
+    &lt;em>Emphasized&lt;/em>
+    &lt;strong>Important&lt;/strong>
+    &lt;br/>
+    &lt;a href="url">Link&lt;/a>
+    &lt;ul>
+      &lt;li>unordered list item&lt;/li>
+    &lt;/ul>
+    &lt;ol>
+      &lt;li>ordered list item&lt;/li>
+    &lt;/ol>
+    &lt;table>
+      &lt;tr>
+        &lt;td>&lt;/td>
+      &lt;/tr>
+    &lt;/table>
+  &lt;/body>
+&lt;/html> </code></pre>
         </section>
         <!-- CSS Review - Id and Class -->
        <section>
@@ -232,7 +267,7 @@
           </ul>
         </div>
       	<div class="right" style="width: 45%;">
-      		<img src="images/session2site.png" height="480px">
+        		<img src="images/class3exercise.jpg">
       	</div>
       </section>
     
@@ -272,17 +307,15 @@
               &lt;h1&gt;Loren Ipsum&lt;h1&gt;
           &lt;/div&gt;
           </code></pre>
-          <pre><code>
+          <pre><code class="html">
           &lt;div class="sub-content"&gt;
                 &lt;p&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit&lt;/p&gt;
                 &lt;p&gt;Sed do eiusmod tempor incididunt ut labore et dolore.&lt;/p&gt;
           &lt;/div&gt;    
           &lt;div&gt;
-               &lt;p&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit&lt;/p&gt;
-               &lt;p&gt;Sed do eiusmod tempor incididunt ut labore et dolore.&lt;/p&gt; &lt;p&gt;
-               &lt;p&gt;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit&lt;/p&gt;
-               &lt;p&gt;Sed do eiusmod tempor incididunt ut labore et dolore.&lt;/p&gt;
-          &lt;/div&gt;
+		  		&lt;p&gt;Magna aliqua. Ut enim ad minim veniam.&lt;/p&gt;
+		   		&lt;p&gt;Quis nostrud exercitation ullamco.&lt;/p&gt; 
+		  &lt;/div&gt;
           </code></pre>
       </section>
 <!-- Div continued -->
@@ -315,9 +348,20 @@
       <section>
         <h3>Let's Develop It</h3>
         <div class="left-align">
-         <p>Let's create a web page using divs to separate content into different sections on our page.</p>
-         <p>Create a header, content area, sidebar, and a footer.</p>
-         <p>Create some CSS to give it character!
+         <p>Start a new web page with the below layout.</p>
+         <p>Add some content and CSS to give it character!  </p>
+         <pre style="margin:0px;"><code class="html">&lt;!DOCTYPE html>
+			&lt;html lang="en"> 
+			  &lt;head>
+			    &lt;link rel="stylesheet" type="text/css" href="style.css"/>
+			  &lt;/head>
+			  &lt;body>
+			    &lt;div id="header">...&lt;/div>
+			    &lt;div id="navigation">...&lt;/div>
+			    &lt;div id="content">...&lt;/div>
+			    &lt;div id="footer">...&lt;/div>
+			  &lt;/body>
+&lt;/html></code></pre>
        </div>         
       </section> 
    
@@ -345,6 +389,10 @@
       <section>
         <h3>Pseudo-classes: More Style for Links</h3>
         <div class ="left left-align" style="width:50%">
+          <p>Changing the format of a link when you hover over it is accomplished by using pseudo-classes.</p>
+          <br/>
+          <p>CSS pseudo-classes are used to select tags in a certain state.</p>
+          </div>
         <p>Syntax:</p>
         <pre><code class ="html">
         selector:pseudo-class
@@ -384,8 +432,15 @@
       <!-- Exercise-->
       <section>
         <h3>Let's Develop It</h3>
-        <p>Add pseudo-classes for your links</p>
-      </section>
+          <p>Add a list of links to your navigation area</p>
+          <p>Style your links using psuedo classes</p>
+          <pre><code class ="html">  a {text-decoration: underline;}
+		  a:link  {} /* unvisited link */
+		  a:visited {} /* visited link */
+		  a:hover {} /* mouse over link */
+		  a:active  {} /* selected link */
+		</code></pre>
+	 </section>
       
       <!-- Box model-->
       <section>
@@ -463,7 +518,7 @@
       <section>
         <h3>Border Styles</h3>
         <img src="images/border-styles.jpg" alt="Border style examples" style="border:none;"/>
-        <a href="http://www.w3schools.com/css/css_border.asp" target="_blank">More on borders</a>
+        <a href="http://www.w3schools.com/css/css_border.asp" target="_blank">Border definition</a>
       </section>
      
       <!-- Margin -->
@@ -516,8 +571,15 @@
       <!-- Exercise -->
 	<section>
 		<h3>Let's Develop it!</h3>
-		<p>Let's add some padding, borders, and margins to our divs.</p>
-		<p>Let's center our entire document in the browser.</p>
+			<p>Add some padding, borders, and margins to your divs.</p>
+			<p>Center your entire document in the browser.</p>
+      	<pre><code class ="html">  margin: auto;
+		  margin: top right bottom left;
+		  border: width style color;
+		  padding: top right bottom left;
+
+  		  &lt;div id="wrapper"&gt;...&lt;/div&gt;
+		</code></pre>
 	</section>
       <!-- Width-->
 	<section>
@@ -539,7 +601,7 @@
 	<section>
 		<h3>Let's develop it!</h3>
 		<div class="left-align">
-			<p>Add a width &amp; height to our divs.</p>
+			<p>Add a width &amp; height to your divs.</p>
 			<p>Use IDs to target each div with CSS</p>
 		</div>
 	</section>

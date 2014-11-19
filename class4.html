@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Class 4 ~ HTML/CSS ~ Girl Develop IT</title>
+		<title>Class 4 ~ HTML/CSS ~ Girl Develop It Tri-Cities</title>
 
 		<meta name="description" content="This is the official Girl Develop It Core HTML/CSS curriculum. It was developed through the contributions of Pamela Fox, Alexis Goldstein, Erin M. Kidwell, Izzy Johnston, and Jen Myers.
 
@@ -15,7 +15,7 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 		<link rel="stylesheet" href="reveal/css/reveal.css">
-		<link rel="stylesheet" href="reveal/css/theme/gdidefault.css" id="theme">
+		<link rel="stylesheet" href="reveal/css/theme/gdilight.css" id="theme">
 
 		<!-- For syntax highlighting -->
 		<!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
@@ -28,6 +28,16 @@
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
+    <style type="text/css">
+      .notes{display:none;}
+      .reveal .slides{
+        top:0%;
+        margin-top:0px;
+      }
+      .reveal code.long{
+          max-height:none;
+      }
+    </style>
 	</head>
 
 	<body>
@@ -38,56 +48,164 @@
 			<div class="slides">
 			  <!-- Opening slide -->
         <section>
-          <img src = "images/gdi_logo_badge.png">
-          <h3>Beginning HTML and CSS</h3>
-          <h4>Class 4</h4>
+          <img src = "images/gdi-tricities.jpg" width="360" height="360">
+          <h3>Build Your Own Website: <br />Intro to HTML and CSS</h3>
+          <h4>Class 3</h4>
         </section>
         
         <!-- Welcome-->
         <section>
           <h3>Welcome!</h3>
           <div class = "left-align">
-          <p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
-          <p class ="green">Some "rules"</p>
-          <ul>
-            <li>We are here for you!</li>
-            <li>Every question is important</li>
-            <li>Help each other</li>
-            <li>Have fun</li>
-          </ul>
+            <p>Girl Develop It is here to help you learn software through accessible mentorship and affordable hands-on instruction.</p>
+            <p class ="pink">Some "rules"</p>
+            <ul>
+              <li>Use us as resources</li>
+              <li>Ask every question</li>
+              <li>Help each other</li>
+              <li>Have fun</li>
+            </ul>
+          </div>
+          <div>
+            <p style="margin-top:30px;"><a href="http://gdi-tri-cities.github.io/gdi-core-html-css/">http://gdi-tri-cities.github.io/gdi-core-html-css/</a></p>
           </div>
         </section>
-        
+        <!-- Review of first session -->
         <section>
-         <h3>Static Positioning</h3>
-         <div class = "left-align">
-         <p>HTML elements are positioned static by default.</p>
-         <p>Static elements are positioned in the normal ﬂow of the page</p>
-         <p>Static elements ignore top, bottom, right or left property specifications.</p>
-         </div>
-       </section>
-       
+          <h3>Review - HTML Page Layout</h3>
+              <pre><code class="html long">&lt;!DOCTYPE html>
+&lt;html lang="en"> 
+  &lt;head>
+    &lt;title>Page Title&lt;/title>
+    &lt;link rel="stylesheet" type="text/css" href="style.css"/>
+    &lt;style type="text/css">&lt;/style>
+  &lt;/head>
+  &lt;body>
+    &lt;p>...&lt;/p>
+    &lt;img src="picture.jpg" alt="alternate text"/>
+    &lt;h1>Heading 1&lt;/h1>
+    &lt;em>Emphasized&lt;/em>
+    &lt;strong>Important&lt;/strong>
+    &lt;br/>
+    &lt;a href="url">Link&lt;/a>
+    &lt;ul>
+      &lt;li>unordered list item&lt;/li>
+    &lt;/ul>
+    &lt;ol>
+      &lt;li>ordered list item&lt;/li>
+    &lt;/ol>
+    &lt;table>
+      &lt;tr>
+        &lt;td>&lt;/td>
+      &lt;/tr>
+    &lt;/table>
+  &lt;/body>
+&lt;/html> </code></pre>
+        </section>
+        <!-- CSS Review -->
        <section>
-         <h3>Static Positioning</h3>
-         <p>In normal flow, inline boxes flow from left to right, wrapping to next line when needed.</p>
-<pre><code class = "html">
-&lt;img src="images/cookie1.png"/>
-&lt;img src="images/cookie2.png"/>
-&lt;img src="images/cookie3.png"/>
-...
-&lt;img src="images/cookie2.png"/>
-&lt;img src="images/cookie3.png"/>
+          <h3>CSS Review</h3>
+          <h3>CSS Review - The CSS Rule</h3>
+          <img src="images/cssrule.png" alt="The CSS Rule" style="border: none; box-shadow: none;" height="360px" />
+         </section>
+      </section> 
+      <!-- CSS Review - Rules -->
+      <section>
+        <h3>CSS Review - Declarations</h3>
+        <pre><code class = "html">
+          p {
+            font-style: italic;
+            font-weight: bold;
+            font-size: 10px;
+            font-family: Arial, Verdana, sans-serif;
+          }
+        </code></pre>
+        <pre><code class = "html">
+          p {
+            font: italic bold 10px sans-serif;
+          }
+       </code></pre>
+       <pre><code class = "html">
+          p {
+            color: rgb(102,205,170);
+          }
+          p{
+            color: #66cdaa;
+          }
+          P {
+            color: MediumAquaMarine;
+          }
+       </code></pre>     
+    </section>
+    <section>
+    <!-- Cascading -->
+    <section>
+      <h3>CSS Review - Cascading</h3>
+      <ul>
+        <li>Inheritance
+         <ul>
+          <li>Auto inheritance: <em>like</em> font-family, color</li>
+          <li>No inheritance: <em>like</em> background-color, border</li>
+          <li>Forced inheritance: <strong>inherit</strong> value keyword</li>
+        </ul></li>
+        <li>Precedence
+          <ol>
+            <li><strong>important!</strong> keyword</li>
+            <li>Inline styles</li>
+            <li>Last rule</li>
+            <li>Selector specificity
+              <ol>
+                <li>Id</li>
+                <li>Class</li>
+                <li>Element</li>
+              </ol>
+            </li>
+          </ol>
+    </section>
+	<section>
+		<h3>CSS Review - Divs, Spans, Box Model</h3>
+      		<ul>
+            <li>New tags: &lt;div&gt; and &lt;span&gt;</li>
+            <li>Pseudo-classes</li>
+            <li>Box model 
+              <ul>
+                <li>borders</li>
+                <li>margins</li>
+                <li>padding</li>
+              </ul>
+            </li>
+            <li>Sizing: width and height</li>
+          </ul>
+	</section>
+	<section>
+		<h3>Static Positioning</h3>
+		<div class = "left-align">
+			<p>HTML elements are positioned static by default.</p>
+			<p>Static elements are positioned in the normal ﬂow of the page</p>
+			<p>Static elements ignore top, bottom, right or left property specifications.</p>
+		</div>
+	</section>
+	<section>
+		<h3>Static Positioning</h3>
+		<p>In normal flow, inline boxes flow from left to right, wrapping to next line when needed.</p>
+		<pre><code class = "html">
+		&lt;img src="images/cookie1.png"/>
+		&lt;img src="images/cookie2.png"/>
+		&lt;img src="images/cookie3.png"/>
+		...
+		&lt;img src="images/cookie2.png"/>
+		&lt;img src="images/cookie3.png"/>
 
-</code></pre>
-<img src="images/cookie1.png"/>
-<img src="images/cookie2.png"/>
-<img src="images/cookie3.png"/>
-<img src="images/cookie1.png"/>
-<img src="images/cookie2.png"/>
-<img src="images/cookie3.png"/>
-<img src="images/cookie2.png"/>
-<img src="images/cookie3.png"/>
-       </section>
+		</code></pre>
+		<img src="images/cookie1.png"/>
+		<img src="images/cookie2.png"/>
+		<img src="images/cookie3.png"/>
+		<img src="images/cookie1.png"/>
+		<img src="images/cookie2.png"/>
+		<img src="images/cookie3.png"/>
+		<img src="images/cookie2.png"/>
+		<img src="images/cookie3.png"/>
+	</section>
        
        <section>
          <h3>Static Positioning</h3>
@@ -103,7 +221,22 @@
           <p>Hi there!</p>
         </div>
       </section>
-       
+      <section>
+	  <div class="left" style="width: 45%;">
+      		<ul>
+            <li>New tags: &lt;div&gt; and &lt;span&gt;</li>
+            <li>Pseudo-classes</li>
+            <li>Box model 
+              <ul>
+                <li>borders</li>
+                <li>margins</li>
+                <li>padding</li>
+              </ul>
+            </li>
+            <li>Sizing: width and height</li>
+          </ul>
+        </div>
+		 
        <!-- Relative Positioning-->
        <section>
          <h3>Relative Positioning</h3>
