@@ -409,10 +409,10 @@
          <h3>Float</h3>
          <div class = "left-align">
             <ul>
-            <li>"Floating" an element takes it in the normal flow, as far to the left or right of it's containing element as possible.</li>
+            <li>Elements can be floated left or right.</li>
             <li>Any other elements, such as paragraphs or lists, will wrap around the floated element.</li>
-            <li>Always specify a width when floating an element, otherwise the element is likely to take up the whole page and not appear floated.</li>
-            <li>You can specify a) whether an element is floated or not, and b) which side it ﬂoats on.</li>
+            <li>Specify a width if the element is likely to stretch accross the page.</li>
+            <li>Clear the float to stop elements wrapping.</li>
             </ul>
          </div>
        </section>
@@ -442,7 +442,7 @@
        
        <section>
        <h3>Using floats to place elements side by side</h3> 
-       <p>If you want two block level elements to be side by side, you need to float both elements. One left, and one right.</p>
+       <p>If you want two block level elements to be side by side, you need to float both elements.</p>
        <img src="images/example-float-column.png" />
        </section>
        <!-- Clear-->
@@ -473,9 +473,8 @@
    }
  </code></pre>
          <div style ="float:left;width:50px;background:yellow; color:black; ">
-           hi<br/>
-           hi<br/>
-           hi<br/>
+           Hi, I'm a yellow box with black text.<br/>
+          I like to hang out on the left side.
          </div>
          <div class = "left-align">Not floating element</div>
          <div class = "left-align">Not floating element</div>
@@ -485,7 +484,18 @@
         <!-- Exercise-->
        <section>
          <h3>Let's Develop It</h3>
-         <p>Let's float our side bar and content areas.</p>
+         <p>Let's float our navigation and content areas.</p>
+         <p>Clear the float on the footer to keep it below the content.</p>
+         <pre class="fragment"><code>#navigation{ 
+  float:left;
+  width:300px;
+}
+#content{
+  float:right;
+  width:500px;
+}
+#footer{ clear:both;}
+         </code> </pre>
        </section>       
        <!-- Question-->
         <section>
