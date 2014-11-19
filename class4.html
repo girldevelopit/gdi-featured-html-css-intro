@@ -147,9 +147,10 @@
         <section>
          <h3>Static Positioning</h3>
          <div class = "left-align">
-         <p>HTML elements are positioned static by default.</p>
-         <p>Static elements are positioned in the normal ﬂow of the page</p>
-         <p>Static elements ignore top, bottom, right or left property specifications.</p>
+          <pre><code>position:static;</code></pre>
+         <p>Default value.</p>
+         <p>Elements render in normal order</p>
+         <p>Ignores top, bottom, left, right css declarations</p>
          </div>
        </section>
        
@@ -195,19 +196,20 @@
          <h3>Relative Positioning</h3>
          <div class = "left-align">
          <ul>
-         <li>Takes the element out of the normal flow, allowing it to be moved to the top, left, right or bottom. </li>
+         <li>Takes the element out of the normal flow</li>
+         <li>Top, left, right and bottom move the element relative to itself. </li>
          <li>Does not affect the elements surrounding it.</li>
-         <li>Makes an element a "positioning context" in which to position other elements relative to it.</li>
-         <li>Relative positioning and absolute positioning are used together.</li>
+         <li>Makes an element a "positioning context".</li>
+
          </ul>
          </div>
        </section>
        
        <section>
          <h3>Relative Positioning</h3>
-         <p>The "relative" value will still put the element in the normal flow, but then offset it according to top/left/right/bottom properties.</p>
+         <!--p>The "relative" value will still put the element in the normal flow, but then offset it according to top/left/right/bottom properties.</p-->
 
-<pre><code class = "html">
+<pre><code class = "html">&lt;style type="text/css">
   .relative{
     position: relative; 
     left: 80px; 
@@ -215,6 +217,10 @@
     height: 100px; 
     background-color: yellow;
   }
+&lt;/style>
+&lt;div style="border:2px solid black;">
+    &lt;div class="relative">Hello, hi&lt;/div>
+&lt;/div>
 </code></pre>
  <div style="border:2px solid black;">
  <div style="position: relative; left: 80px; top: 20px;
@@ -228,35 +234,35 @@
          <h3>Absolute Positioning</h3>
          <div class = "left-align">
          <ul>
-         <li>Positions element outside of the normal flow.</li>
-         <li>An absolutely positioned element is offset from its container block, positioned relative.</li>
-         <li>Its container block is the first element that has a position other than static.</li>
-         <li>If no such element is found, the container block is &lt;html>.</li>
+         <li>Pulls element outside of the normal flow.</li>
+         <li>Positioned relative to closest non-static parent.</li>
+         <li>Uses &lt;html> if no parent found.</li>
          <li>Other elements act as if it's not there.</li>
-         <li>Determined by its oﬀset values in the properties top, bottom, right and left.</li>
+         <li>Position adjusted using top, bottom, right and left.</li>
          </ul>
          </div>
        </section>
        
        <section  style="border: 1px solid black">
          <h3>Absolute Positioning</h3>
-         <p>The "absolute" value will take the element out of the normal flow and position it in relation to the window (or the closest non-static element).</p>
-<pre><code class = "html">
+         <!--p>The "absolute" value will take the element out of the normal flow and position it in relation to the window (or the closest non-static element).</p-->
+<pre><code class = "html">&lt;style type="text/css">
   .top{
     position: absolute; 
     top: -40px; 
     right: 10px; 
     background-color: yellow
   }
-</code></pre>
-<pre><code class = "html">
+
   .bottom{
     position: absolute; 
     bottom: -40px; 
     left:60px; 
     background-color: green
   }
-</code></pre>
+  &lt;/style>
+  &lt;div class="top">Up here&lt;/div>
+  &lt;div class="bottom">Down here&lt;/div></code></pre>
          <div>
          <div style="position: absolute; top: -40px; right: 10px; 
            background-color: yellow; color:black">
