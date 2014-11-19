@@ -70,41 +70,60 @@
             <p style="margin-top:30px;"><a href="http://gdi-tri-cities.github.io/gdi-core-html-css/">http://gdi-tri-cities.github.io/gdi-core-html-css/</a></p>
           </div>
         </section>
+
+        <!-- Tag -->
+
+        <section>
+          <h3>Anatomy of a Tag</h3>
+          <img src="images/tagbreakdown.png" alt="Tag breakdown" width="540" height="540" style="border: none; box-shadow: none;width:70%;" />
+        </section>   
         <!-- Review of first session -->
         <section>
-          <h3>Review - HTML Page Layout</h3>
-              <pre><code class="html long">&lt;!DOCTYPE html>
-&lt;html lang="en"> 
-  &lt;head>
-    &lt;title>Page Title&lt;/title>
-    &lt;link rel="stylesheet" type="text/css" href="style.css"/>
-    &lt;style type="text/css">&lt;/style>
-  &lt;/head>
-  &lt;body>
-    &lt;p>...&lt;/p>
-    &lt;img src="picture.jpg" alt="alternate text"/>
-    &lt;h1>Heading 1&lt;/h1>
-    &lt;em>Emphasized&lt;/em>
-    &lt;strong>Important&lt;/strong>
-    &lt;br/>
-    &lt;a href="url">Link&lt;/a>
-    &lt;ul>
-      &lt;li>unordered list item&lt;/li>
-    &lt;/ul>
-    &lt;ol>
-      &lt;li>ordered list item&lt;/li>
-    &lt;/ol>
-    &lt;table>
-      &lt;tr>
-        &lt;td>&lt;/td>
-      &lt;/tr>
-    &lt;/table>
-  &lt;/body>
-&lt;/html> </code></pre>
+          <h3>HTML Review - Page Elements</h3>
+            <pre><code class="html long">
+      &lt;!DOCTYPE html>
+        &lt;html lang="en"&gt; 
+          &lt;head&gt;
+            &lt;title&gt;Page Title&lt;/title&gt;
+            &lt;link rel="stylesheet" type="text/css" href="style.css"/&gt;
+            &lt;style type="text/css"&gt;&lt;/style&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+           ...
+          &lt;/body&gt;
+        &lt;/html&gt; 
+          </code></pre>
         </section>
+        <section>
+          <h3>Review - HTML Content Elements </h3>
+          <pre><code class="html long">
+            ...
+            &lt;div&gt;
+            &lt;p&gt;...&lt;span&gt;...&lt;/span&gt;...&lt;/p&gt;
+            &lt;img src="picture.jpg" alt="alternate text"/&gt;
+            &lt;h1&gt;Heading 1&lt;/h1&gt;
+            &lt;em&gt;Emphasized&lt;/em&gt;
+            &lt;strong&gt;Important&lt;/strong&gt;
+            &lt;br/&gt;
+            &lt;a href="url"&gt;Link&lt;/a&gt;
+            &lt;ul&gt;
+              &lt;li&gt;unordered list item&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;ol&gt;
+              &lt;li&gt;ordered list item&lt;/li&gt;
+            &lt;/ol&gt;
+            &lt;table&gt;
+              &lt;tr&gt;
+                &lt;td&gt;&lt;/td&gt;
+              &lt;/tr&gt;
+            &lt;/table&gt;
+            &lt;/div&gt;
+            ...
+          </code></pre>
+        </section>
+
         <!-- CSS Review -->
        <section>
-          <h3>CSS Review</h3>
           <h3>CSS Review - The CSS Rule</h3>
           <img src="images/cssrule.png" alt="The CSS Rule" style="border: none; box-shadow: none;" height="360px" />
          </section>
@@ -112,21 +131,16 @@
       <!-- CSS Review - Rules -->
       <section>
         <h3>CSS Review - Declarations</h3>
-        <pre><code class = "html">
-          p {
+        <pre><code class = "html">          p {
             font-style: italic;
             font-weight: bold;
             font-size: 10px;
             font-family: Arial, Verdana, sans-serif;
-          }
-        </code></pre>
-        <pre><code class = "html">
-          p {
+          }</code></pre>
+        <pre><code class = "html">          p {
             font: italic bold 10px sans-serif;
-          }
-       </code></pre>
-       <pre><code class = "html">
-          p {
+          }</code></pre>
+       <pre><code class = "html">          p {
             color: rgb(102,205,170);
           }
           p{
@@ -134,11 +148,11 @@
           }
           P {
             color: MediumAquaMarine;
-          }
-       </code></pre>     
+          }</code></pre>     
     </section>
-    <section>
+
     <!-- Cascading -->
+
     <section>
       <h3>CSS Review - Cascading</h3>
       <ul>
@@ -162,21 +176,22 @@
             </li>
           </ol>
     </section>
-	<section>
-		<h3>CSS Review - Divs, Spans, Box Model</h3>
-      		<ul>
-            <li>New tags: &lt;div&gt; and &lt;span&gt;</li>
-            <li>Pseudo-classes</li>
-            <li>Box model 
-              <ul>
-                <li>borders</li>
-                <li>margins</li>
-                <li>padding</li>
-              </ul>
-            </li>
-            <li>Sizing: width and height</li>
-          </ul>
+	 <section>
+		<h3>CSS Review - Pseudo-Classes</h3>
+      		
+        <ul style="list-style-type:none;">
+            <li>a:link    {color:#FF0000;} /* unvisited link */ </li>
+            <li>a:visited {color:#00FF00;} /* visited link */ </li>
+            <li>a:hover   {color:#FF00FF;} /* mouse over link */ </li>
+            <li>a:focus   {color:#FFFF00;} /* holding pointer over link */ </li>
+            <li>a:active  {color:#0000FF;} /* selected link */ </li>
+        </ul>
+   </section>
+   <section>
+    <h3>CSS Review - Box Model</h3>
+    <img src="images/box-model-width.png" title="Box Model" height="500px"/></li>         
 	</section>
+  <!-- New material -->
 	<section>
 		<h3>Static Positioning</h3>
 		<div class = "left-align">
