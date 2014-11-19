@@ -348,7 +348,7 @@
        </section>
        <section>
         <h3>Example: Absolute Positioning</h3>
-        <div class="left left-align" style="width: 45%;">
+        <div class="left left-align" style="width: 50%;">
         <p>Here's an example of an image with a caption absolutely positioned over top of it.</p>
         <br/>
         <p>The containing div has a position of relative, and the caption has a position of absolute.</p>
@@ -359,9 +359,9 @@
        </section>
        <section>
        <h3>Z-index</h3>
-         <p class="left-align">When you use positioning to move elements out of the normal flow of content, elements can overlap. You can change the order of overlapping with z-index.</p>
+         <p class="left-align">When you use positioning elements can overlap. You can change the order of overlapping with z-index.</p>
          <p class="left-align">The element with highest z-index goes on top.</p>
-<pre><code class ="html">
+<pre><code class ="html left">
   .bottom{
     position: absolute; 
     bottom: 10px; 
@@ -369,7 +369,7 @@
     background-color: yellow;
   }
 </code></pre>
-<pre><code class ="html">
+<pre><code class ="html right">
   .top{
     position: absolute; 
     bottom: 15px; 
@@ -378,16 +378,31 @@
     z-index: 2;
   }
 </code></pre>
-        <div style="position: absolute; bottom: -20px; left:60px; 
+        <div style="position: absolute; bottom: 20px; left:60px; 
           background-color: yellow; color:black"> Bottom </div>
-        <div style="position: absolute; bottom: -15px; left:60px; 
+        <div style="position: absolute; bottom: 45px; left:50px; 
           background-color: green; z-index: 2; "> Top </div>
        </section>
        <section>
         <h3>Let's Develop it!</h3>
-        <p>Let's add some positioning.</p>
         <p>Let's create a div that contains an image and a caption, and position the caption absolutely overtop the image.</p>
-        
+        <pre class="fragment"><code>
+          &lt;div class="captionImage">
+            &lt;img src=""/>
+            &lt;p class="caption"> my caption text&lt;/p>
+          &lt;/div>
+        </code> </pre>
+        <pre class="fragment"><code>
+          &lt;style type="text/css">
+            .captionImage{ position:relative; }
+            .caption {
+              position:absolute;
+              left: 10px;
+              top: 10px;
+              background-color:white;
+          }
+          &lt;/style>
+        </code> </pre>
        </section>
        <!-- Float-->
        <section>
