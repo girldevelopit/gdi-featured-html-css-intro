@@ -24,7 +24,11 @@
 		<!-- If use the PDF print sheet so students can print slides-->
 		
 		<link rel="stylesheet" href="reveal/css/print/pdf.css" type="text/css" media="print">
-
+    <style type="text/css"  >
+.reveal code.long{
+          max-height:none;
+      }
+      </style>
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
@@ -50,7 +54,7 @@
         <section>
           <img src = "images/gdi-tricities.jpg" width="360" height="360">
           <h3>Build Your Own Website: <br />Intro to HTML and CSS</h3>
-          <h4>Class 3</h4>
+          <h4>Class 4</h4>
         </section>
         
         <!-- Welcome-->
@@ -177,8 +181,7 @@
           </ol>
     </section>
 	 <section>
-		<h3>CSS Review - Pseudo-Classes</h3>
-      		
+		<h3>CSS Review - Pseudo-Classes</h3>    		
         <ul style="list-style-type:none;">
             <li>a:link    {color:#FF0000;} /* unvisited link */ </li>
             <li>a:visited {color:#00FF00;} /* visited link */ </li>
@@ -187,40 +190,41 @@
             <li>a:active  {color:#0000FF;} /* selected link */ </li>
         </ul>
    </section>
+   <!-- Box Model -->
    <section>
     <h3>CSS Review - Box Model</h3>
     <img src="images/box-model-width.png" title="Box Model" height="500px"/></li>         
-	</section>
-  <!-- New material -->
-	<section>
-		<h3>Static Positioning</h3>
-		<div class = "left-align">
-			<p>HTML elements are positioned static by default.</p>
-			<p>Static elements are positioned in the normal ﬂow of the page</p>
-			<p>Static elements ignore top, bottom, right or left property specifications.</p>
-		</div>
-	</section>
-	<section>
-		<h3>Static Positioning</h3>
-		<p>In normal flow, inline boxes flow from left to right, wrapping to next line when needed.</p>
-		<pre><code class = "html">
-		&lt;img src="images/cookie1.png"/>
-		&lt;img src="images/cookie2.png"/>
-		&lt;img src="images/cookie3.png"/>
-		...
-		&lt;img src="images/cookie2.png"/>
-		&lt;img src="images/cookie3.png"/>
+      	</section>
+        <!-- New material -->
+      	<section>
+      		<h3>Static Positioning</h3>
+      		<div class = "left-align">
+      			<p>HTML elements are positioned static by default.</p>
+      			<p>Static elements are positioned in the normal ﬂow of the page</p>
+      			<p>Static elements ignore top, bottom, right or left property specifications.</p>
+      		</div>
+      	</section>
+      	<section>
+      		<h3>Static Positioning</h3>
+      		<p>In normal flow, inline boxes flow from left to right, wrapping to next line when needed.</p>
+      		<pre><code class = "html">
+      		&lt;img src="images/cookie1.png"/>
+      		&lt;img src="images/cookie2.png"/>
+      		&lt;img src="images/cookie3.png"/>
+      		...
+      		&lt;img src="images/cookie2.png"/>
+      		&lt;img src="images/cookie3.png"/>
 
-		</code></pre>
-		<img src="images/cookie1.png"/>
-		<img src="images/cookie2.png"/>
-		<img src="images/cookie3.png"/>
-		<img src="images/cookie1.png"/>
-		<img src="images/cookie2.png"/>
-		<img src="images/cookie3.png"/>
-		<img src="images/cookie2.png"/>
-		<img src="images/cookie3.png"/>
-	</section>
+      		</code></pre>
+      		<img src="images/cookie1.png"/>
+      		<img src="images/cookie2.png"/>
+      		<img src="images/cookie3.png"/>
+      		<img src="images/cookie1.png"/>
+      		<img src="images/cookie2.png"/>
+      		<img src="images/cookie3.png"/>
+      		<img src="images/cookie2.png"/>
+      		<img src="images/cookie3.png"/>
+      	</section>
        
        <section>
          <h3>Static Positioning</h3>
@@ -236,22 +240,7 @@
           <p>Hi there!</p>
         </div>
       </section>
-      <section>
-	  <div class="left" style="width: 45%;">
-      		<ul>
-            <li>New tags: &lt;div&gt; and &lt;span&gt;</li>
-            <li>Pseudo-classes</li>
-            <li>Box model 
-              <ul>
-                <li>borders</li>
-                <li>margins</li>
-                <li>padding</li>
-              </ul>
-            </li>
-            <li>Sizing: width and height</li>
-          </ul>
-        </div>
-		 
+      
        <!-- Relative Positioning-->
        <section>
          <h3>Relative Positioning</h3>
@@ -455,7 +444,8 @@
        <section>
          <h3>Let's Develop It</h3>
          <p>Let's float our side bar and content areas.</p>
-       </section>       <!-- Question-->
+       </section>       
+       <!-- Question-->
         <section>
           <h2>Questions?</h2>
           <div style = "font-size:1200%; height:100%; margin-top:30%" class ="blue">?
