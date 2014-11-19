@@ -1,49 +1,59 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+  <head>
+    <meta charset="utf-8">
 
-		<title>Class 4 ~ HTML/CSS ~ Girl Develop IT</title>
+    <title>Class 4 ~ HTML/CSS ~ Girl Develop It Tri-Cities</title>
 
-		<meta name="description" content="This is the official Girl Develop It Core HTML/CSS curriculum. It was developed through the contributions of Pamela Fox, Alexis Goldstein, Erin M. Kidwell, Izzy Johnston, and Jen Myers.
+    <meta name="description" content="This is the official Girl Develop It Core HTML/CSS curriculum. It was developed through the contributions of Pamela Fox, Alexis Goldstein, Erin M. Kidwell, Izzy Johnston, and Jen Myers.
 
     The course is meant to be taught in 4 or 6 two-hour sections. If you are teaching a 4 section course, you can ignore classes 5 and 6 without losing any impact or information. Each of the slides and practice files are customizable according to the needs of a given class or audience.">
-		<meta name="author" content="Girl Develop It">
+    <meta name="author" content="Girl Develop It">
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<link rel="stylesheet" href="reveal/css/reveal.css">
-		<link rel="stylesheet" href="reveal/css/theme/gdilight.css" id="theme">
+    <link rel="stylesheet" href="reveal/css/reveal.css">
+    <link rel="stylesheet" href="reveal/css/theme/gdilight.css" id="theme">
 
-		<!-- For syntax highlighting -->
-		<!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
-		<!-- dark editor--><link rel="stylesheet" href="reveal/lib/css/dark.css">
+    <!-- For syntax highlighting -->
+    <!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
+    <!-- dark editor--><link rel="stylesheet" href="reveal/lib/css/dark.css">
 
-		<!-- If use the PDF print sheet so students can print slides-->
-		
-		<link rel="stylesheet" href="reveal/css/print/pdf.css" type="text/css" media="print">
+    <!-- If use the PDF print sheet so students can print slides-->
+    
+    <link rel="stylesheet" href="reveal/css/print/pdf.css" type="text/css" media="print">
     <style type="text/css"  >
 .reveal code.long{
           max-height:none;
       }
       </style>
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+    <style type="text/css">
+      .notes{display:none;}
+      .reveal .slides{
+        top:0%;
+        margin-top:0px;
+      }
+      .reveal code.long{
+          max-height:none;
+      }
+    </style>
+  </head>
 
-	<body>
+  <body>
 
-		<div class="reveal">
+    <div class="reveal">
 
-			<!-- Any section element inside of this container is displayed as a slide-->
-			<div class="slides">
-			  <!-- Opening slide -->
+      <!-- Any section element inside of this container is displayed as a slide-->
+      <div class="slides">
+        <!-- Opening slide -->
         <section>
-          <img src = "images/gdi_logo_badge.png">
-          <h3>Beginning HTML and CSS</h3>
+          <img src = "images/gdi-tricities.jpg" width="360" height="360">
+          <h3>Build Your Own Website: <br />Intro to HTML and CSS</h3>
           <h4>Class 4</h4>
         </section>
         
@@ -51,130 +61,192 @@
         <section>
           <h3>Welcome!</h3>
           <div class = "left-align">
-          <p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
-          <p class ="green">Some "rules"</p>
-          <ul>
-            <li>We are here for you!</li>
-            <li>Every question is important</li>
-            <li>Help each other</li>
-            <li>Have fun</li>
-          </ul>
+            <p>Girl Develop It is here to help you learn software through accessible mentorship and affordable hands-on instruction.</p>
+            <p class ="pink">Some "rules"</p>
+            <ul>
+              <li>Use us as resources</li>
+              <li>Ask every question</li>
+              <li>Help each other</li>
+              <li>Have fun</li>
+            </ul>
+          </div>
+          <div>
+            <p style="margin-top:30px;"><a href="http://gdi-tri-cities.github.io/gdi-core-html-css/">http://gdi-tri-cities.github.io/gdi-core-html-css/</a></p>
           </div>
         </section>
+
+        <!-- Tag -->
+
+        <section>
+          <h3>Anatomy of a Tag</h3>
+          <img src="images/tagbreakdown.png" alt="Tag breakdown" width="540" height="540" style="border: none; box-shadow: none;width:70%;" />
+        </section>   
         <!-- Review of first session -->
         <section>
-          <h3>Review - HTML Page Layout</h3>
-              <pre><code class="html long">&lt;!DOCTYPE html>
-&lt;html lang="en"> 
-  &lt;head>
-    &lt;title>Page Title&lt;/title>
-    &lt;link rel="stylesheet" type="text/css" href="style.css"/>
-    &lt;style type="text/css">&lt;/style>
-  &lt;/head>
-  &lt;body>
-    &lt;p>...&lt;/p>
-    &lt;img src="picture.jpg" alt="alternate text"/>
-    &lt;h1>Heading 1&lt;/h1>
-    &lt;em>Emphasized&lt;/em>
-    &lt;strong>Important&lt;/strong>
-    &lt;br/>
-    &lt;a href="url">Link&lt;/a>
-    &lt;ul>
-      &lt;li>unordered list item&lt;/li>
-    &lt;/ul>
-    &lt;ol>
-      &lt;li>ordered list item&lt;/li>
-    &lt;/ol>
-    &lt;table>
-      &lt;tr>
-        &lt;td>&lt;/td>
-      &lt;/tr>
-    &lt;/table>
-
-  &lt;/body>
-&lt;/html> </code></pre>
+          <h3>HTML Review - Page Elements</h3>
+            <pre><code class="html long">
+      &lt;!DOCTYPE html>
+        &lt;html lang="en"&gt; 
+          &lt;head&gt;
+            &lt;title&gt;Page Title&lt;/title&gt;
+            &lt;link rel="stylesheet" type="text/css" href="style.css"/&gt;
+            &lt;style type="text/css"&gt;&lt;/style&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+           ...
+          &lt;/body&gt;
+        &lt;/html&gt; 
+          </code></pre>
         </section>
         <section>
-          <h3>Review - The CSS Rule</h3>
+          <h3>Review - HTML Content Elements </h3>
+          <pre><code class="html long">          &lt;body>
+            &lt;div id="wrapper" class="blue"&gt;
+              &lt;p&gt;...&lt;span class="yellow"&gt;...&lt;/span&gt;...&lt;/p&gt;
+              &lt;img src="picture.jpg" alt="alternate text"/&gt;
+              &lt;h1&gt;Heading 1&lt;/h1&gt;
+              &lt;em&gt;Emphasized&lt;/em&gt;
+              &lt;strong&gt;Important&lt;/strong&gt;
+              &lt;br/&gt;
+              &lt;a href="url" title="picture title"&gt;Link&lt;/a&gt;
+              &lt;ul&gt;
+                &lt;li&gt;unordered list item&lt;/li&gt;
+              &lt;/ul&gt;
+              &lt;ol&gt;
+                &lt;li&gt;ordered list item&lt;/li&gt;
+              &lt;/ol&gt;
+              &lt;table&gt;
+                &lt;tr&gt;
+                  &lt;td&gt;&lt;/td&gt;
+                &lt;/tr&gt;
+              &lt;/table&gt;
+            &lt;/div&gt;
+          &lt;/body>          </code></pre>
+        </section>
+
+        <!-- CSS Review -->
+       <section>
+          <h3>CSS Review - The CSS Rule</h3>
           <img src="images/cssrule.png" alt="The CSS Rule" style="border: none; box-shadow: none;" height="360px" />
-          
          </section>
-         <section>
-            <h3>Review - Selectors and properties</h3>
-
-            <div class="left">
+      </section> 
+      <!-- CSS Review - Rules -->
+      <section>
+        <h3>CSS Review - Declarations</h3>
+        <pre><code class = "html">          p {
+            font-style: italic;
+            font-weight: bold;
+            font-size: 10px;
+            font-family: Arial, Verdana, sans-serif;
+            font: italic bold 10px sans-serif;
+          }</code></pre>
+       <pre><code class = "html">          p {
+            color: rgb(102,205,170);
+            color: #66cdaa;
+            color: MediumAquaMarine;
+          }</code></pre>  
+          <pre><code class = "html">          img {
+            width: 100px;
+            height: 100px;
+          }</code></pre>   
+          <pre><code class = "html">          span {
+            background-color: yellow;
+          }</code></pre> 
+    </section>
+ <section>
+      <h3>CSS Review - Cascading</h3>
+      <ul>
+        <li>Inheritance
+         <ul>
+          <li>Auto inheritance: <em>like</em> font-family, color</li>
+          <li>No inheritance: <em>like</em> background-color, border</li>
+          <li>Forced inheritance: <strong>inherit</strong> value keyword</li>
+        </ul></li>
+        <li>Precedence
+          <ol>
+            <li><strong>!important</strong> keyword</li>
+            <li>Inline styles</li>
+            <li>Selector specificity
+              <ol>
+                <li>Id</li>
+                <li>Class</li>
+                <li>Element</li>
+              </ol>
+            </li>
+          </ol>
+    </section>
+    <section>
+            <div class="left" style="width:350px;">
               <p>Types of selectors</p>
-               <ul>
-                <li>p</li>
-                <li>p a</li>
-                <li>p, h1, a</li>
-                <li>#identifier</li>
-                <li>.classname</li>
-               </ul>
+              <pre><code>  
+  p { font-size:12px; }
+  p a {color:blue}
+  p, h1, a {color:black;}
+  #wrapper{
+    margin:auto;
+    width:700px;
+  }
+  .yellow{ 
+    background-color:yellow; 
+  }
+              </code></pre>
             </div>
-            <div class="right">
-              <p>Properties</p>
-               <ul>
-                <li>color</li>
-                <li>background-color</li>
-                <li>font-family</li>
-                <li>font-size</li>
-                <li>font-style</li>
-                <li>font-weight</li>
-               </ul>
-            </div>
-         </section>
-         <section>
-            <h3>Review - Class 3</h3>
-            <p>Div's and Spans</p>
-            <pre><code>    &lt;div>&lt;/div>
-    &lt;span>&lt;/span></code></pre>
+            <div class="right" style="width:350px;">
 <p>pseudo-classes</p>
-  <pre><code>  a:link  {color:#FF0000;} /* unvisited link */
-  a:visited {color:#00FF00;} /* visited link */
-  a:hover {color:#FF00FF;} /* mouse over link */
-  a:active  {color:#0000FF;} /* selected link */
-            </code></pre>
-            <p>width & height</p>
-            <pre><code> width: 50px;
- height: 50px; </code></pre>
+  <pre><code>  
+    /* anchor*/
+  a { color: FFFFFF; }
+    /* unvisited link */
+  a:link  {color:#FF0000;}
+    /* visited link */ 
+  a:visited {color:#00FF00;} 
+   /* mouse over link */
+  a:hover {color:#FF00FF;}
+   /* holding pointer over link */
+  a:focus {color:#FFFF00;} 
+   /* selected link */
+  a:active  {color:#0000FF;} 
+            </code></pre>  
+            </div>         
          </section>
-         <!-- Box model-->
-        <section>
-          <h3>Review - Box Model</h3>
-          <img src ="images/box-model.png"/>
+
+
+         <!-- Box Model -->
+   <section>
+    <h3>CSS Review - Box Model</h3>
+    <img src="images/box-model-height-width.png" title="Box Model" height="500px"/></li>         
         </section>
+        
+         <!-- New material -->
         <section>
-         <h3>Static Positioning</h3>
-         <div class = "left-align">
-          <pre><code>position:static;</code></pre>
-         <p>Default value.</p>
+          <h3>Static Positioning</h3>
+          <div class = "left-align">
+            <p>Default value.</p>
          <p>Elements render in normal order</p>
          <p>Ignores top, bottom, left, right css declarations</p>
-         </div>
-       </section>
-       
-       <section>
-         <h3>Static Positioning</h3>
-         <p>In normal flow, inline boxes flow from left to right, wrapping to next line when needed.</p>
-<pre><code class = "html">
-&lt;img src="images/cookie1.png"/>
-&lt;img src="images/cookie2.png"/>
-&lt;img src="images/cookie3.png"/>
-...
-&lt;img src="images/cookie2.png"/>
-&lt;img src="images/cookie3.png"/>
+          </div>
+        </section>
+        <section>
+          <h3>Static Positioning</h3>
+          <p>In normal flow, inline boxes flow from left to right, wrapping to next line when needed.</p>
+          <pre><code class = "html">
+          &lt;img src="images/cookie1.png"/>
+          &lt;img src="images/cookie2.png"/>
+          &lt;img src="images/cookie3.png"/>
+          ...
+          &lt;img src="images/cookie2.png"/>
+          &lt;img src="images/cookie3.png"/>
 
-</code></pre>
-<img src="images/cookie1.png"/>
-<img src="images/cookie2.png"/>
-<img src="images/cookie3.png"/>
-<img src="images/cookie1.png"/>
-<img src="images/cookie2.png"/>
-<img src="images/cookie3.png"/>
-<img src="images/cookie2.png"/>
-<img src="images/cookie3.png"/>
-       </section>
+          </code></pre>
+          <img src="images/cookie1.png"/>
+          <img src="images/cookie2.png"/>
+          <img src="images/cookie3.png"/>
+          <img src="images/cookie1.png"/>
+          <img src="images/cookie2.png"/>
+          <img src="images/cookie3.png"/>
+          <img src="images/cookie2.png"/>
+          <img src="images/cookie3.png"/>
+        </section>
        
        <section>
          <h3>Static Positioning</h3>
@@ -190,7 +262,7 @@
           <p>Hi there!</p>
         </div>
       </section>
-       
+      
        <!-- Relative Positioning-->
        <section>
          <h3>Relative Positioning</h3>
@@ -275,15 +347,15 @@
          </div>
        </section>
        <section>
-       	<h3>Example: Absolute Positioning</h3>
-       	<div class="left left-align" style="width: 45%;">
-       	<p>Here's an example of an image with a caption absolutely positioned over top of it.</p>
-       	<br/>
-       	<p>The containing div has a position of relative, and the caption has a position of absolute.</p>
-       	</div>
-       	<div class="right" style="width: 45%;">
-       		<img src="images/example-absolute.png" style="border: none; box-shadow: none;"/>
-       	</div>
+        <h3>Example: Absolute Positioning</h3>
+        <div class="left left-align" style="width: 45%;">
+        <p>Here's an example of an image with a caption absolutely positioned over top of it.</p>
+        <br/>
+        <p>The containing div has a position of relative, and the caption has a position of absolute.</p>
+        </div>
+        <div class="right" style="width: 45%;">
+          <img src="images/example-absolute.png" style="border: none; box-shadow: none;"/>
+        </div>
        </section>
        <section>
        <h3>Z-index</h3>
@@ -312,21 +384,21 @@
           background-color: green; z-index: 2; "> Top </div>
        </section>
        <section>
-       	<h3>Let's Develop it!</h3>
-       	<p>Let's add some positioning.</p>
-       	<p>Let's create a div that contains an image and a caption, and position the caption absolutely overtop the image.</p>
-       	
+        <h3>Let's Develop it!</h3>
+        <p>Let's add some positioning.</p>
+        <p>Let's create a div that contains an image and a caption, and position the caption absolutely overtop the image.</p>
+        
        </section>
        <!-- Float-->
        <section>
          <h3>Float</h3>
          <div class = "left-align">
-          	<ul>
-          	<li>"Floating" an element takes it in the normal flow, as far to the left or right of it's containing element as possible.</li>
-          	<li>Any other elements, such as paragraphs or lists, will wrap around the floated element.</li>
-          	<li>Always specify a width when floating an element, otherwise the element is likely to take up the whole page and not appear floated.</li>
+            <ul>
+            <li>"Floating" an element takes it in the normal flow, as far to the left or right of it's containing element as possible.</li>
+            <li>Any other elements, such as paragraphs or lists, will wrap around the floated element.</li>
+            <li>Always specify a width when floating an element, otherwise the element is likely to take up the whole page and not appear floated.</li>
             <li>You can specify a) whether an element is floated or not, and b) which side it ﬂoats on.</li>
-          	</ul>
+            </ul>
          </div>
        </section>
        <!--example float-->
@@ -354,7 +426,7 @@
        </section>
        
        <section>
-       <h3>Using floats to place elements side by side</h3>	
+       <h3>Using floats to place elements side by side</h3> 
        <p>If you want two block level elements to be side by side, you need to float both elements. One left, and one right.</p>
        <img src="images/example-float-column.png" />
        </section>
@@ -399,7 +471,8 @@
        <section>
          <h3>Let's Develop It</h3>
          <p>Let's float our side bar and content areas.</p>
-       </section>       <!-- Question-->
+       </section>       
+       <!-- Question-->
         <section>
           <h2>Questions?</h2>
           <div style = "font-size:1200%; height:100%; margin-top:30%" class ="blue">?
@@ -414,36 +487,36 @@
           <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
         </div>
       </footer>
-		</div>
+    </div>
 
 
-		<script src="reveal/lib/js/head.min.js"></script>
-		<script src="reveal/js/reveal.min.js"></script>
+    <script src="reveal/lib/js/head.min.js"></script>
+    <script src="reveal/js/reveal.min.js"></script>
 
-		<script>
+    <script>
 
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
 
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
 
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
 
-		</script>
+    </script>
 
-	</body>
+  </body>
 </html>
