@@ -1,24 +1,29 @@
-.reveal h1, .reveal  h2, .reveal  h3, .reveal  h4, .reveal  h5, .reveal  h6{
-	color: #f3787e;
-}
-
-.reveal h1 {
-  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); 
-  font-size: 1.5em}
-  
-.reveal h2 {
-  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); 
-  font-size: 1.2em}
-  
-p.credit{
-	font-size: 12px;
+.reveal section img.noborder{
+	border-width: 0;
+	box-shadow: none;
 }
 
 .reveal section img {
-	max-height: 75%;
+	max-height: 500px;
+	max-width: 80%;
 }
 
-  
+div.halfblock{
+	float: left;
+	width: 45%;
+	text-align: left;
+	margin-right: 5%;
+}
+
+div.left-align{
+	text-align: left;
+}
+
+.clear{
+	clear: both;
+}
+
+
 /*
  * Hide only visually, but have it available for screenreaders: h5bp.com/v
  */
