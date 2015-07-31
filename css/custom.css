@@ -1,5 +1,6 @@
 .reveal section img.noborder{
 	border-width: 0;
+	box-shadow: none;
 }
 
 .reveal section img {
@@ -15,7 +16,7 @@ div.halfblock{
 }
 
 div.left-align{
-	text-align: left;	
+	text-align: left;
 }
 
 .clear{
