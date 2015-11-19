@@ -22,7 +22,7 @@
 		<!-- dark editor--><link rel="stylesheet" href="reveal/lib/css/dark.css">
 
 		<!-- If use the PDF print sheet so students can print slides-->
-		
+
 		<link rel="stylesheet" href="reveal/css/print/pdf.css" type="text/css" media="print">
 
 		<!--[if lt IE 9]>
@@ -42,7 +42,7 @@
           <h3>Beginning HTML and CSS</h3>
           <h4>Class 2</h4>
         </section>
-        
+
         <!-- Welcome-->
         <section class="hide-pdf">
           <h3>Welcome!</h3>
@@ -57,7 +57,7 @@
           </ul>
           </div>
         </section>
-        
+
         <!-- Role of HTML v. CSS-->
         <section>
           <h3>Anatomy of a website</h3>
@@ -75,18 +75,18 @@
           <p>CSS is a "style sheet language" that lets you style the elements on your page.</p>
           <p>CSS works in conjunction with HTML, but is not HTML itself.</p>
         </section>
-        
+
         <section>
           <h3>CSS: What can it do?</h3>
           <p>All colored text, position, and size</p>
           <img src = "images/homepage-view.png">
         </section>
-        
+
         <section>
           <h3>CSS: What does it look like?</h3>
           <img src = "images/homepage-css.png">
         </section>
-        
+
         <!-- The CSS Rule-->
         <section>
         	<h3>The CSS Rule</h3>
@@ -106,7 +106,7 @@ selector {
             <p>A property-value pair is a declaration.</p>
           </div>
         </section>
-        
+
         <!-- CSS Syntax -->
         <section>
           <h3>CSS Syntax</h3>
@@ -115,7 +115,7 @@ selector {
           <p>Declarations end with a semicolon</p>
           <p>Declaration groups are surrounded by curly brackets.</p>
           </div>
-          
+
 <pre><code class = "html">
 selector {
   property: value;
@@ -141,7 +141,7 @@ img {
 </code></pre>
         <p>Selects all image elements.</p>
         </section>
-        
+
         <!-- Selectors ID-->
         <section>
 			    <h3>Selector: ID</h3>
@@ -151,13 +151,13 @@ img {
 }
 </code></pre>
           <p>Selects all elements with an id of "footer".</p>
-          
+
 <pre><code class = "html">
 &lt;p id="footer">Copyright 2011&lt;/p>
 </code></pre>
          <p>The associated HTML.</p>
 			  </section>
-        
+
         <!-- Selectors Class-->
         <section>
 			    <h3>Selector: Class</h3>
@@ -173,7 +173,7 @@ img {
 </code></pre>
          <p>The associated HTML.</p>
 			  </section>
-        
+
         <!-- ID vs Class-->
         <section>
         <h3>IDs vs. Classes</h3>
@@ -185,8 +185,8 @@ img {
           <span class = "yellow">Class</span> -- Many elements can have the same class. I.E. There can be many warnings on one webpage.
           <p>The "." is how you tell CSS "this is a class name."</p>
         </div>
-      </section>  
-      
+      </section>
+
         <!-- Selector descendant-->
         <section>
         <h3>Selector: Descendant</h3>
@@ -201,7 +201,7 @@ p em {
 </code></pre>
         <p>The associated HTML.</p>
       </section>
-        
+
         <!-- Multiple values -->
         <section>
         <h3>Property Values</h3>
@@ -214,7 +214,7 @@ p{
 }
 </code></pre>
       </section>
-        
+
         <!-- Color-->
         <section>
           <h3>Property: Color</h3>
@@ -232,7 +232,7 @@ p {
         <p><small>The 17 standard colors are: <font color="aqua" style="background:black;">aqua</font>, <font color="black">black</font>, <font color="blue">blue</font>, <font color="fuchsia">fuchsia</font>, <font color="gray">gray</font>, <font color="grey">grey</font>, <font color="green">green</font>, <font color="lime">lime</font>, <font color="maroon">maroon</font>, <font color="navy">navy</font>, <font color="olive">olive</font>, <font color="purple">purple</font>, <font color="red">red</font>, <font color="silver" style="background:black;">silver</font>, <font color="teal">teal</font>, <font color="white" style="background:black;">white</font>, and <font color="yellow" style="background:black;">yellow</font>.</small></p>
 
         </section>
-        
+
         <!-- Background color-->
         <section>
           <h3>Property: Background-color</h3>
@@ -245,7 +245,7 @@ p {
 }
 </code></pre>
         </section>
-      
+
         <!-- Font family-->
         <section>
           <h3>Property: Font-family</h3>
@@ -261,7 +261,7 @@ p {
           <p>Generic name</p>
           <p>Comma-separated list</p>
         </section>
-      
+
         <!-- Font size -->
         <section>
           <h3>Property: Font-size</h3>
@@ -277,7 +277,7 @@ p {
           <p>"em"</p>
           <p>Percentage</p>
         </section>
-        
+
         <!-- Fonts-->
         <section>
           <h3>Property: Fonts (shorthand)</h3>
@@ -296,7 +296,7 @@ p {
 }
 </code></pre>
         </section>
-      
+
         <!-- Connecting HTML to CSS-->
         <section>
           <h3>Connecting CSS to HTML</h3>
@@ -305,18 +305,18 @@ p {
           <p>"Embedded"</p>
           <p>"External"</p>
         </section>
-      
+
         <!-- Inline -->
         <section>
           <h3>Connecting CSS to HTML: Inline</h3>
 <pre><code class = "html">
-  &lt;p style="color:red">Some text.&lt;/p>
+  &lt;p style="color:red;">Some text.&lt;/p>
 </code></pre>
           <p>Uses the HTML attribute style.</p>
           <p>Difficult to use in large projects</p>
           <p>Not preferred.</p>
         </section>
-        
+
         <!-- Embedded -->
         <section>
           <h3>Connecting CSS to HTML: Embedded</h3>
@@ -334,7 +334,7 @@ p {
           <p>Uses &lt;style> tag.</p>
           <p>Can only be used in one html file</p>
         </section>
-        
+
         <!-- External-->
         <section>
           <h3>Connecting CSS to HTML: Linked</h3>
@@ -348,7 +348,7 @@ p {
           <p>Easy to maintain in larger projects.</p>
           <p>Preferred by developers everywhere!</p>
         </section>
-      
+
         <!-- Exercise-->
         <section class="hide-pdf">
           <h3>Let's develop it</h3>
@@ -359,32 +359,32 @@ p {
             <li>Try using ids and classes to change specific elements</li>
           </ul>
         </section>
-        
+
         <!-- Cascading-->
         <section>
           <h3>Cascading</h3>
           <p>Styles "cascade" down until changed</p>
 <pre><code class = "html">
-p{
-  color:blue;
+p {
+  color: blue;
   font-family: 'Helvetica';
 }
-.red{
-  color:red;
+.red {
+  color: red;
 }
-#special{
+#special {
   font-family: Arial;
 }
 </code></pre>
 
 <pre><code class = "html">
   &lt;p>Paragraph&lt;/p>
-  &lt;p class ="green">Paragraph&lt;/p>
-  &lt;p class ="red">Paragraph&lt;/p>
-  &lt;p class = "red" id ="special">Paragraph&lt;/p>
+  &lt;p class="green">Paragraph&lt;/p>
+  &lt;p class="red">Paragraph&lt;/p>
+  &lt;p class="red" id="special">Paragraph&lt;/p>
 </code></pre>
         </section>
-      
+
         <!-- Properties-->
         <section>
           <h3>CSS Properties</h3>
@@ -399,7 +399,7 @@ p{
           </ul>
           <p><a href = "https://developer.mozilla.org/en-US/docs/CSS/CSS_Reference">Comprehensive list of all CSS properties</a></p>
         </section>
-        
+
        <!-- Question-->
         <section>
           <h2>Questions?</h2>
@@ -407,7 +407,7 @@ p{
             <div class ="clear"></div></div>
         </section>
       </div>
-      
+
       <footer>
         <div class="copyright">
           HTML/CSS ~ Girl Develop It ~
