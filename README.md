@@ -8,9 +8,7 @@ This curriculum is based on the official Girl Develop It Core HTML/CSS. It was c
 
 The course is meant to be taught in 4 two-hour sections. Each of the slides and practice files are customizable according to the needs of a given class or audience.
 
-
 ### Tech Requirements for Students:
-
  - Your laptop (Mac, PC, or Linux are all okay) and a charger
  - Google Chrome
  - A text editor. We recommend Atom or Sublime Text (both free; available for Mac, PC, and Linux)
@@ -18,6 +16,36 @@ The course is meant to be taught in 4 two-hour sections. Each of the slides and 
 ### Notes for Instructors and/or Course Organizers:
  - Before each class, print out a cheatsheet for each student (found in the cheatsheets directory)
  - Try to code in front of students, so students can see the 'before' and 'after' versions of each exercise
+
+## Suggested Course Description for Meetup
+
+**About This Class**
+Want to learn how to build your own website? Already have your own website but want to have more control over it? Interested in learning to program but want to start small? This class is for you!
+
+We'll guide you through the basics of HTML and CSS, give you some readily-applicable skills, and answer any questions you may have along the way.
+
+This class takes place over four sessions, as follows:
+
+[SESSION DATES AND TIMES]
+
+Your payment registers you for the entire series.
+
+Note: This class will be limited to [MAX STUDENTS] students. Register early to secure your spot.
+
+All attendees are expected to abide by the Girl Develop It Code of Conduct. 
+
+**Takeaways**
+-- Learn how to structure a website with basic HTML
+-- The fundamental structure of an HTML file 
+-- Standard practices in website development
+-- Learn how to style a website with basic CSS
+-- Using your browser's Inspector tool to troubleshoot HTML and CSS problems 
+-- Build your first website!
+
+**Prereqs & Preparation**
+In addition to bringing a laptop and charger with you to each class, please be sure to have the following programs installed before arriving:
+-- SublimeText (text editor) 
+-- Google Chrome (web browser)
 
 ## Classes
 
