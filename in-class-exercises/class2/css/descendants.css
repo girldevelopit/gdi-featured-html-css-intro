@@ -1,0 +1,17 @@
+body {
+  font-family: Tahoma,Verdana,Segoe,sans-serif;
+}
+main {
+  font-size: 40px;
+  background: teal;
+  padding: 10px;
+}
+.font-size-16px {
+  font-size: 16px;
+}
+.font-size-2em {
+  font-size: 2em;
+}
+.font-size-half-percent {
+  font-size: 50%;
+}

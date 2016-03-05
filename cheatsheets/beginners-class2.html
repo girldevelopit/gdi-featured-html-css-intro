@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+
+	<head>
+		<title>CSS: A Beginner's Cheatsheet</title>
+		<link rel='stylesheet' href='css/styles.css' type='text/css' media='all' />
+
+	</head>
+
+	<body id="beginners-class2">
+		<h1>CSS: A Beginner's Cheatsheet</h2>
+
+		<!-- Left Column -->
+		<section>
+			<div>
+				<h2>CSS Syntax</h2>
+				<img src="../img/css-syntax.png" />
+			</div>
+			<!--<div>
+				<h2>CSS Coding Tips</h2>
+				<ol>
+					<li>CSS ignores whitespace. All you need is for each rule to be in the correct format: <strong>selector{property:value;}</strong></li>
+					<li>The recommended way of formatting CSS is to have one property-value pair per indented line, for example:<br />
+						<pre><code>
+p {
+	<span class="code-content">font-size:</span> 22px;
+	<span class="code-content">text-align:</span> center;
+	<span class="code-content">color:</span> red;
+}
+						</code></pre>
+
+					</li>
+				</ol>
+			</div>
+			<div>
+				<h2>Connecting CSS to HTML</h2>
+				<ol>
+					<li><strong>External (Recommended):</strong> Within the <em>&lt;head /></em> element of an HTML file, use the following to link to a CSS file to HTML:
+						<pre><code>
+&lt;link rel="<span class="code-content">stylesheet</span>" href="<span class="code-content">file-path-here.css</span>" />
+						</code></pre>
+					</li>
+					<li><strong>Inline</strong>: In the HTML file, within an element's opening tag, a <em>style=""</em> attribute contains CSS for that element.</li>
+					<li><strong>Embedded</strong>: In the HTML file, CSS is placed within the &lt;head /> in a <em>&lt;style /></em> element.</li>
+				<pre><code>
+				</pre></code>
+			</div>-->
+			<div>
+				<h2>Selector: Element</h2>
+				<p>Enter the element's tag name to target those elements:</p>
+				<pre><code>
+p {
+	<span class="code-content">color:</span> aqua;
+}
+				</pre></code>
+			</div>
+			<div>
+				<h2>Selector: Descendant</h2>
+				<p>To target elements that are descended from another element, use a selector for the ancestor, then a space, then a selector for the descendant:</p>
+				<pre><code>p em {
+	<span class="code-content">font-weight:</span> bold;
+}
+
+#special .fancy {
+	<span class="code-content">color:</span> fuchsia;
+}</pre></code>
+			</div>
+			<div>
+				<h2>Property: line-height</h2>
+				<p>Use px, em, or a single number as units.</p>
+				<pre><code>p {
+	<span class="code-content">line-height:</span> 20px;
+}</code></pre>
+			</div>
+			<div>
+				<h2>Properties: font-variant and text-transform</h2>
+				<pre><code>p {
+	<span class="code-content">font-variant:</span> normal;
+	<span class="code-content">font-variant:</span> small-caps;
+
+	<span class="code-content">text-transform:</span> lowercase;
+	<span class="code-content">text-transform:</span> capitalize;
+	<span class="code-content">text-transform:</span> uppercase;
+}</code></pre>
+			</div>
+		</section>
+
+		<!-- Right Column -->
+		<section>
+			<div>
+				<h2>Property: color</h2>
+				<p>The color property changes the color of the text.</p>
+				<pre><code>p {
+	<span class="code-content">color:</span> red;
+	<span class="code-content">color:</span> #ff0000;
+	<span class="code-content">color:</span> rgb(255, 0, 0);
+	<span class="code-content">color:</span> rgba(255, 0, 0, 0.7);
+}</pre></code>
+				<p>Colors can be represented as color names, hexadecimals, RGB colors, or RGBA colors.</p>
+			</div>
+			<div>
+				<h2>Property: background-color</h2>
+				<pre><code>body {
+	<span class="code-content">background-color:</span> black;
+}</code></pre>
+			</div>
+			<div>
+				<h2>Property: font-family</h2>
+				<p>Use CSSFontStack.com to generate a web-safe font.</p>
+				<pre><code>body {
+	<span class="code-content">font-family:</span> Helvetica, "Helvetica Neue", Arial, sans-serif;
+}</code></pre>
+			</div>
+			<div>
+				<h2>Property: font-size</h2>
+				<p>Use px, em, or % as units.</p>
+				<pre><code>p {
+	<span class="code-content">font-size:</span> 32px;
+}</code></pre>
+			</div>
+			<div>
+				<h2>Properties: font-style and font-weight</h2>
+				<pre><code>p {
+	<span class="code-content">font-style:</span> normal;
+	<span class="code-content">font-style:</span> italic;
+	<span class="code-content">font-style:</span> oblique;
+
+	<span class="code-content">font-weight:</span> normal;
+	<span class="code-content">font-style:</span> bold;
+}</code></pre>
+			</div>
+			<div>
+				<h2>Property: text-align</h2>
+				<pre><code>p {
+	<span class="code-content">text-align:</span> left;
+	<span class="code-content">text-align:</span> right;
+	<span class="code-content">text-align:</span> center;
+}</code></pre>
+			</div>
+		</section>
+
+	</body>
+
+</html>

@@ -1,0 +1,13 @@
+body {
+  font-family: Tahoma,Verdana,Segoe,sans-serif;
+  background-color: grey;
+}
+.search-result {
+  background-color: lightgrey;
+  padding: 10px;
+  margin: 20px;
+  color: #911BBF;
+}
+#sponsored {
+  background: greenyellow;
+}

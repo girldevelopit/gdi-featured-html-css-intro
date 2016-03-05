@@ -1,0 +1,190 @@
+<!doctype html>
+<html>
+
+	<head>
+		<title>File Paths &amp The Display Property</title>
+		<link rel='stylesheet' href='css/styles.css' type='text/css' media='all' />
+
+	</head>
+
+	<body>
+		<h1>File Paths &amp The <em>display</em> Property</h2>
+
+		<section class="full">
+			
+			<div>
+				<h2>File Paths</h2>
+				<p>Applies to all types of file references, including links to CSS files, image sources, and background images.</p>
+				<table class="data compact">
+          <tbody><tr>
+            <th>File Path</th>
+            <th>What it means</th>
+          </tr>
+          <tr>
+            <td>
+              <span class="code-content">pointB.css</span>
+            </td>
+            <td>
+              pointB.css is located in the current folder
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="code-content">css/pointB.css</span>
+            </td>
+            <td>
+              pointB.css is located in a folder called <span class="code-comment">css</span><br />The <span class="code-comment">css</span> folder is located in the current folder
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="code-content">css/other/pointB.css</span>
+            </td>
+            <td>
+              pointB.css is located in a folder called <span class="code-comment">other</span> that is located in a folder called <span class="code-comment">css</span> that is located in the current folder
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="code-content">../pointB.css</span>
+            </td>
+            <td>
+              pointB.css is located in a folder one level up from the current folder
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="code-content">../../pointB.css</span>
+            </td>
+            <td>
+              pointB.css is located in a folder two levels up from the current folder
+            </td>
+          </tr>
+        </tbody></table>
+			</div>
+			
+			<div>
+				<h2>Connecting CSS to HTML</h2>
+				<ol>
+					<li><strong>External (Recommended):</strong> Within the <em>&lt;head /></em> element of an HTML file, use the following to link to a CSS file:
+						<pre><code>
+&lt;link rel="<span class="code-content">stylesheet</span>" href="<span class="code-content">file-path-here.css</span>" />
+						</code></pre>
+					</li>
+					<li><strong>Inline</strong>: In the HTML file, within an element's opening tag, a <em>style=""</em> attribute contains CSS for that element.</li>
+					<li><strong>Embedded</strong>: In the HTML file, CSS is placed within the &lt;head /> in a <em>&lt;style /></em> element.</li>
+			</div>
+		</section>
+		<section>
+			<div>
+				<h2>Inline Elements</h2>
+				<pre><code>
+selector {
+   <span class="code-content">display:</span> inline;
+}
+				</code></pre>
+				<ol>
+					<li>Cannot have a set width and height</li>
+					<li>Allow other elements to their left and right</li>
+					<li>Don't force sibling elements to move to a new line</li>
+					<li>Respect left and right margins</li>
+					<li>Do not respect top and bottom margins</li>
+				</ol>
+				<p><strong>Examples:</strong> &lt;span />, &lt;em />, &lt;strong />,<br />&lt;a />, &lt;img /></p>
+			</div>
+			<div>
+				<h2>CSS Box Model</h2>
+				<div class="centered"><img src="../img/box-model.png" alt="The CSS Box Model" /></div>
+				<ul>
+					<li><strong>Padding</strong> is the same background color as the content and acts as the padding inside of an element</li>
+					<li><strong>Border</strong> is the edge around the box, specified as "thickness, style, color"</li>
+					<li><strong>Margin</strong> is the transparent area around the box that separates it from other elements</li>
+				</ul>
+			</div>
+			
+			<div>
+				<h2>Property: width</h2>
+				<pre><code>
+selector {
+   <span class="code-content">width:</span> 300px;
+}
+				</code></pre>
+			</div>
+			<div>
+				<h2>Property: height</h2>
+				<pre><code>
+selector {
+   <span class="code-content">height:</span> 100px;
+}
+				</code></pre>
+			</div>
+			<div>
+				<h2>Centering Block Elements</h2>
+				<p>Set a width on a block element, then use <span class="code-content">auto</span> as a margin.</p>
+				<pre><code>
+selector {
+   <span class="code-content">width:</span> 300px;
+   <span class="code-content">margin:</span> auto;
+}
+				</code></pre>
+			</div>
+		</section>
+		<section>
+			<div>
+				<h2>Block Elements</h2>
+				<pre><code>
+selector {
+   <span class="code-content">display:</span> block;
+}
+				</code></pre>
+				<ol>
+					<li>Can have a set width and height</li>
+					<li>Don't allow other elements to their left and right</li>
+					<li>Force sibling elements to move to a new line</li>
+					<li>Respect left and right margins</li>
+					<li>Respect top and bottom margins</li>
+				</ol>
+				<p><strong>Examples:</strong> &lt;div />, &lt;section />, &lt;p />, &lt;h1 />, &lt;h2 />, &lt;h3 />, &lt;h4 />, &lt;h5 />, &lt;h6 />, and almost everything else</p>
+			</div>
+			<div>
+				<h2>Padding and Margin</h2>
+				<p>Both padding and margin use the same syntax. Substitute 'margin' for 'padding' to apply margins instead.</p>
+				<p>One value:</p>
+				<pre><code>
+selector {
+   <span class="code-content">padding:</span> all;
+}
+				</code></pre>
+				<p>Two values:</p>
+				<pre><code>
+selector {
+   <span class="code-content">padding:</span> topAndBottom leftAndRight;
+}
+				</code></pre>
+				<p>Four values:</p>
+				<pre><code>
+selector {
+   <span class="code-content">padding:</span> top right bottom left;
+}
+				</code></pre>				
+				<div class="centered"><img src="../img/trouble.gif" alt="TRouBLe mnemonic" /></div>
+				
+				<p>Can also specify padding-top, padding-right, padding-bottom, or padding-left to apply padding to individual sides.</p>
+				
+			</div>
+			<div>
+				<h2>Border</h2>
+				<pre><code>
+selector {
+   <span class="code-content">border:</span> thickness style color;
+}
+				</code></pre>
+				<p>Can also specify border-top, border-right, border-bottom, or border-left to apply a border to individual sides.</p>
+			</div>
+			
+			
+		</section>
+		
+	</body>
+
+</html>

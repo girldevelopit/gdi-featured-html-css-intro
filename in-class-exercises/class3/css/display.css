@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  background-color: SlateGray;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+  font-size: 20px;
+  line-height: 2;
+}
+
+p {
+  background-color: goldenrod;
+  border: 2px dashed red;
+
+  margin-top: 80px;
+  margin-bottom: 40px;
+  margin-left: 80px;
+  margin-right: 80px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  width: 60%;
+  display: block;
+}
