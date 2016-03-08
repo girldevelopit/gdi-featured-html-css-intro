@@ -1,0 +1,63 @@
+body {
+  background-color: lightgrey;
+  color: teal;
+  font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+}
+
+p {
+  text-align: center;
+  line-height: 2.5;
+}
+
+a {
+  color: fuchsia;
+  font-style: oblique;
+}
+
+h1 {
+  color: rgba(177, 7, 7, 0.71);
+  font-style: italic;
+}
+
+h1, h3 {
+  font-variant: small-caps;
+}
+
+p strong{
+  background-color: gold;
+  color: blue;
+  text-transform: uppercase;
+}
+
+.centered {
+  text-align: center;
+  font-family: Copperplate,"Copperplate Gothic Light",fantasy;
+}
+
+.bordered {
+  border-width: 3px;
+  border-style: dashed;
+  border-color: fuchsia;
+  font-weight: bold;
+}
+
+img.bordered {
+  border-style: dotted;
+  border-color: purple;
+}
+
+#list-container{
+  background: black;
+  color: lightgrey;
+}
+
+#special {
+  color: #3930B5;
+  text-align: right;
+}
+
+#special .bordered {
+  border-color: blue;
+  border-style: dotted;
+  font-style: italic;
+}

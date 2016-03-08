@@ -1,0 +1,26 @@
+body {
+    background-color: #E94344;
+    font-family: Verdana,Geneva,sans-serif;
+    color: white;
+}
+a {
+    color: #F0C042;
+}
+a:hover {
+    color: teal;
+}
+h3 {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: normal;
+    border: 2px solid white;
+    padding: 10px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 200px;
+}
+section {
+    width: 70%;
+    margin: auto;
+}

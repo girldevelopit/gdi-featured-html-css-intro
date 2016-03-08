@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+
+	<head>
+		<title>Positioning & Floating</title>
+		<link rel='stylesheet' href='css/styles.css' type='text/css' media='all' />
+
+	</head>
+
+	<body id="beginners-class4">
+		<h1>Positioning &amp; Floating</h2>
+
+		<section>
+			<div>
+				<h2>Property: <em>position</em></h2>
+				<h3 style="margin:0;font-size:1em;">Static</h3>
+				<ul style="margin-top:0;">
+					<li>The default <em>position</em> value for all HTML elements</li>
+					<li>Can't use <em>top</em>, <em>right</em>, <em>bottom</em>, or <em>left</em> properties</li> 
+					<li>Static elements can't overlap others</li>
+				</ul>
+				<pre><code>
+selector {
+   <span class="code-content">position:</span> static;
+}
+				</code></pre>
+				
+				<h3 style="margin:0;font-size:1em;">Relative</h3>
+				<ul style="margin-top:0;">
+					<li>Use <em>top</em>, <em>right</em>, <em>bottom</em>, or <em>left</em> properties to set the location relative to where it would normally be, leaving an empty area where the element once was</li> 
+					<li>Relative elements can overlap others</li>
+				</ul>
+				<pre><code>
+selector {
+   <span class="code-content">position:</span> relative;
+}
+				</code></pre>
+			
+				<h3 style="margin:0;font-size:1em;">Absolute</h3>
+				<ul style="margin-top:0;">
+					<li>Use <em>top</em>, <em>right</em>, <em>bottom</em>, or <em>left</em> properties to set the location relative to the closest ancestor element with a position other than static
+						<ul>
+							<li>If there is no such ancestor, an absolute element will position relative to the window (the &lt;html> element)</li>
+						</ul>
+					</li> 
+					<li>Nothing shows where the element once was</li>
+					<li>Absolute elements can overlap others</li>
+				</ul>
+				<pre><code>
+selector {
+   <span class="code-content">position:</span> absolute;
+}
+				</code></pre>
+			</div>
+			
+			<div>
+				<h2>Limiting an Absolute Element's Scope</h2>
+				<p>Corral an absolute element inside any non-static element</p>
+				<pre><code>
+.container {
+   <span class="code-content">position:</span> relative;
+}
+.container .foo {
+   <span class="code-content">position:</span> absolute;
+   <span class="code-content">bottom:</span> 10px;
+   <span class="code-content">left:</span> 10px;
+   <span class="code-content">height:</span> 100px;
+   <span class="code-content">width:</span> 100px;
+}
+				</code></pre>
+				<p><img src="../img/positioning-banner-concept.png" alt="Positioning in relative" style="max-width:100%;" /></p>
+			</div>
+			
+		</section>
+		
+		<section>
+			
+			<div>
+				<h2>Property: <em>z-index</em></h2>
+				<p>Since <em>relative</em>- and <em>absolute</em>-positioned elements can overlap, use <em>z-index</em> to control the order of overlapping. The element with the highest z-index goes on top.</p>
+				<pre><code>
+selector {
+   <span class="code-content">position:</span> relative;
+   <span class="code-content">z-index:</span> 2;
+}
+				</code></pre>
+			</div>
+			
+			<div>
+				<h2>Property: <em>float</em></h2>
+				<ul>
+					<li>Shifts an element to the left or right on the current line, taking it out of normal flow</li>
+					<li>Subsequent elements wrap around it</li>
+					<li>Always set a width on floated block-level elements used in layouts</li>
+				</ul>
+				<pre><code>
+selector {
+   <span class="code-content">float:</span> left;
+   <span class="code-content">float:</span> right;
+}
+				</code></pre>
+				<p><img src="../img/floating.png" alt="Floating" style="max-width:100%;" /></p>
+			</div>
+			
+			<div>
+				<h2>Property: <em>clear</em></h2>
+				<p><em>clear</em> tells the element on which side (<em>left</em>, <em>right</em>, or <em>both</em>) floated elements cannot appear</p>
+				<pre><code>
+selector {
+   <span class="code-content">clear:</span> left;
+   <span class="code-content">clear:</span> right;
+   <span class="code-content">clear:</span> both;
+}
+				</code></pre>
+			</div>
+			
+		</section>
+		
+	</body>
+
+</html>

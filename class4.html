@@ -1,357 +1,454 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+<head>
+    <meta charset="utf-8">
 
-		<title>Class 4 ~ HTML/CSS ~ Girl Develop IT</title>
+    <title>Girl Develop It - Intro to HTML + CSS, Class 4</title>
 
-		<meta name="description" content="This is the official Girl Develop It Core HTML/CSS curriculum. It was developed through the contributions of Pamela Fox, Alexis Goldstein, Erin M. Kidwell, Izzy Johnston, and Jen Myers.
+    <meta name="description" content="Girl Develop It's Intro to HTML and CSS course, customized by Liz Shaw">
+    <meta name="author" content="Liz Shaw">
 
-    The course is meant to be taught in 4 or 6 two-hour sections. If you are teaching a 4 section course, you can ignore classes 5 and 6 without losing any impact or information. Each of the slides and practice files are customizable according to the needs of a given class or audience.">
-		<meta name="author" content="Girl Develop It">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/simple.css" id="theme">
 
-		<link rel="stylesheet" href="reveal/css/reveal.css">
-		<link rel="stylesheet" href="reveal/css/theme/gdidefault.css" id="theme">
+    <!-- For syntax highlighting -->
+    <!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
+    <!-- dark editor-->
+    <link rel="stylesheet" href="lib/css/dark.css">
+    <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- For syntax highlighting -->
-		<!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
-		<!-- dark editor--><link rel="stylesheet" href="reveal/lib/css/dark.css">
+    <link rel="stylesheet" href="plugin/accessibility-helper/css/accessibility-helper.css">
 
-		<!-- If use the PDF print sheet so students can print slides-->
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+        if (window.location.search.match(/print-pdf/gi)) {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = 'css/print/pdf.css';
+            document.getElementsByTagName('head')[0].appendChild(link);
+        }
+    </script>
 
-		<link rel="stylesheet" href="reveal/css/print/pdf.css" type="text/css" media="print">
+    <!-- If use the PDF print sheet so students can print slides-->
 
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
+    <link rel="stylesheet" href="css/print/pdf.css" type="text/css" media="print">
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+</head>
 
-	<body>
+<body>
 
-		<div class="reveal">
+    <div class="reveal">
+        <div class="slides">
+            <!-- Code Your Own Website -->
+            <section>
+                <h2>Code Your Own Website</h2>
+                <img src="img/circle-gdi-logo.png" alt="GDI Logo" />
+                <h3>Intro to HTML + CSS</h3>
+                <p>
+                    <small>Class 4</small>
+                </p>
+            </section>
 
-			<!-- Any section element inside of this container is displayed as a slide-->
-			<div class="slides">
-			  <!-- Opening slide -->
-        <section>
-          <img src = "images/gdi_logo_badge.png">
-          <h3>Beginning HTML and CSS</h3>
-          <h4>Class 4</h4>
-        </section>
+			<!-- Flow -->
+			<section>
+				<h3>Normal Flow vs. Out of Flow</h3>
+				<p class="fragment blue">Normal Flow</p>
+				<p class="fragment">The typical way a browser positions an element in respect to elements around it<br /><span class="fragment">&raquo; An element without any CSS positioning applied is considered <span class="green">in normal flow</span></p>
+				<p class="fragment blue"><br />Out of Flow</p>
+				<p class="fragment">When an element's default position is overridden, the element is considered <span class="green">out of flow</span></p>
+			</section>
 
-        <!-- Welcome-->
-        <section>
-          <h3>Welcome!</h3>
-          <div class = "left-align">
-          <p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
-          <p class ="green">Some "rules"</p>
-          <ul>
-            <li>We are here for you!</li>
-            <li>Every question is important</li>
-            <li>Help each other</li>
-            <li>Have fun</li>
-          </ul>
-          </div>
-        </section>
+			<!-- Normal Flow -->
+			<section data-background="#f05b62">
+                <h1 style="color: #fafafa;">Normal Flow</h1>
+            </section>
 
-        <section>
-         <h3>Static Positioning</h3>
-         <div class = "left-align">
-         <p>HTML elements are positioned static by default.</p>
-         <p>Static elements are positioned in the normal ﬂow of the page</p>
-         <p>Static elements ignore top, bottom, right or left property specifications.</p>
-         </div>
-       </section>
+			<!-- Static -->
+			<section>
+				<h3>Property: <em>position</em></h3>
+				<p class="blue">The Default <em>static</em> Position</p>
+				<pre><code class="css">
+selector {
+   position: static;
+}
+				</code></pre>
+				<p class="fragment"><br />The default <em>position</em> property's value for <span class="green">all</span> HTML elements (block-level, inline, etc.) is <span class="orange">static</p>
+				<p class="fragment">Static elements are <span class="green">in normal flow</span></p>
+				<p class="fragment">Usually you wouldn't specify <span class="orange">position: static;</span> since it is the default position of every element</p>
+			</section>
+            <section>
+                <h3>Property: <em>position</em></h3>
+				<p class="blue">The Default <em>static</em> Position</p>
+                <p class="fragment" style="font-size:90%;">So far, every element we've worked with has been <span class="orange">static</span></p>
+                <div class="fragment" style="font-size:80%">
+                    <div style="width:50%;float:left">
+                        <p><img src="img/blockinline.png" alt="Block and inline elements, statically positioned" /></p>
+                    </div>
+                    <div style="float:right;width:50%">
+                        <h4>Block-Level Elements:</h4>
+                        <p>&lt;p><br />&lt;div><br />&lt;section><br />&lt;main><br />&lt;aside><br />&lt;h1>                        </p>
+                        <h4>Inline Elements:</h4>
+                        <p>&lt;span><br />&lt;em><br />&lt;strong><br />&lt;a><br />&lt;img></p>
+                    </div>
+                </div>
+            </section>
 
-       <section>
-         <h3>Static Positioning</h3>
-         <p>In normal flow, inline boxes flow from left to right, wrapping to next line when needed.</p>
-<pre><code class = "html">
-&lt;img src="images/cookie1.png"/>
-&lt;img src="images/cookie2.png"/>
-&lt;img src="images/cookie3.png"/>
-...
-&lt;img src="images/cookie2.png"/>
-&lt;img src="images/cookie3.png"/>
+			<!-- Limitations -->
+			<!--<section>
+				<h3>Limitations of Static Positioning</h3>
+				<p class="fragment"><span class="green">All</span> static elements (block-level, inline, etc.) recognize the boundaries of their neighbors and <span class="green">do not overlap other elements</span></p>
+				<p class="fragment">Static elements ignore <span class="orange">top</span>, <span class="orange">bottom</span>, <span class="orange">right</span>, <span class="orange">left</span>, and <span class="orange">z-index</span> properties</p>
+				<pre class="fragment"><code class="css">
+selector {
+   display: block;
+   top: 500px;
+   bottom: 20px;
+   right: 400px;
+   left: 20px;
+   z-index: 2;
 
-</code></pre>
-<img src="images/cookie1.png"/>
-<img src="images/cookie2.png"/>
-<img src="images/cookie3.png"/>
-<img src="images/cookie1.png"/>
-<img src="images/cookie2.png"/>
-<img src="images/cookie3.png"/>
-<img src="images/cookie2.png"/>
-<img src="images/cookie3.png"/>
-       </section>
+   /* since this block-level element is
+   position: static;
+   by default, the above values won't
+   do anything! */
+}
+				</code></pre>
+			</section>-->
 
-       <section>
-         <h3>Static Positioning</h3>
-         <p>In normal flow, block boxes flow from top to bottom, making a new line after every box.</p>
-<pre><code class ="html">
- &lt;p>Greetings&lt;/p>
- &lt;p>Hello&lt;/p>
- &lt;p>Hi there!&lt;/p>
-</code></pre>
-        <div class ="left-align">
-          <p>Greetings</p>
-          <p>Hello</p>
-          <p>Hi there!</p>
-        </div>
-      </section>
+			<!-- Out of Flow -->
+			<section data-background="#f05b62">
+                <h1 style="color: #fafafa;">Out of Flow</h1>
+            </section>
+			
+			<!-- Relative -->
+			<section>
+				<h3>Relative Positioning</h3>
+				<p class="fragment">To move an element relative to where it ordinarily would rest in normal flow, use <span class="green">relative positioning</span></p>				
+				<pre class="fragment"><code class="css">
+selector {
+   position: relative;
+}
+				</code></pre>
+			</section>
+			<section>
+				<h3>Relative Positioning</h3>
+				<p class="fragment">Use the <span class="orange">top</span>, <span class="orange">bottom</span>, <span class="orange">right</span>, and <span class="orange">left</span> properties to set the location</p>
+				<p class="fragment">These values position the element <span class="green">relative to where it would be normally</span></p>
+				<p class="fragment">An empty area shows where the element once was, when the element was in normal flow</p>
+				<p class="fragment">Unlike static elements, a relative element can <span class="green">overlap other elements</span></p>
+				<div class="fragment"><p data-height="185" data-theme-id="0" data-slug-hash="QjQPVj" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/QjQPVj/'>Relative Positioning</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+				</div>
+				<p class="fragment"><a href="http://codepen.io/anythingcodes/pen/yYjMvL" target="_blank">View result of above CodePen &raquo;</a></p>
+				
+			</section>
+			<!--<section>
+				<h3>Relative Positioning</h3>
+				<p class="blue">Other Features</p>
+				<p class="fragment">Often used to <span class="green">limit the positioning scope</span> of descendants, usually for <span class="orange">absolute</span>ly-positioned descendants</p>
+			</section>-->
 
-       <!-- Relative Positioning-->
-       <section>
-         <h3>Relative Positioning</h3>
-         <div class = "left-align">
-         <ul>
-         <li>Takes the element out of the normal flow, allowing it to be moved to the top, left, right or bottom. </li>
-         <li>Does not affect the elements surrounding it.</li>
-         <li>Makes an element a "positioning context" in which to position other elements relative to it.</li>
-         <li>Relative positioning and absolute positioning are used together.</li>
-         </ul>
-         </div>
-       </section>
+			<!-- Absolute -->
+			<section>
+				<h3>Absolute Positioning</h3>
+				<pre class="fragment"><code class="css">
+selector {
+   position: absolute;
+}
+				</code></pre>
+				<p class="fragment">When you specify <em>position: absolute;</em> the element is removed from the document and placed exactly where you tell it to go</p>
+				<p class="fragment">Nothing shows where the element once was, when the element was in normal flow</p>
+				<p class="fragment">Unlike static elements, an absolute element can <span class="green">overlap other elements</span></p>
+			</section>
+			<section>
+				<h3>Absolute Positioning</h3>
+                <p class="blue">Setting the Location</p>
+				<p class="fragment">Use the <span class="orange">top</span>, <span class="orange">bottom</span>, <span class="orange">right</span>, and <span class="orange">left</span> properties to set the location</p>				
+				<p class="fragment">By default, an absolute element's location is <span class="green">relative to the window</span> (the &lt;html> element)</p>
+				<p class="fragment">If the absolute element is within a non-static element, its location will be <span class="green">relative to the closest non-static element</span></p>
+			</section>
+			<section>
+				<h3>Absolute Positioning</h3>
+				<p data-height="284" data-theme-id="0" data-slug-hash="epVoXR" data-default-tab="result" data-user="anythingcodes" class='codepen fragment'>See the Pen <a href='http://codepen.io/anythingcodes/pen/epVoXR/'>Absolute Positioning</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+				<p class="fragment"><a href="http://codepen.io/anythingcodes/pen/xwjqYq" target="_blank">View result of above CodePen &raquo;</a></p>
+			</section>
+			<section>
+				<h3>Absolute Positioning</h3>
+				<p class="blue">How to limit an absolute element's scope</p>
+                <div class="fragment">
+		            <p>We can corral an absolute element inside any non-static (e.g. <span class="green">relative</span>) element</p>
+				    <p><img src="img/positioning-banner-concept.png" alt="Limiting the scope" /></p>
+                </div>
+			</section>
+			<section>
+				<h3>Absolute Positioning</h3>
+				<p class="blue">How to limit an absolute element's scope</p>
+				<div class="fragment"><p data-height="351" data-theme-id="0" data-slug-hash="KdowRV" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/KdowRV/'>Limiting an Absolute Element's Scope</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p></div>
+				<p class="fragment"><a href="http://codepen.io/anythingcodes/pen/meLWXK" target="_blank">View result of above CodePen &raquo;</a></p>
+			</section>
 
-       <section>
-         <h3>Relative Positioning</h3>
-         <p>The "relative" value will still put the element in the normal flow, but then offset it according to top/left/right/bottom properties.</p>
+			<!-- Z-Index -->
+			<section>
+				<h3>Z-Index</h3>
+				<p class="fragment">Non-static elements can overlap</p>
+				<p class="fragment">You can change the order of overlapping with <span class="blue">z-index</span></p>
+				<p class="fragment">The element with the highest z-index goes on top</p>
+				<p class="fragment"><small>z-index only works on non-static elements (such as <span class="green">relative</span> or <span class="green">absolute</span>)</small></p>
+				<div class="fragment">
+					<pre><code class="html css">
+.bottom {
+   position: absolute; /* absolute is a non-static position */
+   bottom: 10px;
+   left: 60px;
+   background-color: lightcoral;
+}
 
-<pre><code class = "html">
-  .relative {
-    position: relative;
-    left: 80px;
-    top: 20px;
-    height: 100px;
-    background-color: yellow;
-  }
-</code></pre>
- <div style="border:2px solid black;">
- <div style="position: relative; left: 80px; top: 20px;
-   height: 100px; background-color: yellow; color:black; text-align:left">
-   Hello, hi!
- </div>
- </div>
-       </section>
-       <!-- Absolute positioning-->
-       <section >
-         <h3>Absolute Positioning</h3>
-         <div class = "left-align">
-         <ul>
-         <li>Positions element outside of the normal flow.</li>
-         <li>An absolutely positioned element is offset from its container block, positioned relative.</li>
-         <li>Its container block is the first element that has a position other than static.</li>
-         <li>If no such element is found, the container block is &lt;html>.</li>
-         <li>Other elements act as if it's not there.</li>
-         <li>Determined by its oﬀset values in the properties top, bottom, right and left.</li>
-         </ul>
-         </div>
-       </section>
+.top {
+   position: absolute; /* absolute is a non-static position */
+   bottom: 15px;
+   left: 60px;
+   background-color: lightseagreen;
+   z-index: 2;
+}
+					</code></pre>
+					<div style="position: absolute; bottom: -20px; left:60px;
+          background-color: lightcoral; color:black"> Bottom </div>
+					<div style="position: absolute; bottom: -15px; left:60px;
+          background-color: lightseagreen; z-index: 2; "> Top </div>
+				</div>
 
-       <section  style="border: 1px solid black">
-         <h3>Absolute Positioning</h3>
-         <p>The "absolute" value will take the element out of the normal flow and position it in relation to the window (or the closest non-static element).</p>
-<pre><code class = "html">
-  .top {
-    position: absolute;
-    top: -40px;
-    right: 10px;
-    background-color: yellow;
-  }
-</code></pre>
-<pre><code class = "html">
-  .bottom {
-    position: absolute;
-    bottom: -40px;
-    left: 60px;
-    background-color: green;
-  }
-</code></pre>
-         <div>
-         <div style="position: absolute; top: -40px; right: 10px;
-           background-color: yellow; color:black">
-          Up here
-         </div>
-       <div style="position: absolute; bottom: -40px; left:60px;
-         background-color: green">
-          Down here
-         </div>
-         </div>
-       </section>
-       <section>
-       	<h3>Example: Absolute Positioning</h3>
-       	<div class="left left-align" style="width: 45%;">
-       	<p>Here's an example of an image with a caption absolutely positioned over top of it.</p>
-       	<br/>
-       	<p>The containing div has a position of relative, and the caption has a position of absolute.</p>
-       	</div>
-       	<div class="right" style="width: 45%;">
-       		<img src="images/example-absolute.png" style="border: none; box-shadow: none;"/>
-       	</div>
-       </section>
-       <section>
-       <h3>Z-index</h3>
-         <p class="left-align">When you use positioning to move elements out of the normal flow of content, elements can overlap. You can change the order of overlapping with z-index.</p>
-         <p class="left-align">The element with highest z-index goes on top.</p>
-<pre><code class ="html">
-  .bottom{
-    position: absolute;
-    bottom: 10px;
-    left: 60px;
-    background-color: yellow;
-  }
-</code></pre>
-<pre><code class ="html">
-  .top{
-    position: absolute;
-    bottom: 15px;
-    left: 60px;
-    background-color: green;
-    z-index: 2;
-  }
-</code></pre>
-        <div style="position: absolute; bottom: -20px; left:60px;
-          background-color: yellow; color:black"> Bottom </div>
-        <div style="position: absolute; bottom: -15px; left:60px;
-          background-color: green; z-index: 2; "> Top </div>
-       </section>
-       <section>
-       	<h3>Let's Develop it!</h3>
-       	<p>Let's add some positioning.</p>
-       	<p>Let's create a div that contains an image and a caption, and position the caption absolutely overtop the image.</p>
+			</section>
+			<section>
+				<h3>Z-Index</h3>
+				<p class="blue">An Example</p>
+				<p data-height="268" data-theme-id="0" data-slug-hash="MaVYNm" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/MaVYNm/'>Z-Index - Before</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+				<p class="fragment"><a href="http://codepen.io/anythingcodes/pen/KdRWoP" target="_blank">View result of above CodePen &raquo;</a></p>
+			</section>
 
-       </section>
-       <!-- Float-->
-       <section>
-         <h3>Float</h3>
-         <div class = "left-align">
-          	<ul>
-          	<li>"Floating" an element takes it in the normal flow, as far to the left or right of it's containing element as possible.</li>
-          	<li>Any other elements, such as paragraphs or lists, will wrap around the floated element.</li>
-          	<li>Always specify a width when floating an element, otherwise the element is likely to take up the whole page and not appear floated.</li>
-            <li>You can specify a) whether an element is floated or not, and b) which side it ﬂoats on.</li>
-          	</ul>
-         </div>
-       </section>
-       <!--example float-->
-       <section>
-       <h3>Float: Example</h3>
-       <p>Below a &lt;blockquote> is floated to the left, allowing text to wrap around it on the right</p>
-       <img src="images/example-floatbq.png" alt="example float" />
-       </section>
-       <section>
-         <h3>Float</h3>
-<pre><code class ="html">
-  .float {
-    float: left;
-    width: 200px;
-    background: yellow;
-  }
-</code></pre>
-        <div style ="float:left; text-align: left;width:200px;background:yellow; color:black; padding: 10px;">
-          <small>Hi, I'm a yellow box with black text.<br/>
-          I like to hang out on the left side.</small><br/>
-        </div>
-        <div class = "left-align">Not floating element</div>
-        <div class = "left-align">Not floating element</div>
-         <div class = "left-align">Not floating element with wrapping Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
-       </section>
+			<!-- Let's Develop It! -->
+			<section>
+				<h2>Let's Develop It!</h2>
+				<p>Let's use relative and absolute positioning to style our site's banner section</p>
+				<p><img src="img/project-banner.jpg" alt="The design's banner section" /></p>
+			</section>
 
-       <section>
-       <h3>Using floats to place elements side by side</h3>
-       <p>If you want two block level elements to be side by side, you need to float both elements. One left, and one right.</p>
-       <img src="images/example-float-column.png" />
-       </section>
-       <!-- Clear-->
-       <section>
-         <h3>Clear</h3>
-         <ul>
-         <li>Clearing tells the element on which side (right, left, both) other elements <strong>cannot</strong> appear. </li>
-         <li>If you had an image floated left, and you did not want the paragraph to appear next to it, you would add <strong>clear: left;</strong> to the paragraph.</li>
-         <li>Clearing both sides makes sure ﬂoats don’t ﬂow past the clear element.</li>
-         </ul>
-<pre><code class = "html">
-  clear: right;
-  clear: left;
-  clear: both;
-</code></pre>
-       </section>
+			<section>
+				<h3>Property: <em>float</em></h3>
+<pre><code class="css">selector {
+   float: left;
+   float: right;
+}</code></pre>
+				<p class="fragment"><br />The <span class="blue">float</span> property shifts an element to the <span class="green">left</span> or <span class="green">right</span> on the current line, taking it out of normal flow</p>
+				<p class="fragment">When an element is floated, <span class="orange">subsequent elements wrap around it</span></p>
+				<p class="fragment"><img src="img/floating.png" alt="A floating example" /></p>
+			</section>
+			<section>
+				<h3>Property: <em>float</em></h3>
+				<p class="blue">An Example</p>
+				<p data-height="295" data-theme-id="0" data-slug-hash="vNROXq" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/vNROXq/'>Float - Before</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+				<p class="fragment"><a href="http://codepen.io/anythingcodes/pen/RWypMy" target="_blank">View result of above CodePen &raquo;</a></p>
+			</section>
+			<section>
+				<h3>Property: <em>float</em></h3>
+				<p class="blue">Using <em>float</em> in Layouts</p>
+				<p class="fragment">Use <em>float</em> on block-level elements (<span class="orange">&lt;aside></span>, <span class="orange">&lt;main></span>, <span class="orange">&lt;div></span>, etc.) to make page layouts</p>
+				<p class="fragment">Always <span class="green">set a width</span> on floated block-level elements used in layouts</p>
+				<p class="fragment"><img src="img/example-float-column.png" alt="Setting a width on floated layout elements" /></p>
+			</section>
+			<section>
+				<h3>Property: <em>float</em></h3>
+				<p class="blue">Example: Using <em>float</em> in Layouts</p>
+				<p data-height="182" data-theme-id="0" data-slug-hash="JYLdyw" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/JYLdyw/'>Float in Layouts - Before</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+				<p class="fragment"><a href="http://codepen.io/anythingcodes/pen/qOYrYj" target="_blank">View result of above CodePen &raquo;</a></p>
+			</section>
 
-       <section>
-          <h3>Clear</h3>
- <pre><code class ="html">
-   .float {
-     float: left;
-     width: 50px;
-     background: yellow;
-   }
-   .clear-left {
-     clear: left;
-   }
- </code></pre>
-         <div style ="float:left;width:50px;background:yellow; color:black; ">
-           hi<br/>
-           hi<br/>
-           hi<br/>
-         </div>
-         <div class = "left-align">Not floating element</div>
-         <div class = "left-align">Not floating element</div>
-         <div class = "left-align" style="clear: left;">Non-floating element with a class of <strong>.clear-left</strong></div>
-        </section>
+			<!-- Clearing -->
+			<section>
+				<h3>Property: <em>clear</em></h3>
+				<pre><code class="css">selector {
+   clear: left;
+   clear: right;
+   clear: both;
+}</code></pre>
+				<p class="fragment"><br />The <span class="blue">clear</span> property is used exclusively on elements surrounding floated elements</p>
+				<p class="fragment">It tells the element on which side (<span class="orange">left</span>, <span class="orange">right</span>, or <span class="orange">both</span>) floated elements <strong>cannot</strong> appear</p>
+				<div class="fragment"><p data-height="205" data-theme-id="0" data-slug-hash="jbzbbx" data-default-tab="result" data-user="anythingcodes" class='codepen'>See the Pen <a href='http://codepen.io/anythingcodes/pen/jbzbbx/'>Float with Text - Before</a> by Liz Shaw (<a href='http://codepen.io/anythingcodes'>@anythingcodes</a>) on <a href='http://codepen.io'>CodePen</a>.</p></div>
+				<p class="fragment"><a href="http://codepen.io/anythingcodes/pen/pjVeKo" target="_blank">View result of above CodePen &raquo;</a></p>
+			</section>
 
-        <!-- Exercise-->
-       <section>
-         <h3>Let's Develop It</h3>
-         <p>Let's float our side bar and content areas.</p>
-       </section>       <!-- Question-->
-        <section>
-          <h2>Questions?</h2>
-          <div style = "font-size:1200%; height:100%; margin-top:30%" class ="blue">?
-            <div class ="clear"></div></div>
-        </section>
+			<!-- Let's Develop It! -->
+			<section>
+				<h2>Let's Develop It!</h2>
+				<p>Let's use floating to style our site's portfolio section</p>
+				<p><img src="img/project-portfolio.jpg" alt="The design's banner section" /></p>
+			</section>
 
-      </div>
+            <!-- Questions -->
+            <section>
+                <h1>Questions</h1>
+				<div class="blue" style="font-size:1200%; height:100%; margin-top:20%">?
+					<div class="clear"></div>
+				</div>
+            </section>
+			
+			<!-- Getting Your Site Online -->
+			<section>
+				<section data-background="#00A9B4">
+					<h3 style="color: #fafafa;">Bonus Material:</h3>
+					<h1 style="color: #fafafa;"><br />Getting Your Site Online</h1>
+					<p style="color:#fafafa;">Press the down arrow or spacebar to view</p>
+				</section>
+				<section>
+					<h3>Method 1: GitHub</h3>
+					<p class="fragment"><a href="http://github.com" target="_blank">GitHub</a> is <span class="orange">free</span> and a great intro to <span class="orange">version control</span></p>
+					<p class="fragment">A <span class="orange">version control system</span> records changes to a file or set of files over time so that you can keep track of changes and roll back to previous revisions</p>
+					<p class="fragment blue">Almost every web agency uses a version control system</p>
+				</section>
+				
+				<!-- GitHub -->
+				<section>
+					<h3>Method 1: GitHub</h3>
+					<ol style="font-size:85%;line-height:1.3;">					
+						<li class="fragment">Create an account on <a href="http://github.com" target="_blank">GitHub.com</a></li>
+						<li class="fragment"><a href="https://desktop.github.com/" target="_blank">Download GitHub Desktop</a>, then open it and login</li>
+						<li class="fragment"><img src="img/GitHub-add-repository.png" alt="Adding a repository" style="float:right;max-width:50%;"/>Click the plus sign and, under the <em>Add</em> tab, browse to the <span class="orange">project</span> folder you used for this class</li>
+						<li class="fragment">An error message will display; click <span class="blue">create a repository</span></li>
+						<li class="fragment"><img src="img/GitHub-create.png" alt="The create repo screen"  style="float:right;max-width:50%;" />Change the <em>Name</em> to <span class="orange"><em>yourusername</em>.github.io</span> (substitute <em>yourusername</em> with your GitHub username)</li>
+						<li class="fragment">Click <span class="blue">Create repository</span> (Don't worry about changing <em>Local path</em> or <em>Git ignore</em>)</li>
+					</ol>
+				</section>
+				<section>
+					<h3>Method 1: GitHub</h3>
+					<ol style="font-size:80%;line-height:1.3;" start="7">
+						<li class="fragment">Click <em>Changes</em>, where you should see a list of project files.</li>
+						<li class="fragment">Enter a <em>Summary</em> and click <span class="blue">Commit to master</span><br /><img src="img/GitHub-commit.png" alt="Committing changes to GitHub"/></li>					
+					</ol>
+				</section>
+				<section>
+					<h3>Method 1: GitHub</h3>
+					<ol style="font-size:80%;line-height:1.3;" start="9">
+						<li class="fragment"><img src="img/GitHub-publish-screen.png" alt="The publish menu" style="float:right;max-width:50%;" />Click <em>Publish</em> at the top, making sure <em>Name</em> is in the correct format (<span class="orange"><em>yourusername</em>.github.io</span>, except with your username)</li>
+						<li class="fragment">Within a few minutes, your site will be live at <span class="blue">http://<em>yourusername</em>.github.io</span> (substituting your GitHub username for <em>yourusername</em>). Check it out!</li>
+						<li class="fragment">Any time you make changes to your project files, open GitHub Desktop, <em>Commit</em> (step 8) and then click the <img src="img/GitHub-sync.png" style="border:none;box-shadow:none;margin:0;" /> button to publish your changes.</li>
+					</ol>
+					<div class="fragment" style="font-size:75%;line-height:1.3;">
+						<p class="blue">More info:</p>
+						<p><a href="https://pages.github.com/" target="_blank">GitHub Documentation &raquo;</a></p>
+						<p><a href="https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/" target="_blank">Setting up a domain (like http://girldevelopit.com) with GitHub &raquo;</a></p>
+					</div>
+				</section>
 
-      <footer>
+				<!-- Method 2: Hosting -->
+				<section>
+					<h3>Method 2: Hosting + Domain</h3>
+					<p class="fragment">There are two paid services involved:</p>
+					<ol style="font-size:80%;line-height:1.3;">
+						<li class="fragment"><span class="blue fragment">Web Hosting</span><span class="fragment">: A computer (a.k.a. server) where your site's files are located, which is visible to the outside world using a browser</span>
+							<ul>
+								<li class="fragment">To publish changes to your site, you upload individual files from your computer to the server using a <span class="green">File Transfer Protocol (FTP) program</span> such as <a href="https://filezilla-project.org/download.php?type=client" target="_blank">Filezilla</a></li>
+								<li class="fragment">The web hosting company will give you FTP info</li>
+							</ul>
+						</li>
+						<li class="fragment"><span class="blue fragment">Domain Name</span><span class="fragment">: The name you type in to the browser (e.g. girldevelopit.com)</span>
+							<ul>
+								<li class="fragment">Buying a domain is often called <span class="green">registering</span>, so companies that sell domain names are often called <span class="green">Domain Name Registrars</span></li>
+							</ul>
+						</li>
+					</ol>
+				</section>
+				<section>
+					<h3>Method 2: Hosting + Domain</h3>
+					<p class="fragment">You can buy <span class="blue">hosting</span> from one company and <span class="blue">a domain name</span> from another, but it's usually less of a hassle to buy both from the same company</p>
+					<p class="fragment">I use <a href="https://www.1and1.com/web-hosting" target="_blank">1&amp;1's Starter package</a>, since it includes hosting and one domain name</p>
+					<p class="fragment"><br />When it comes to <span class="blue">hosting</span>, <span class="green"><strong>don't be fooled by the extra bells and whistles</strong></span> &mdash; if you aren't sure what something is, you probably don't need it</p>
+				</section>
+				<section>
+					<h3>Method 2: Hosting + Domains</h3>
+					<p class="orange fragment">Why are there two separate services?</p>
+					<p class="fragment">First, your files need to be stored on a <span class="blue">web host</span>, which is a computer (a.k.a. server)</p>
+					<p class="fragment">When you <span class="blue">register a domain</span>, it doesn't 'point' to the server where your files are located</p>
+					<p class="fragment">This is why your web host may give you a <span class="green">Domain Name System (or DNS)</span> address, which is the IP address of the computer (a.k.a. server) where your files are located</p> 
+					<p class="fragment">The <span class="green">Domain Name System (DNS)</span> is a huge list that links your domain name (e.g. girldevelopit.com) to where your files are located (using the <span class="green">IP address</span> of the server where your files are located)</p>
+				</section>
+			</section>
+			
+			<!-- Thank you! -->
+			<section data-background="#f05b62">
+                <h1 style="color: #fafafa;">Thank you all!</h1>
+		  </section>
+    </div>
+    <footer>
         <div class="copyright">
-          HTML/CSS ~ Girl Develop It ~
-          <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+            Intro to HTML &amp; CSS&nbsp; | &nbsp;Boston Chapter &nbsp;| &nbsp;
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" />
+            </a>
         </div>
-      </footer>
-		</div>
+    </footer>
+  </div>
 
 
-		<script src="reveal/lib/js/head.min.js"></script>
-		<script src="reveal/js/reveal.min.js"></script>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
 
-		<script>
+    <script>
+        // Full list of configuration options available here:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
 
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
 
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+            // Optional reveal.js plugins
+            dependencies: [{
+                src: 'lib/js/classList.js',
+                condition: function() {
+                    return !document.body.classList;
+                }
+            }, {
+                src: 'plugin/markdown/marked.js',
+                condition: function() {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: 'plugin/markdown/markdown.js',
+                condition: function() {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: 'plugin/highlight/highlight.js',
+                async: true,
+                condition: function() {
+                    return !!document.querySelector('pre code');
+                },
+                callback: function() {
+                    hljs.initHighlightingOnLoad();
+                }
+            }, {
+                src: 'plugin/zoom-js/zoom.js',
+                async: true
+            }, {
+                src: 'plugin/notes/notes.js',
+                async: true
+            }, {
+                src: 'plugin/accessibility-helper/js/accessibility-helper.js',
+                async: true,
+                condition: function() {
+                    return !!document.body.classList;
+                }
+            }]
+        });
+    </script>
+    <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+</body>
 
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
-
-		</script>
-
-	</body>
 </html>
