@@ -1,0 +1,64 @@
+body {
+    background-color: #E94344;
+    font-family: Verdana,Geneva,sans-serif;
+    color: white;
+    margin: 0;
+}
+a {
+    color: #F0C042;
+}
+a:hover {
+    color: teal;
+}
+h3 {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: normal;
+    border: 2px solid white;
+    padding: 10px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 200px;
+}
+section {
+    width: 70%;
+    margin: auto;
+}
+#banner {
+    width: 100%;
+    position: relative;
+}
+#banner-image {
+    width: 100%;
+}
+.corral {
+    position: absolute;
+    bottom: 20%;
+    text-align: center;
+    width: 100%;
+    font-family: Georgia,Times,"Times New Roman",serif;
+    color: #E94344;
+}
+#banner ul {
+    padding-left: 0;
+}
+#banner li {
+    display: inline;
+    margin: 0 5px 0 5px;
+}
+#banner a {
+    text-decoration: none;
+}
+h1 {
+    font-size: 46px;
+    margin-bottom: 0;
+}
+.portfolio-item {
+    float: left;
+    width: 31.33333%;
+    margin: 1%;
+}
+.portfolio-item img {
+    width: 100%;
+}

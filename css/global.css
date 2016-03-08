@@ -1,0 +1,22 @@
+/*********************************************
+* Custom Global Styles For All Slides
+*********************************************/
+
+.reveal [class^="fa"],
+.reveal [class*=" fa"]{
+  font-style: normal;
+  font-family: 'FontAwesome';
+  font:normal;
+}
+.block-level{
+  display:block;
+}
+.reveal .toc a{
+  color: #fff;
+}
+.reveal indicator,
+  .reveal .indicator,
+    .reveal .indicator,
+      .reveal .indicator{
+        padding-top: 30px;
+      }

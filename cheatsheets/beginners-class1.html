@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+
+	<head>
+		<title>HTML: A Beginner's Cheatsheet</title>
+		<link rel='stylesheet' href='css/styles.css' type='text/css' media='all' />
+		
+	</head>
+	
+	<body>
+		<h1>HTML: A Beginner's Cheatsheet</h2>
+		
+		<!-- Left Column -->
+		<section>
+			<div>
+				<h2>The Fundamental Structure of an HTML File</h2>
+				<pre>
+					<code>
+&lt;!DOCTYPE html>
+&lt;html>
+	&lt;head>
+	&lt;/head>
+	
+	&lt;body>
+	&lt;/body>
+&lt;/html></code>
+				</pre>
+			</div>
+			<div>
+				<h2>Headings</h2>
+				<pre><code>
+&lt;h1><span class="code-content">Heading 1</span>&lt;/h1>
+&lt;h2><span class="code-content">Heading 2</span>&lt;/h2>
+&lt;h3><span class="code-content">Heading 3</span>&lt;/h3>
+&lt;h4><span class="code-content">Heading 4</span>&lt;/h4>
+&lt;h5><span class="code-content">Heading 5</span>&lt;/h5>
+&lt;h6><span class="code-content">Heading 6</span>&lt;/h6>
+				</pre></code>
+			</div>
+			<div>
+				<h2>Links</h2>
+				<pre><code>
+&lt;a href="my-page.html" title="My Portfolio Page"><span class="code-content">Click here</span>&lt;/a>
+				</pre></code>
+				<p>Use <em>target="_blank"</em> to open a link in a new window/tab:</p>
+				<pre><code>
+&lt;a href="my-page.html" title="My Portfolio Page" target="_blank"><span class="code-content">Click here</span>&lt;/a>
+				</pre></code>
+				<p>Use <em>mailto:</em> to make an email link:</p>
+				<pre><code>
+&lt;a href="mailto:ada@lovelace.com"><span class="code-content">Email me</span>&lt;/a>
+				</pre></code>
+			</div>
+			<div>
+				<h2>Images</h2>
+				<p>Absolute image path:</p>
+				<pre><code>
+&lt;img src="http://lorempixel.com/200/200/city" alt="Picture of a city" />
+				</pre></code>
+				<p>Relative image path:</p>
+				<pre><code>
+&lt;img src="images/map.png" alt="Map of Louisville, KY" />
+				</pre></code>
+			</div>
+			<div>
+				<h2>Lists</h2>
+				<p>Unordered (bulleted) list:</p>
+				<pre><code>
+&lt;ul>
+	&lt;li><span class="code-content">The first list item</span>&lt;/li>
+	&lt;li><span class="code-content">Another list item</span>&lt;/li>
+&lt;/ul>
+				</code></pre>
+				<p>Ordered (numbered) list:</p>
+				<pre><code>
+&lt;ol>
+	&lt;li><span class="code-content">The first list item</span>&lt;/li>
+	&lt;li><span class="code-content">Another list item</span>&lt;/li>
+&lt;/ol>
+				</code></pre>
+			</div>
+		</section>
+		
+		<!-- Right Column -->
+		<section>
+			<div>
+				<h2>HTML Coding Tips</h2>
+				<ol>
+					<li>Whenever you type an opening tag, immediately type the closing tag, then fill in your content.</li>
+					<li>Whenever you add a 'child' element, indent it on a new line.</li>
+					<li>HTML ignores multiple whitespaces in a row. You can add consecutive white space characters (spaces, tabs, & carriage returns) into your HTML, but when you view that page, all but one will disappear.</li>
+				</ol>
+			</div>
+			<div>
+				<h2>Paragraphs</h2>
+				<pre><code>
+&lt;p><span class="code-content">Here is a lovely paragraph.</span>&lt;/p>
+				</pre></code>
+			</div>
+			<div>
+				<h2>Text Formatting</h2>
+				<pre><code>
+&lt;em><span class="code-content">Emphasized (italic) text</span>&lt;/em>
+&lt;strong><span class="code-content">Important (bold) text</span>&lt;/strong>
+&lt;small><span class="code-content">Smaller text</span>&lt;/small>
+				</pre></code>
+			</div>
+			<div>
+				<h2>Dividing Areas</h2>
+<pre><code>
+&lt;div><span class="code-content">A generic container for elements and content</span>&lt;/div>
+&lt;section><span class="code-content">A section of your page</span>&lt;/section>
+&lt;header><span class="code-content">A container for your site's header</span>&lt;/header>
+&lt;footer><span class="code-content">A container for your site's footer</span>&lt;/footer>
+&lt;nav><span class="code-content">A container for navigation links</span>&lt;/nav>
+&lt;main><span class="code-content">The container for your site's main content</span>&lt;/main>
+&lt;aside><span class="code-content">A container for related content</span>&lt;/aside>
+</code></pre>
+				<p><small><strong>Note:</strong> Of the above, older browsers only support <em>div</em>s.</small></p>
+			</div>
+			<div>
+				<h2>Comments</h2>
+				<pre><code>
+<span class="code-comment">&lt;!-- I'm a comment; the browser won't display me --></span>
+				</code></pre>
+			</div>
+			<div>
+				<h2>Tables</h2>
+				<pre><code>
+&lt;table>
+	&lt;tr>
+		&lt;th><span class="code-content">Left Column Head</span>&lt;/th>
+		&lt;th><span class="code-content">Right Column Head</span>&lt;/th>
+	&lt;/tr>
+	&lt;tr>
+		&lt;td><span class="code-content">Left Data Cell</span>&lt;/td>
+		&lt;td><span class="code-content">Right Data Cell</span>&lt;/td>
+	&lt;/tr>
+&lt;/table>
+				</pre></code>
+				
+			</div>
+			<div>
+				<h2>Shorthand Notation</h2>	
+				<pre><code>
+&lt;br />
+&lt;img />
+&lt;hr />
+&lt;link />
+&lt;input />
+&lt;meta />
+				</code></pre>
+				<p><small><strong>Note:</strong> <em>&lt;link /></em> is not a standard web link; it is used in the <em>head</em> element to reference CSS files and fonts. Use <em>&lt;a>&lt;/a></em> for standard web links in the <em>body</em>.</small></p>
+			</div>
+		</section>
+		
+		
+	</body>
+
+</html>
