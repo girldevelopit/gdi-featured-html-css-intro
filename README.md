@@ -4,6 +4,9 @@ This is the official Girl Develop It Core HTML/CSS curriculum. It was developed 
 
 The course is meant to be taught in 4 two-hour sections. Each of the slides and practice files are customizable according to the needs of a given class or audience.
 
+
+** Updated 3/29/16 in Curriculum Sprint 2 **
+
 ## Classes
 
 ### Class 1
