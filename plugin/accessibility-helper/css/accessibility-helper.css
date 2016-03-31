@@ -14,7 +14,11 @@
   display: none;
   visibility: hidden;
 }
-
+.reveal.overview .slides>section>.accessibilityWrapper,
+.reveal.overview .slides>section>section>.accessibilityWrapper {
+  display: block;
+  visibility: visible;
+}
 .reveal .slides section.present > .accessibilityWrapper {
   display: block;
   visibility: visible;
