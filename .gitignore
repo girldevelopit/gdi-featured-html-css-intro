@@ -1,4 +1,7 @@
-# OS generated files #
-######################
-.DS_Store*
-Thumbs.db
+.DS_Store
+.svn
+log/*.log
+tmp/**
+node_modules/
+.sass-cache
+*.db
