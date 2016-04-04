@@ -23,6 +23,13 @@ div.left-align{
 	clear: both;
 }
 
+.reveal h1 {
+    font-size: 2em;
+}
+
+.reveal h2{
+    font-size: 1.8em;
+}
 
 /*
  * Hide only visually, but have it available for screenreaders: h5bp.com/v
