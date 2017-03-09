@@ -57,7 +57,7 @@
             <h3>Static Positioning</h3>
             <ul>
               <li>HTML elements are positioned static by default.</li>
-              <li>Static elements are positioned in the normal ﬂow of the page</li>
+              <li>Static elements are positioned in the normal ﬂow of the page.</li>
               <li>Static elements ignore top, bottom, right or left property specifications.</li>
             </ul>
           </section>
@@ -108,7 +108,7 @@
           <section>
             <h3>Relative Positioning</h3>
             <p>The "relative" value will still put the element in the normal flow, but then offset it according to top/left/right/bottom properties.</p>
-<pre><code class="css">.relative{
+<pre><code class="css">.relative {
   position: relative;
   left: 80px;
   top: 20px;
@@ -132,24 +132,24 @@
               <li>Its container block is the first element that has a position other than static.</li>
               <li>If no such element is found, the container block is &lt;html&gt;.</li>
               <li>Other elements act as if it's not there.</li>
-              <li>Determined by its oﬀset values in the properties top, bottom, right and left.</li>
+              <li>Determined by its offset values in the properties top, bottom, right and left.</li>
             </ul>
           </section>
 
           <section  style="border: 1px solid black">
             <h3>Absolute Positioning</h3>
             <p>The "absolute" value will take the element out of the normal flow and position it in relation to the window (or the closest non-static element).</p>
-<pre><code class="css">.top{
+<pre><code class="css">.top {
   position: absolute;
   top: -40px;
   right: 10px;
-  background-color: yellow
+  background-color: yellow;
 }
-.bottom{
+.bottom {
   position: absolute;
   bottom: -40px;
   left:60px;
-  background-color: green
+  background-color: green;
 }
 </code></pre>
             <div>
@@ -177,13 +177,13 @@
           <section>
             <h3>Z-index</h3>
             <p>Sometimes elements overlap. You can change the order of overlapping with z-index. The element with highest z-index goes on top.</p>
-<pre><code class ="css">.bottom{
+<pre><code class ="css">.bottom {
   position: absolute;
   bottom: 10px;
   left:60px;
   background-color: yellow;
 }
-.top{
+.top {
   position: absolute;
   bottom: 15px;
   left:60px;
@@ -196,7 +196,7 @@
           </section>
 
           <section>
-            <h3>Let's Develop it!</h3>
+            <h3>Let's Develop It!</h3>
             <p>Let's add some positioning.</p>
             <p>Let's create a div that contains an image and a caption, and position the caption absolutely overtop the image.</p>
           </section>
@@ -221,10 +221,10 @@
 
           <section>
             <h3>Float</h3>
-<pre><code class="css">.float{
-  float:left;
-  width:200px;
-  background:yellow;
+<pre><code class="css">.float {
+  float: left;
+  width: 200px;
+  background: yellow;
 }
 </code></pre>
             <div style ="float:left; text-align: left;width:200px;background:yellow; color:black; padding: 10px;">
@@ -267,13 +267,13 @@ clear: both;
 
           <section>
             <h3>Clear</h3>
-<pre><code class ="css">.float{
-  float:left;
-  width:50px;
-  background:yellow;
+<pre><code class ="css">.float {
+  float: left;
+  width: 50px;
+  background: yellow;
 }
-.clear-left{
-  clear:left
+.clear-left {
+  clear: left;
 }
 </code></pre>
             <div style ="float:left;width:50px;background:yellow; color:black; ">

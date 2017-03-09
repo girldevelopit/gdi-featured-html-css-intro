@@ -125,16 +125,16 @@
         <section>
           <h3>Div Examples</h3>
 <pre><code class="html">&lt;div&gt;
-   &lt;p&gt;Content&lt;p&gt;
-   &lt;p&gt;Content&lt;p&gt;
+   &lt;p&gt;Content&lt;/p&gt;
+   &lt;p&gt;Content&lt;/p&gt;
 &lt;/div&gt;
 </code></pre>
 <pre><code class="html">&lt;div id="header"&gt;
-   &lt;h1&gt;Main Heading&lt;h1&gt;
+   &lt;h1&gt;Main Heading&lt;/h1&gt;
 &lt;/div&gt;
 </code></pre>
 <pre><code class="html">&lt;div class="sub-content"&gt;
-   &lt;p&gt;Some more content&lt;p&gt;
+   &lt;p&gt;Some more content&lt;/p&gt;
 &lt;/div&gt;
 </code></pre>
         </section>
@@ -149,8 +149,8 @@
 
         <section>
           <h3>Grouping elements with div, cont.</h3>
-<pre><code class="css">.align-right{
-  text-align:right;
+<pre><code class="css">.align-right {
+  text-align: right;
   color: purple;
   font-weight: bold;
 }
@@ -258,8 +258,8 @@
           <h3>Span</h3>
           <p>Span is used to apply a specific style inline</p>
 
-<pre><code class="css">.highlight{
-  color:teal;
+<pre><code class="css">.highlight {
+  color: teal;
 }
 </code></pre>
 <pre><code class="html">&lt;p&gt;Paragraph with &lt;span class="highlight"&gt;teal&lt;/span&gt; text.&lt;/p&gt;
@@ -274,7 +274,7 @@
 
         <!-- Pseudo class-->
         <section>
-          <h3>Pseudo-classess</h3>
+          <h3>Pseudo-classes</h3>
           <div class="halfblock">
             <p>Changing the format of a link when you hover over it is accomplished by using pseudo-classes.</p>
             <p>CSS pseudo-classes are used to add special effects to some selectors.</p>
@@ -282,12 +282,12 @@
 
           <div class="halfblock">
             <p>Syntax:</p>
-<pre><code class="css">selector:pseudo-class{
-  property:value;
+<pre><code class="css">selector:pseudo-class {
+  property: value;
 }
 </code></pre>
             <p>Example:</p>
-<pre><code class="css">a:link{
+<pre><code class="css">a:link {
   text-decoration: none;
 }
 </code></pre>
@@ -425,7 +425,7 @@ width: 300px;
         <section>
           <h3>Wrappers</h3>
           <p>Wrappers are a good way to center content if the screen width is wider than your content.</p>
-<pre><code class="css">div.wrapper{
+<pre><code class="css">div.wrapper {
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
@@ -435,7 +435,7 @@ width: 300px;
 
         <!-- Exercise -->
         <section>
-          <h3>Let's Develop it!</h3>
+          <h3>Let's Develop It!</h3>
           <p>Let's add some padding, borders, and margins to our divs.</p>
           <p>Let's center our entire document in the browser.</p>
         </section>
@@ -446,10 +446,10 @@ width: 300px;
           <h3>Property: Width</h3>
           <p>Sets the width of an element.</p>
           <p>Does not include padding or borders. Remember to add these to the width.</p>
-<pre><code class="css">div#sidebar{
+<pre><code class="css">div#sidebar {
   width: 31%;
   padding: 1%;
-  border: none; //Total width is 33%
+  border: none; /*Total width is 33%*/
 }
 </code></pre>
         </section>
@@ -459,17 +459,17 @@ width: 300px;
           <h3>Property: Height</h3>
           <p>Sets the height of an element.</p>
           <p>Does not include padding or borders. Remember to add these to the height.</p>
-<pre><code class="css">p.alert{
+<pre><code class="css">p.alert {
   height: 50px;
   padding: 5px;
-  border: 2px solid red; //Total height is 64px
+  border: 2px solid red; /*Total height is 64px*/
 }
 </code></pre>
         </section>
 
         <!-- Exercise -->
         <section>
-          <h3>Let's develop it!</h3>
+          <h3>Let's Develop It!</h3>
           <div>
             <p>Add a width &amp; height to our divs.</p>
             <p>Use IDs to target each div with CSS</p>
