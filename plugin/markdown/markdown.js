@@ -4,32 +4,25 @@
  * of external markdown documents.
  */
 (function( root, factory ) {
-	if( typeof exports === 'object' ) {
+	if (typeof define === 'function' && define.amd) {
+		root.marked = require( './marked' );
+		root.RevealMarkdown = factory( root.marked );
+		root.RevealMarkdown.initialize();
+	} else if( typeof exports === 'object' ) {
 		module.exports = factory( require( './marked' ) );
-	}
-	else {
+	} else {
 		// Browser globals (root is window)
 		root.RevealMarkdown = factory( root.marked );
 		root.RevealMarkdown.initialize();
 	}
 }( this, function( marked ) {
 
-	if( typeof marked === 'undefined' ) {
-		throw 'The reveal.js Markdown plugin requires marked to be loaded';
-	}
-
-	if( typeof hljs !== 'undefined' ) {
-		marked.setOptions({
-			highlight: function( lang, code ) {
-				return hljs.highlightAuto( lang, code ).value;
-			}
-		});
-	}
-
-	var DEFAULT_SLIDE_SEPARATOR = '^\n---\n$',
+	var DEFAULT_SLIDE_SEPARATOR = '^\r?\n---\r?\n$',
 		DEFAULT_NOTES_SEPARATOR = 'note:',
 		DEFAULT_ELEMENT_ATTRIBUTES_SEPARATOR = '\\\.element\\\s*?(.+?)$',
 		DEFAULT_SLIDE_ATTRIBUTES_SEPARATOR = '\\\.slide:\\\s*?(\\\S.+?)$';
+
+	var SCRIPT_END_PLACEHOLDER = '__SCRIPT_END__';
 
 
 	/**
@@ -43,6 +36,9 @@
 		// strip leading whitespace so it isn't evaluated as code
 		var text = ( template || section ).textContent;
 
+		// restore script end tags
+		text = text.replace( new RegExp( SCRIPT_END_PLACEHOLDER, 'g' ), '</script>' );
+
 		var leadingWs = text.match( /^\n?(\s*)/ )[1].length,
 			leadingTabs = text.match( /^\n?(\t*)/ )[1].length;
 
@@ -50,7 +46,7 @@
 			text = text.replace( new RegExp('\\n?\\t{' + leadingTabs + '}','g'), '\n' );
 		}
 		else if( leadingWs > 1 ) {
-			text = text.replace( new RegExp('\\n? {' + leadingWs + '}','g'), '\n' );
+			text = text.replace( new RegExp('\\n? {' + leadingWs + '}', 'g'), '\n' );
 		}
 
 		return text;
@@ -76,7 +72,7 @@
 			if( /data\-(markdown|separator|vertical|notes)/gi.test( name ) ) continue;
 
 			if( value ) {
-				result.push( name + '=' + value );
+				result.push( name + '="' + value + '"' );
 			}
 			else {
 				result.push( name );
@@ -112,8 +108,12 @@
 		var notesMatch = content.split( new RegExp( options.notesSeparator, 'mgi' ) );
 
 		if( notesMatch.length === 2 ) {
-			content = notesMatch[0] + '<aside class="notes" data-markdown>' + notesMatch[1].trim() + '</aside>';
+			content = notesMatch[0] + '<aside class="notes">' + marked(notesMatch[1].trim()) + '</aside>';
 		}
+
+		// prevent script end tags in the content from interfering
+		// with parsing
+		content = content.replace( /<\/script>/g, SCRIPT_END_PLACEHOLDER );
 
 		return '<script type="text/template">' + content + '</script>';
 
@@ -177,7 +177,7 @@
 				markdownSections += '<section '+ options.attributes +'>';
 
 				sectionStack[i].forEach( function( child ) {
-					markdownSections += '<section data-markdown>' +  createMarkdownSlide( child, options ) + '</section>';
+					markdownSections += '<section data-markdown>' + createMarkdownSlide( child, options ) + '</section>';
 				} );
 
 				markdownSections += '</section>';
@@ -219,12 +219,13 @@
 
 				xhr.onreadystatechange = function() {
 					if( xhr.readyState === 4 ) {
-						if ( xhr.status >= 200 && xhr.status < 300 ) {
+						// file protocol yields status code 0 (useful for local debug, mobile applications etc.)
+						if ( ( xhr.status >= 200 && xhr.status < 300 ) || xhr.status === 0 ) {
 
 							section.outerHTML = slidify( xhr.responseText, {
 								separator: section.getAttribute( 'data-separator' ),
-								verticalSeparator: section.getAttribute( 'data-vertical' ),
-								notesSeparator: section.getAttribute( 'data-notes' ),
+								verticalSeparator: section.getAttribute( 'data-separator-vertical' ),
+								notesSeparator: section.getAttribute( 'data-separator-notes' ),
 								attributes: getForwardedAttributes( section )
 							});
 
@@ -251,12 +252,12 @@
 				}
 
 			}
-			else if( section.getAttribute( 'data-separator' ) || section.getAttribute( 'data-vertical' ) || section.getAttribute( 'data-notes' ) ) {
+			else if( section.getAttribute( 'data-separator' ) || section.getAttribute( 'data-separator-vertical' ) || section.getAttribute( 'data-separator-notes' ) ) {
 
 				section.outerHTML = slidify( getMarkdownFromSlide( section ), {
 					separator: section.getAttribute( 'data-separator' ),
-					verticalSeparator: section.getAttribute( 'data-vertical' ),
-					notesSeparator: section.getAttribute( 'data-notes' ),
+					verticalSeparator: section.getAttribute( 'data-separator-vertical' ),
+					notesSeparator: section.getAttribute( 'data-separator-notes' ),
 					attributes: getForwardedAttributes( section )
 				});
 
@@ -378,6 +379,24 @@
 	return {
 
 		initialize: function() {
+			if( typeof marked === 'undefined' ) {
+				throw 'The reveal.js Markdown plugin requires marked to be loaded';
+			}
+
+			if( typeof hljs !== 'undefined' ) {
+				marked.setOptions({
+					highlight: function( code, lang ) {
+						return hljs.highlightAuto( code, [lang] ).value;
+					}
+				});
+			}
+
+			var options = Reveal.getConfig().markdown;
+
+			if ( options ) {
+				marked.setOptions( options );
+			}
+
 			processSlides();
 			convertSlides();
 		},
