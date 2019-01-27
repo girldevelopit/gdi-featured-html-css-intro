@@ -60,3 +60,26 @@ div.left-align{
     position: static;
     width: auto;
 }
+
+.flex-row{
+    display: flex;
+}
+
+.flex-column-even{
+    height: 100%;
+    display: flex!important;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.flex-column-even pre{
+    width:100%!important;
+}
+
+.container{
+    margin: 10px!important;
+}
+
+.keyword{
+    color:#4d4d4c!important;
+}
