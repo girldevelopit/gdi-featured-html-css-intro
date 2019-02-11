@@ -83,3 +83,57 @@ div.left-align{
 .keyword{
     color:#4d4d4c!important;
 }
+
+.reveal pre code{
+    max-height: none;
+}
+
+.reveal pre {
+    overflow: auto;
+}
+
+.reveal section img{
+    max-width: 450px;
+}
+
+.smaller{
+    font-size: .75em!important;
+}
+
+.pm-0{
+    padding:0!important;
+    margin:0!important;
+}
+
+.margin-example-container{
+    display:flex;
+    justify-content: center;
+    margin-bottom: 20px!important;
+}
+
+.margin-example{
+    display:inline!important;
+    width:max-content!important;
+}
+
+
+.main-example, 
+.block-example{
+    padding: 10px!important;
+    text-align: center;
+    width: 200px;
+}
+
+.main-example{
+    background-color: pink;
+    color: darkblue;
+}
+
+.block-example{
+    background-color: black;
+    color: lightblue;
+}
+
+.margin2-example-container{
+    margin-bottom: 20px!important;
+}

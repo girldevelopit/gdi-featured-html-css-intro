@@ -182,20 +182,6 @@
             </ul>
           </section>
 
-          <!-- Exercise-->
-          <section>
-            <h3>Let's develop it</h3>
-            <ul>
-              <li>In the same folder you used last time, if you already have not done so, create a new file called style.css</li>
-              <li>Add a link to the file in the head of your HTML file</li>
-              <li>Add the CSS rule below to the CSS file:</li>
-            </ul>
-<pre><code class = "css">body {
-  background-color: yellow;
-}
-</code></pre>
-          </section>
-
           <!-- Selectors elements-->
           <section>
             <h3>Selector: Element</h3>
@@ -210,6 +196,19 @@
 </code></pre>
             <p>Selects all image elements.</p>
           </section>
+          <!-- Exercise-->
+          <section>
+            <h3>Let's develop it</h3>
+            <ul>
+              <li>In the same folder you used last time, if you already have not done so, create a new file called style.css</li>
+              <li>Add a link to the file in the head of your HTML file</li>
+              <li>Add the CSS rule below to the CSS file:</li>
+            </ul>
+<pre><code class = "css">body {
+  background-color: yellow;
+}
+</code></pre>
+          </section>
 
           <section>
             <h2>Before we dive in, let's talk color!</h2>
@@ -220,31 +219,31 @@
             <h3>CSS Color Values</h3>
             <p>Your browser can accept colors in many different ways:</p>
             <ul>
-              <li><strong>Color name</strong> (ex. red)</li>
-              <li><strong>Hexadecimal value</strong> (ex. #FF0000)</li>
-              <li><strong>RGB value</strong> (ex. rgb(255, 0, 0))</li>
-              <li><strong>HSL value</strong> (ex. hsl(0, 100%, 100%))</li>
+              <li class="fragment"><strong>Color name</strong> (ex. red)</li>
+              <li class="fragment">
+                The 17 standard colors are:
+                <span style="color:aqua; background:black;">aqua</span>,
+                <span style="color:black,">black</span>,
+                <span style="color:blue;">blue</span>,
+                <span style="color:fuchsia;">fuchsia</span>,
+                <span style="color:gray;">gray</span>,
+                <span style="color:grey;">grey</span>,
+                <span style="color:green;">green</span>,
+                <span style="color:lime;">lime</span>,
+                <span style="color:maroon;">maroon</span>,
+                <span style="color:navy;">navy</span>,
+                <span style="color:olive;">olive</span>,
+                <span style="color:purple;">purple</span>,
+                <span style="color:red;">red</span>,
+                <span style="color:silver; background:black;">silver</span>,
+                <span style="color:teal;">teal</span>,
+                <span style="color:white; background:black;">white</span>,
+                and <span style="color:yellow; background:black;">yellow</span>.
+              </li>
+              <li class="fragment"><strong>Hexadecimal value</strong> (ex. #FF0000)</li>
+              <li class="fragment"><strong>RGB value</strong> (ex. rgb(255, 0, 0))</li>
+              <li class="fragment"><strong>HSL value</strong> (ex. hsl(0, 100%, 100%))</li>
             </ul>
-            <p>
-              The 17 standard colors are:
-              <span style="color:aqua; background:black;">aqua</span>,
-              <span style="color:black,">black</span>,
-              <span style="color:blue;">blue</span>,
-              <span style="color:fuchsia;">fuchsia</span>,
-              <span style="color:gray;">gray</span>,
-              <span style="color:grey;">grey</span>,
-              <span style="color:green;">green</span>,
-              <span style="color:lime;">lime</span>,
-              <span style="color:maroon;">maroon</span>,
-              <span style="color:navy;">navy</span>,
-              <span style="color:olive;">olive</span>,
-              <span style="color:purple;">purple</span>,
-              <span style="color:red;">red</span>,
-              <span style="color:silver; background:black;">silver</span>,
-              <span style="color:teal;">teal</span>,
-              <span style="color:white; background:black;">white</span>,
-              and <span style="color:yellow; background:black;">yellow</span>.
-            </p>
           </section>
           <section>
             <h3>Property: Color</h3>
@@ -267,6 +266,15 @@
   background-color: rgb(0,0,0);
 }
 </code></pre>
+          </section>
+
+
+          <section>
+            <h2>How do you know what to call the property?</h2>
+            <p class="fragment">
+              W3 Consortium came up with them!
+            </p>
+            <a class="fragment" href="https://www.w3schools.com/cssref/" target="_blank">https://www.w3schools.com/cssref/</a>
           </section>
 
           <!-- Exercise-->
@@ -358,7 +366,8 @@
           </section>
 
           <section>
-            <h2>BREAK!</h2>
+            <img width="600px" src="https://media.makeameme.org/created/you-get-a-evdcuu.jpg" alt="">
+            <h2>BREAK!?</h2>
           </section>
           <!-- Selector position-->
           <section>
@@ -389,7 +398,9 @@
 </code></pre>
             <p>Means "find a strong tag inside a link inside a list item in an unordered list"</p>
 <pre><code class = "html">&lt;ul&gt;
-  &lt;li&gt;&lt;a href="programs.html"&gt;Our &lt;strong&gt;program&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="programs.html"&gt;Our &lt;strong&gt;program&lt;/strong&gt;&lt;/a&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 </code></pre>
           </section>
@@ -475,7 +486,8 @@
           <section>
             <h3>Let's develop it</h3>
             <ul>
-              <li>Add an ID and 2 of the same class to a your HTML</li>
+              <li>Add an ID to one HTML element</li>
+              <li>Add a class to 3 HTML elements</li>
               <li>Add CSS rules to target the ID and the class</li>
             </ul>
           </section>
@@ -552,6 +564,24 @@
 }
 </code></pre>
           </section>
+          <section>
+            <h3>Cascading priority</h3>
+            <p>Your browser also assigns priority based on the specificity of the selection. More specific selectors have higher priority.</p>
+<pre><code class = "css">.main .bottom .footer p{
+  color: red;
+}
+
+.bottom .footer p{
+  color: green!important;
+}
+
+.footer p{
+  color: blue;
+}
+</code></pre>
+          </section>
+          
+          
           <section>
             <h3>Cascading priority</h3>
             <p>The tie-breaker is position. Rules lower in the file overwrite rules higher in the file</p>
