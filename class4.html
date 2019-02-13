@@ -54,45 +54,233 @@
           </section>
 
           <section>
+            <h1>Agenda</h1>
+            <ul>
+              <li>Review key concepts</li>
+              <li>CSS Property - Position</li>
+              <li>Wireframing</li>
+              <li>Let's Develop It!</li>
+              <li>Peer Review</li>
+              <li>Exit Survey</li>
+            </ul>
+          </section>
+
+          <section>
+            <section> 
+              <h3>Review Quiz</h3>
+            </section>
+
+            <section>
+              <h2>Question 1</h2>
+              <h3>What are the 4 parts of the box model?</h3>
+              <ol>
+                <li class="fragment">Content</li>
+                <li class="fragment">Padding</li>
+                <li class="fragment">Border</li>
+                <li class="fragment">Margin</li>
+              </ol>
+            </section>
+
+            <section>
+              <h2>Question 2</h2>
+              <h3>You want your link to open in a new tab. What do you do?</h3>
+              <p class="fragment">Set "target" attribute to "_blank"</p>
+              <pre class="fragment"><code class="html">&lt;a href="#" target="_blank"&gt;link&lt;/a&gt;</code></pre>
+            </section>
+            
+            <section>
+              <h2>Question 3</h2>
+              <h3>Spot the 3 CSS errors</h3>
+              <pre><code class="plaintext">img [ 
+    display: block;
+]
+
+.card p{font-size: 3em color: red}
+
+h1,2,3,4{
+  padding: 0;
+  margin: 0;
+}
+</code></pre>
+            </section>
+            <section>
+              <h2>Question 3</h2>
+              <h3>Spot the 3 CSS errors</h3>
+              <div class="halfblock">
+                <p>Error</p>
+              <pre><code class="plaintext">img [ 
+    display: block;
+]
+
+.card p{font-size: 3em color: red}
+
+h1,2,3,4{
+  padding: 0;
+  margin: 0;
+}
+</code></pre>
+</div>
+<div class="halfblock">
+  <p>Correct</p>
+              <pre><code class="css">img { 
+    display: block;
+}
+
+.card p{
+  font-size: 3em;
+  color: red;
+}
+
+h1,h2,h3,h4{
+  padding: 0;
+  margin: 0;
+}
+</code></pre>
+              </div>
+            </section>
+          </section>
+
+          <section>
+            <h2>Key Concept Review</h2>
+            <ul>
+              <li>IDs vs. Classes</li>
+              <li>&lt;div&gt; vs. semantic HTML elements</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>IDs</h2>
+            <h4>What is an ID?</h4>
+            <ul>
+              <li class="fragment">An ID is a unique identifier you can give to <strong>ONE</strong> HTML element</li>
+              <li class="fragment">Element IDs are unique and cannot be shared</li>
+              <li class="fragment">Useful for directly selecting a key element</li>
+            </ul>
+            <br>
+            <br>
+            <div class="halfblock fragment">
+              <p>HTML</p>
+            <pre><code class="html">&lt;div&gt; 
+  &lt;div id="myTitle"&gt;
+    &lt;h1&gt;Bob's Website&lt;/h1&gt;
+    &lt;p&gt;Welcome to my website!&lt;/p&gt;
+  &lt;/div&gt;
+  ...
+&lt;/div&gt;</code></pre>
+            </div>
+            <div class="halfblock fragment">
+              <p>CSS</p>
+            <pre><code class="css">#myTitle{
+  font-weight: bold;
+  font-size: 40px;
+}</code></pre>
+            </div>
+          </section>
+
+          <section>
+            <h2>Classes</h2>
+              <h4>What is a Class?</h4>
+              <ul>
+                <li class="fragment">An Class is an identifier you can give to <strong>MULTIPLE</strong> HTML element</li>
+                <li class="fragment">Element Classes are NOT unique and can be shared</li>
+                <li class="fragment">Superior way for styling multiple elements (DRY)</li>
+                <li class="fragment">Use a Class when muliple elements are similar in purpose or function</li>
+              </ul>
+              <br>
+              <br>
+              <div class="halfblock fragment">
+                <p>HTML</p>
+            <pre><code class="html xml">&lt;a class="link" href="#"&gt;Bob's Website&lt;/a&gt;
+&lt;a class="link" href="#"&gt;Mary's Website&lt;/a&gt;
+&lt;a class="link" href="#"&gt;John's Website&lt;/a&gt;
+&lt;a class="link" href="#"&gt;Amy's Website&lt;/a&gt;
+</code></pre>
+            </div>
+            <div class="halfblock fragment">
+              <p>CSS</p>
+            <pre><code class="css">.link{
+  font-family: monospace;
+  color: purple;
+}</code></pre>
+              </div>
+          </section>
+
+          <section>
+            <h3>&lt;div&gt; vs. semantic HTML elements</h3>
+
+            <div class="halfblock">
+              <p>&lt;div&gt;</p>
+              <ul>
+                <li class="fragment">General purpose "wrapper" for related content</li>
+                <li class="fragment">The tag name "div" conveys no information about the purpose of the elements within</li>
+              </ul>
+            </div>
+            <div class="halfblock">
+              <p>Semantic HTML elements</p>
+              <ul>
+                  <li class="fragment">Intentional "wrapper" for related content</li>
+                  <li class="fragment">Tag name conveys purpose elements within</li>
+                </ul>
+<pre class="fragment"><code class ="plaintext">&lt;header&gt; = Starting content (top)
+&lt;nav&gt;    = Navigation elements
+&lt;article&gt;= Information Content
+&lt;section&gt;= Divides site components
+&lt;main&gt;   = Main content
+&lt;aside&gt;  = Supplemental info
+&lt;footer&gt; = End content (bottom)
+</code></pre>
+          </div>
+          </section>
+
+          <section>
+            <h2>CSS property - position</h2>
+          </section>
+
+          <section>
             <h3>Static Positioning</h3>
             <ul>
-              <li>HTML elements are positioned static by default.</li>
-              <li>Static elements are positioned in the normal ﬂow of the page</li>
-              <li>Static elements ignore top, bottom, right or left property specifications.</li>
+              <li class="fragment">HTML elements are positioned static by default.</li>
+              <li class="fragment">Follows the normal flow of the page</li>
             </ul>
           </section>
 
           <section>
             <h3>Static Positioning</h3>
-            <p>In normal flow, inline boxes flow from left to right, wrapping to next line when needed.</p>
-<pre><code class="html">&lt;img src="img/cookie1.png"/&gt;
+            <p class="fragment">In normal flow, inline elements flow from left to right, wrapping to next line when needed.</p>
+<pre class="fragment"><code class="html">&lt;img src="img/cookie1.png"/&gt;
 &lt;img src="img/cookie2.png"/&gt;
 &lt;img src="img/cookie3.png"/&gt;
 ...
 &lt;img src="img/cookie2.png"/&gt;
 &lt;img src="img/cookie3.png"/&gt;
 </code></pre>
-            <img src="img/cookie1.png" alt="Stocking-shaped cookie"/>
-            <img src="img/cookie2.png" alt="Tree-shaped cookie"/>
-            <img src="img/cookie3.png" alt="Snowflake-shaped cookie"/>
-            <img src="img/cookie1.png" alt="Stocking-shaped cookie"/>
-            <img src="img/cookie2.png" alt="Tree-shaped cookie"/>
-            <img src="img/cookie3.png" alt="Snowflake-shaped cookie"/>
-            <img src="img/cookie1.png" alt="Stocking-shaped cookie"/>
-            <img src="img/cookie2.png" alt="Tree-shaped cookie"/>
-          </section>
-
+<div style="text-align: left;" class="fragment">
+  <img src="img/cookie1.png" alt="Stocking-shaped cookie"/>
+  <img src="img/cookie2.png" alt="Tree-shaped cookie"/>
+  <img src="img/cookie3.png" alt="Snowflake-shaped cookie"/>
+  <img src="img/cookie1.png" alt="Stocking-shaped cookie"/>
+  <img src="img/cookie2.png" alt="Tree-shaped cookie"/>
+  <img src="img/cookie3.png" alt="Snowflake-shaped cookie"/>
+  <img src="img/cookie1.png" alt="Stocking-shaped cookie"/>
+  <img src="img/cookie2.png" alt="Tree-shaped cookie"/>
+  <img src="img/cookie3.png" alt="Snowflake-shaped cookie"/>
+  <img src="img/cookie1.png" alt="Stocking-shaped cookie"/>
+  <img src="img/cookie2.png" alt="Tree-shaped cookie"/>
+</div>
+</section>
           <section>
             <h3>Static Positioning</h3>
-            <p>In normal flow, block boxes flow from top to bottom, making a new line after every box.</p>
-<pre><code class ="html">&lt;p&gt;Greetings&lt;/p&gt;
+            <p>In normal flow, block elemetns flow from top to bottom, making a new line after every box.</p>
+<pre class="fragment"><code class ="html">&lt;p&gt;Greetings&lt;/p&gt;
 &lt;p&gt;Hello&lt;/p&gt;
 &lt;p&gt;Hi there!&lt;/p&gt;
 </code></pre>
-            <p>Greetings</p>
-            <p>Hello</p>
-            <p>Hi there!</p>
-          </section>
+<div class="fragment">
+  <p>Greetings</p>
+  <p>Hello</p>
+  <p>Hi there!</p> 
+</div>
+</section>
 
           <!-- Relative Positioning-->
           <section>
@@ -172,27 +360,6 @@
               <img src="img/example-absolute.png" class="noborder" alt="Photo with caption overlayed on top"/>
             </div>
             <div class="clear"></div>
-          </section>
-
-          <section>
-            <h3>Z-index</h3>
-            <p>Sometimes elements overlap. You can change the order of overlapping with z-index. The element with highest z-index goes on top.</p>
-<pre><code class ="css">.bottom{
-  position: absolute;
-  bottom: 10px;
-  left:60px;
-  background-color: yellow;
-}
-.top{
-  position: absolute;
-  bottom: 15px;
-  left:60px;
-  background-color: green;
-  z-index: 2;
-}
-</code></pre>
-            <div style="position: absolute; bottom: -20px; left:60px; background-color: yellow; color:black">Bottom</div>
-            <div style="position: absolute; bottom: -15px; left:60px; background-color: green; z-index: 2; ">Top</div>
           </section>
 
           <section>
@@ -295,6 +462,110 @@ clear: both;
           <section>
             <h2>Questions?</h2>
           </section>
+
+          <section>
+            <h1>Break!</h1>
+          </section>
+          
+        <section>
+            <h1>Wireframe your site!</h1>
+          </section>
+          <section>
+            <h1>What's a wireframe?</h1>
+            <p>A visual guide that represents the layout of a website</p>
+            <img style="width:800px;max-width:none;" class="fragment" src="https://alistapart.com/d/priority-guides/wireframes.png" alt="">
+          </section>
+
+          <section>
+            <h2>Why bother?</h2>
+            <ul>
+              <li class="fragment">Web design starts with planning!</li>
+              <li class="fragment">Measure twice, cut once</li>
+              <li class="fragment">Box model*</li>
+            </ul>
+          </section>
+
+          <!-- Exercise-->
+          <section>
+              <h3>Let's develop it</h3>
+              <h5>Creating your wireframe</h5>
+              <br>
+              <ul>
+                <li class="fragment">Pick a topic you like for your website (preferably not yourself!)</li>
+                <li class="fragment">Using pencil and paper, draw out the wireframe for your <strong>single page website</strong></li>
+                <li class="fragment" style="text-decoration: underline;">When done, call instructor over to brainstorm implementation</li>
+                <li class="fragment"><strong>10 min activity!</strong></li>
+              </ul>
+            </section>
+
+            <section>
+              <h1>Let's Develop It!</h1>
+              <h5>Creating your website</h5>
+              <ul>
+                <li class="fragment">Using your wireframe and instructor input as your guide, start coding your site</li>
+                <li class="fragment">You can start a new project folder or continue using the one you have</li>
+                <li class="fragment">Keep your code clean and organized</li>
+              </ul>
+              <div class="fragment">
+                <div style="border: solid 1px blue; box-sizing: border-box;" class="halfblock">
+                  <p>HTML</p>
+                  <pre><code class="html">&lt;div id="sidebar"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;First item&lt;/li&gt;
+    &lt;li&gt;Second item&lt;/li&gt;
+    &lt;li&gt;Third item&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+                <div style="border: solid 1px blue; box-sizing: border-box;"class="halfblock">
+                  <p>CSS</p>
+                  <pre><code class="css">body{
+  margin: 0;
+}
+
+p, a {
+  color: red;
+  font-size: 16px;
+}</code></pre>
+                </div>
+              </div>
+              <P class="fragment"><strong>Activity ends 20 min before end of class!</strong></P>
+            </section>
+
+            <section>
+              <h1>Peer Review</h1>
+              <div class="halfblock">
+                <p class="fragment"><strong>In groups of 2-3, check out each others websites!</strong></p>
+                <ul class="fragment">
+                  <li>Ask: what was most challenging about making the site?</li>
+                  <li>Ask: what was most fun about making the site?</li>
+                </ul>
+              </div>
+              <div class="halfblock">
+                <p class="fragment"><strong>Look at the HTML/CSS for their site</strong></p>
+                <ul class="fragment">
+                  <li>How readable is their HTML? How organized is the content?</li>
+                  <li>How readable is their CSS?</li>
+                  <li>If you see any mistakes (unclosed tags, incorrect CSS syntax, etc.), let them know!</li>
+                </ul>
+              </div>
+            </section>
+
+            <section>
+              <h2>Exit Survey!</h2>
+            </section>
+
+            <section>
+              <div class="halfblock">
+                <img src="img/fireplace1.jpg" alt="">
+              </div>
+              <div class="halfblock">
+                <a style="display:block; margin-bottom: 20px;" target="_blank" href="https://mahdis.pw">mahdis.pw</a>
+                <a style="display:block; margin-bottom: 20px;" target="_blank" href="mailto:mahdis.pw@gmail.com">mahdis.pw@gmail.com</a>
+                <a style="display:block; margin-bottom: 20px;" target="_blank" href="https://twitter.com/Shaddymaze">@Shaddymaze</a>
+                <a style="display:block; margin-bottom: 20px;" target="_blank" href="https://www.linkedin.com/in/mahdi-shadkamfarrokhi-8a410958/">LinkedIn</a>
+              </div>
+            </section>
 </div><!-- Close slides -->
 
     <div>

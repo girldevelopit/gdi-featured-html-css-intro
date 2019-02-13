@@ -137,3 +137,12 @@ div.left-align{
 .margin2-example-container{
     margin-bottom: 20px!important;
 }
+
+code.plaintext .attribute,
+code.plaintext .number,
+code.plaintext .tag,
+code.plaintext .value,
+code.plaintext .class
+{
+    color: #4d4d4c!important;
+}
