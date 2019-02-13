@@ -186,37 +186,41 @@ h1,h2,h3,h4{
                 <li class="fragment">Superior way for styling multiple elements (DRY)</li>
                 <li class="fragment">Use a Class when muliple elements are similar in purpose or function</li>
               </ul>
-              <br>
-              <br>
-              <div class="halfblock fragment">
-                <p>HTML</p>
-            <pre><code class="html xml">&lt;a class="link" href="#"&gt;Bob's Website&lt;/a&gt;
-&lt;a class="link" href="#"&gt;Mary's Website&lt;/a&gt;
-&lt;a class="link" href="#"&gt;John's Website&lt;/a&gt;
-&lt;a class="link" href="#"&gt;Amy's Website&lt;/a&gt;
+          </section>
+
+          <section>
+              <h2>Classes</h2>
+          <p>HTML</p>
+          <pre><code class="html xml">&lt;nav&gt;
+  &lt;a id="special_link" href="#"&gt;Bob's Website&lt;/a&gt;
+  &lt;a class="nav_link" href="#"&gt;Mary's Website&lt;/a&gt;
+  &lt;a class="nav_link" href="#"&gt;John's Website&lt;/a&gt;
+  &lt;a class="nav_link" href="#"&gt;Amy's Website&lt;/a&gt;
+&lt;/nav&gt;
 </code></pre>
-            </div>
-            <div class="halfblock fragment">
-              <p>CSS</p>
-            <pre><code class="css">.link{
+
+            <p>CSS</p>
+          <pre><code class="css">#special_link{
+  color: red;
+  font-weight: bold;
+}
+.nav_link{
   font-family: monospace;
   color: purple;
 }</code></pre>
-              </div>
-          </section>
-
+</section>
           <section>
             <h3>&lt;div&gt; vs. semantic HTML elements</h3>
 
             <div class="halfblock">
-              <p>&lt;div&gt;</p>
+              <p class="fragment" style="font-weight: bold;">&lt;div&gt;</p>
               <ul>
                 <li class="fragment">General purpose "wrapper" for related content</li>
                 <li class="fragment">The tag name "div" conveys no information about the purpose of the elements within</li>
               </ul>
             </div>
             <div class="halfblock">
-              <p>Semantic HTML elements</p>
+              <p class="fragment" style="font-weight: bold;">Semantic HTML elements</p>
               <ul>
                   <li class="fragment">Intentional "wrapper" for related content</li>
                   <li class="fragment">Tag name conveys purpose elements within</li>
@@ -270,7 +274,7 @@ h1,h2,h3,h4{
 </section>
           <section>
             <h3>Static Positioning</h3>
-            <p>In normal flow, block elemetns flow from top to bottom, making a new line after every box.</p>
+            <p>In normal flow, block elements flow from top to bottom, making a new line after every box.</p>
 <pre class="fragment"><code class ="html">&lt;p&gt;Greetings&lt;/p&gt;
 &lt;p&gt;Hello&lt;/p&gt;
 &lt;p&gt;Hi there!&lt;/p&gt;
@@ -284,73 +288,142 @@ h1,h2,h3,h4{
 
           <!-- Relative Positioning-->
           <section>
-            <h3>Relative Positioning</h3>
+            <h3>Relative Positioning (inline)</h3>
             <ul>
-              <li>Takes the element out of the normal flow, allowing it to be moved to the top, left, right or bottom. </li>
-              <li>Does not affect the elements surrounding it.</li>
-              <li>Makes an element a "positioning context" in which to position other elements relative to it.</li>
-              <li>Relative positioning and absolute positioning are used together.</li>
+              <li class="fragment">Takes the element out of the normal flow</li>
+              <li class="fragment">Does not affect the elements surrounding it - Other elements act as if it's still there</li>
+              <li class="fragment">Can be shifted top, left, right or bottom</li>
+              <li class="fragment">*If element contains other elements, it now serves as a "positioning context" for them</li>
             </ul>
           </section>
 
           <section>
             <h3>Relative Positioning</h3>
-            <p>The "relative" value will still put the element in the normal flow, but then offset it according to top/left/right/bottom properties.</p>
-<pre><code class="css">.relative{
+            <p>Normal Flow</p>
+            <div class="fragment">
+              <img style="border: red solid 2px;" src="img/cookie2.png" alt="">
+              <img style="border: red solid 2px;" src="img/cookie2.png" alt="">
+              <img style="border: blue solid 2px;" src="img/cookie1.png" alt="">
+              <img style="border: red solid 2px;" src="img/cookie2.png" alt="">
+              <img style="border: red solid 2px;" src="img/cookie2.png" alt="">
+            </div>
+<pre class="fragment"><code class="css">#sock{
   position: relative;
   left: 80px;
   top: 20px;
-  height: 100px;
-  background-color: yellow;
 }
 </code></pre>
-            <div style="border:2px solid black;">
-              <div style="position: relative; left: 80px; top: 20px; height: 100px; background-color: yellow; color:black; text-align:left">
-                Hello, hi!
-              </div>
-            </div>
+<div class="fragment">
+    <img style="border: red solid 2px;" src="img/cookie2.png" alt="">
+    <img style="border: red solid 2px;" src="img/cookie2.png" alt="">    
+    <img style="position:relative; left: 80px; top: 20px; border: blue solid 2px;" src="img/cookie1.png" alt="">
+    <img style="border: red solid 2px;" src="img/cookie2.png" alt="">
+    <img style="border: red solid 2px;" src="img/cookie2.png" alt="">    
+  </div>
+            <p class="fragment" style="font-size: .8em;">The "relative" position will offset the element from its normal flow according to top/left/right/bottom properties.</p>
+          </section>
+          <section>
+            <h3>Relative Positioning (block)</h3>
+            <div class="fragment">
+                <p style="border:green solid 2px;">First Text</p>
+                <p style="border:green solid 2px;background-color: black; color: white;">Second Text</p>
+                <p style="border:green solid 2px;">Third Text</p>
+                  </div>
+<pre class="fragment"><code class="css">#second{
+  position: relative;
+  bottom: 500px;
+  right: 400px;
+}
+</code></pre>
+<div class="fragment">
+    <p style="border:green solid 2px;">First Text</p>
+    <p style="border:green solid 2px; background-color: black; color: white; position: relative; bottom: 500px;right: 400px;">Second Text</p>
+    <p style="border:green solid 2px;">Third Text</p>
+      </div>
           </section>
 
+          <section>
+            <h1>Let's develop it!</h1>
+            <p>Pick ONE image on your website to offset</p>
+            <p>Give it a relative position and offset it so that it appears in the <strong>upper left corner</strong> of the website</p>
+<pre><code class="css">#picked-image{
+  position: relative;
+  bottom: 500px; /*your values will be different*/
+  right: 400px; /*your values will be different*/
+}</code></pre>
+          </section>
           <!-- Absolute positioning-->
           <section >
             <h3>Absolute Positioning</h3>
             <ul>
-              <li>Positions element outside of the normal flow.</li>
-              <li>An absolutely positioned element is offset from its container block, positioned relative.</li>
-              <li>Its container block is the first element that has a position other than static.</li>
-              <li>If no such element is found, the container block is &lt;html&gt;.</li>
-              <li>Other elements act as if it's not there.</li>
-              <li>Determined by its oﬀset values in the properties top, bottom, right and left.</li>
+              <li class="fragment">Takes the element out of the normal flow</li>
+              <li class="fragment">Does not affect the elements surrounding it - Other elements act as if it's NOT there</li>
+              <li class="fragment">Gets position around the WINDOW</li>
+              <li class="fragment">Can be shifted using the top, left, right or bottom properties</li>
             </ul>
           </section>
 
-          <section  style="border: 1px solid black">
+          <section>
             <h3>Absolute Positioning</h3>
-            <p>The "absolute" value will take the element out of the normal flow and position it in relation to the window (or the closest non-static element).</p>
-<pre><code class="css">.top{
+            <p>The "absolute" position will take the element out of the normal flow and position it in relation to the WINDOW</p>
+            <div class="fragment">
+              <img class="special-img" style="border: red solid 2px;" src="img/cookie2.png" alt="">
+              <img class="special-img" style="border: red solid 2px;" src="img/cookie2.png" alt="">
+              <img style="border: blue solid 2px;" src="img/cookie1.png" alt="">
+              <img class="special-img" style="border: red solid 2px;" src="img/cookie2.png" alt="">
+              <img class="special-img" style="border: red solid 2px;" src="img/cookie2.png" alt="">
+            </div>
+<pre class="fragment"><code class="css">#sock{
   position: absolute;
-  top: -40px;
-  right: 10px;
-  background-color: yellow
-}
-.bottom{
-  position: absolute;
-  bottom: -40px;
-  left:60px;
-  background-color: green
 }
 </code></pre>
+<div class="fragment">
+    <img class="special-img" style="border: red solid 2px;" src="img/cookie2.png" alt="">
+    <img class="special-img" style="border: red solid 2px;" src="img/cookie2.png" alt="">    
+    <img style="position:absolute; border: blue solid 2px; z-index:2;" src="img/cookie1.png" alt="">
+    <img class="special-img" style="border: red solid 2px;" src="img/cookie2.png" alt="">
+    <img class="special-img" style="border: red solid 2px;" src="img/cookie2.png" alt="">    
+  </div>
+          </section>
+          <section>
+            <h3>Absolute Positioning</h3>
+            <p>The "absolute" position will take the element out of the normal flow and position it in relation to the WINDOW</p>
             <div>
-              <div style="position: absolute; top: -40px; right: 10px; background-color: yellow; color:black">
-                Up here
-              </div>
-              <div style="position: absolute; bottom: -40px; left:60px; background-color: green">
-                Down here
-              </div>
+              <img class="special-img" style="border: red solid 2px;" src="img/cookie2.png" alt="">
+              <img class="special-img" style="border: red solid 2px;" src="img/cookie2.png" alt="">
+              <img style="border: blue solid 2px;" src="img/cookie1.png" alt="">
+              <img class="special-img" style="border: red solid 2px;" src="img/cookie2.png" alt="">
+              <img class="special-img" style="border: red solid 2px;" src="img/cookie2.png" alt="">
             </div>
+<pre class="fragment"><code class="css">#sock{
+  position: absolute;
+  top: 0;
+  left: 100px;
+}
+</code></pre>
+<div class="fragment">
+    <img class="special-img" style="border: red solid 2px;" src="img/cookie2.png" alt="">
+    <img class="special-img" style="border: red solid 2px;" src="img/cookie2.png" alt="">    
+    <img style="position:absolute; border: blue solid 2px; z-index:2; top:-57px;left: -96px;" src="img/cookie1.png" alt="">
+    <img class="special-img" style="border: red solid 2px;" src="img/cookie2.png" alt="">
+    <img class="special-img" style="border: red solid 2px;" src="img/cookie2.png" alt="">    
+  </div>
           </section>
 
           <section>
+              <h1>Let's develop it!</h1>
+              <p>Pick ANOTHER image on your website to offset</p>
+              <p>Give it an absolute position and offset it so that it appears in the <strong>upper right corner</strong> of the website</p>
+  <pre><code class="css">#picked-image{
+    position: absolute;
+    top: ?;
+    right: ?;
+  }</code></pre>
+            </section>
+
+            <!-- Hate to cut, but time contraints! -->
+
+          <!-- <section>
             <h3>Example: Absolute Positioning</h3>
             <div class="halfblock">
               <p>Here's an example of an image with a caption absolutely positioned over top of it.</p>
@@ -366,44 +439,152 @@ h1,h2,h3,h4{
             <h3>Let's Develop it!</h3>
             <p>Let's add some positioning.</p>
             <p>Let's create a div that contains an image and a caption, and position the caption absolutely overtop the image.</p>
-          </section>
+          </section> -->
 
           <!-- Float-->
           <section>
             <h3>Float</h3>
             <ul>
-              <li>"Floating" an element takes it in the normal flow, as far to the left or right of it's containing element as possible.</li>
-              <li>Any other elements, such as paragraphs or lists, will wrap around the floated element.</li>
-              <li>Always specify a width when floating an element, otherwise the element is likely to take up the whole page and not appear floated.</li>
-              <li>You can specify a) whether an element is floated or not, and b) which side it ﬂoats on.</li>
+              <li class="fragment">"Floating" an element takes it OUT of the normal flow, but keeps it inside of its containing element</li>
+               <li class="fragment">A floated element is pushed as far to one side of it's <strong>containing element</strong> as possible.</li>
+              <li class="fragment">Only 2 options! <code>float: left;</code> or <code>float: right;</code></li>
+              <li class="fragment">Other elements will WRAP around the floated element</li>
+              <li class="fragment">HINT: Specify a width! otherwise the element might take up the whole width and not appear floated</li>
             </ul>
           </section>
 
           <!--example float-->
           <section>
             <h3>Float: Example</h3>
-            <p>Below a &lt;blockquote&gt; is floated to the left, allowing text to wrap around it on the right</p>
+            <p>This blockquote is floated to the left, allowing text to wrap around it on the right</p>
             <img src="img/example-floatbq.png" alt="example float" />
           </section>
 
           <section>
-            <h3>Float</h3>
-<pre><code class="css">.float{
+            <h3>Using Float</h3>
+            <pre class="fragment"><code class="html xml">&lt;div&gt;
+  &lt;p class="float-left"&gt;Check out my blog!&lt;/p&gt;
+  &lt;p&gt;Cats are amazing creatures and we could really learn a lot from them&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<div class="fragment" style="border: black 2px solid;">
+  <p style="color: red;">Check out my blog!</p>
+  <p>Cats are amazing creatures and we could really learn a lot from them</p>
+</div>
+<pre class="fragment"><code class="css">.float-left{
   float:left;
-  width:200px;
-  background:yellow;
 }
 </code></pre>
-            <div style ="float:left; text-align: left;width:200px;background:yellow; color:black; padding: 10px;">
-              <small>Hi, I'm a yellow box with black text.<br/>
-              I like to hang out on the left side.</small>
-            </div>
-            <div class="left-align">Not floating element</div>
-            <div class="left-align">Not floating element</div>
-            <div class="left-align">Not floating element with wrapping Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+<div class="fragment" style="border: black 2px solid;">
+    <p style="float:left;color:red;">Check out my blog!</p>
+    <p>Cats are amazing creatures and we could really learn a lot from them</p>
+  </div>
           </section>
 
           <section>
+            <h3>Using Float</h3>
+            <pre class="fragment"><code class="html xml">&lt;div&gt;
+  &lt;p class="float-left"&gt;Check out my blog! Here's a bit more text to show you something!&lt;/p&gt;
+  &lt;p&gt;Cats are amazing creatures and we could really learn a lot from them&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<div class="fragment" style="border: black 2px solid;">
+  <p style="color: red;">Check out my blog! Here's a bit more text to show you something!</p>
+  <p>Cats are amazing creatures and we could really learn a lot from them</p>
+</div>
+<pre class="fragment"><code class="css">.float-left{
+  float:left;
+}
+</code></pre>
+<div class="fragment" style="border: black 2px solid;">
+    <p style="float:left;color:red;">Check out my blog! Here's a bit more text to show you something!</p>
+    <p>Cats are amazing creatures and we could really learn a lot from them</p>
+  </div>
+          </section>
+
+          <section>
+            <h3>Using Float</h3>
+<pre class="fragment"><code class="css">.float-left{
+  float:left;
+  width: 30%;
+}
+</code></pre>
+<div class="fragment" style="border: black 2px solid;float:left;">
+    <p style="float:left;color:red;width:30%;">Check out my blog! Here's a bit more text to show you something!</p>
+    <p>Cats are amazing creatures and we could really learn a lot from them</p>
+  </div>
+          </section>
+
+          <section>
+            <h3>Using Float w/images</h3>
+<div class="fragment" style="border: black 2px solid;float:left;">
+    <img src="img/cat.jpg" style="float:left;color:red;width:30%;" alt="">
+    <p>Cats are amazing creatures and we could really learn a lot from them</p>
+  </div>
+          </section>
+
+          <section>
+            <h2>Float has a problem!</h2>
+            <p>Recall, floating an element <strong>changes the normal flow</strong>, so...</p>
+<pre class="fragment"><code class="html xml">&lt;div&gt;
+  &lt;div&gt;
+    &lt;p class="float-left"&gt;Check out my blog! Here's a bit more text to show you something!&lt;/p&gt;
+    &lt;p&gt;Cats are amazing creatures and we could really learn a lot from them&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;p&gt;Let's talk about dogs now!&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+
+<div class="fragment" style="border: black 2px solid;float:left;">
+    <div>
+      <p style="float:left;color:red;width:30%;">Check out my blog! Here's a bit more text to show you something!</p>
+      <p>Cats are amazing creatures and we could really learn a lot from them</p>
+    </div>
+    
+    <p style="color: blue;">Let's talk about dogs now!</p>
+  </div>
+          </section>
+
+          <!-- Clear-->
+          <section>
+              <h3>CSS Property - clear</h3>
+              <ul>
+                <li class="fragment">Clearing tells that element on which side (right, left, both) other elements <strong>cannot</strong> appear</li>
+                <li class="fragment">Clearing both sides makes sure floats don’t flow past that element</li>
+                <li class="fragment"><strong>Very common dev trick called "clearfix"</strong> => use an empty div that clears both sides after a floating section to return normal flow</li>
+              </ul>
+  <pre class="fragment"><code class="css">.clearfix{
+  clear: both;
+}</code></pre>
+            </section>
+  
+            <section>
+              <h2>Float w/clearfix</h2>
+<pre class="fragment"><code class="html xml">&lt;div&gt;
+  &lt;div&gt;
+    &lt;p class="float-left"&gt;Check out my blog! Here's a bit more text to show you something!&lt;/p&gt;
+    &lt;p&gt;Cats are amazing creatures and we could really learn a lot from them&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div class="clearfix"&gt;&lt;/div&gt;
+
+  &lt;p&gt;Let's talk about dogs now!&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+
+<div class="fragment">
+    <div style="border: black 2px solid;float:left;">
+      <p style="float:left;color:red;width:30%;">Check out my blog! Here's a bit more text to show you something!</p>
+      <p>Cats are amazing creatures and we could really learn a lot from them</p>
+    </div>
+    
+    <div style="clear:both;"></div>
+
+    <p style="color: blue;">Let's talk about dogs now!</p>
+  </div>
+            </section>
+          <!-- <section>
             <h3>Placing elements side by side</h3>
             <p>If you want two block level elements to be side by side, you need to float both elements. One left, and one right.</p>
             <div style="border:5px solid black; padding:20px; width:720px; height:160px; margin:0 auto;">
@@ -416,47 +597,15 @@ h1,h2,h3,h4{
                 float: right;</p>
               </div>
             </div>
-          </section>
+          </section> -->
 
-          <!-- Clear-->
-          <section>
-            <h3>Clear</h3>
-            <ul>
-              <li>Clearing tells the element on which side (right, left, both) other elements <strong>cannot</strong> appear. </li>
-              <li>If you had an image floated left, and you did not want the paragraph to appear next to it, you would add <strong>clear: left;</strong> to the paragraph.</li>
-              <li>Clearing both sides makes sure ﬂoats don’t ﬂow past the clear element.</li>
-            </ul>
-<pre><code class="css">clear: right;
-clear: left;
-clear: both;
-</code></pre>
-          </section>
-
-          <section>
-            <h3>Clear</h3>
-<pre><code class ="css">.float{
-  float:left;
-  width:50px;
-  background:yellow;
-}
-.clear-left{
-  clear:left
-}
-</code></pre>
-            <div style ="float:left;width:50px;background:yellow; color:black; ">
-              hi<br/>
-              hi<br/>
-              hi
-            </div>
-            <div class="left-align">Not floating element</div>
-            <div class="left-align">Not floating element</div>
-            <div class="left-align" style="clear: left;">Non-floating element with a class of <strong>.clear-left</strong></div>
-          </section>
 
           <!-- Exercise-->
           <section>
             <h3>Let's Develop It</h3>
-            <p>Let's float our side bar and content areas.</p>
+            <p>Create a div and put an image and some text in it</p>
+            <p>Float the image to have the text wrap around it</p>
+            <p>Be sure to clearfix afterward!</p>
           </section>
 
           <section>
@@ -489,20 +638,25 @@ clear: both;
           <section>
               <h3>Let's develop it</h3>
               <h5>Creating your wireframe</h5>
-              <br>
-              <ul>
-                <li class="fragment">Pick a topic you like for your website (preferably not yourself!)</li>
-                <li class="fragment">Using pencil and paper, draw out the wireframe for your <strong>single page website</strong></li>
-                <li class="fragment" style="text-decoration: underline;">When done, call instructor over to brainstorm implementation</li>
-                <li class="fragment"><strong>10 min activity!</strong></li>
-              </ul>
+              <div class="halfblock">
+                <ul>
+                  <li class="fragment">Pick a topic you like for your website (preferably not yourself!)</li>
+                  <li class="fragment">Using pencil and paper, draw out the wireframe for your <strong>single page website</strong></li>
+                  <li class="fragment" style="text-decoration: underline;">When done, call instructor over to brainstorm implementation</li>
+                  <li class="fragment"><strong>10 min activity!</strong></li>
+                </ul>
+              </div>
+              <div class="halfblock">
+                <img src="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/62cb6318-ad27-484a-8899-0c77039b29bb/wireframing-process-photoshop-xd-image-2.jpg" alt="">
+              </div>
+
             </section>
 
             <section>
               <h1>Let's Develop It!</h1>
               <h5>Creating your website</h5>
               <ul>
-                <li class="fragment">Using your wireframe and instructor input as your guide, start coding your site</li>
+                <li class="fragment">Using your wireframe and instructor input as your guide, start coding your site!</li>
                 <li class="fragment">You can start a new project folder or continue using the one you have</li>
                 <li class="fragment">Keep your code clean and organized</li>
               </ul>
@@ -552,14 +706,23 @@ p, a {
             </section>
 
             <section>
-              <h2>Exit Survey!</h2>
+              <img style="display: block; margin:auto;" src="img/qr1.png" alt="">
+              <a style="display: block; margin:20px auto;" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfrOuzj3C8zHjTquIK6IVFepmpDqRVGRwvtRYUiPiDTwOEOfw/viewform">Exit Survey</a>
+
+            </section>
+            <section>
+              <img style="display: block; margin:auto;" src="img/qr1.png" alt="">
+              <a style="display: block; margin:20px auto;" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfg23FBDoqTnpJYFo0DoCnsj189jtFRFfTu4IiRY-t80Crhcw/viewform">GDI NYC Feedback (2 questions)</a>
             </section>
 
             <section>
+              <h1>That's all folks!</h1>
+              <h4>TY to our amazing TAs!🎉👏🏽</h4>
               <div class="halfblock">
                 <img src="img/fireplace1.jpg" alt="">
               </div>
               <div class="halfblock">
+                <p style="margin-top: 30px;">My Contact info</p>
                 <a style="display:block; margin-bottom: 20px;" target="_blank" href="https://mahdis.pw">mahdis.pw</a>
                 <a style="display:block; margin-bottom: 20px;" target="_blank" href="mailto:mahdis.pw@gmail.com">mahdis.pw@gmail.com</a>
                 <a style="display:block; margin-bottom: 20px;" target="_blank" href="https://twitter.com/Shaddymaze">@Shaddymaze</a>
