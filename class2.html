@@ -113,7 +113,7 @@
 
           <section>
             <h3>CSS: What does it look like?</h3>
-            <img src = "https://www.lifewire.com/thmb/gmZDe6vkUBQeB6PWMVWxflIIvqY=/768x0/filters:no_upscale():max_bytes(150000):strip_icc()/css-example-59b800d1d963ac00118f455e.jpg" alt="Screenshot of CSS">
+            <img src = "img/css-example.jpg" alt="Screenshot of CSS">
           </section>
 
           <!-- The CSS Rule-->
@@ -124,11 +124,11 @@
 
           <section>
               <h3>Example CSS</h3>
-              <img src="img/css_ex.PNG" alt="The CSS Rule" style="border: none; box-shadow: none;"/>
+              <img src="img/css_ex.PNG" alt="Single CSS rule example" style="border: none; box-shadow: none;"/>
             </section>
           <section>
-              <h3>Example CSS</h3>
-              <img src="img/css_ex_marked.PNG" alt="The CSS Rule" style="border: none; box-shadow: none;"/>
+              <h3>Common Errors</h3>
+              <img src="img/css_ex_marked.PNG" alt="Single CSS rule example" style="border: none; box-shadow: none;"/>
             </section>
           <!-- Connecting HTML to CSS-->
           <section>
@@ -153,7 +153,7 @@
           <!-- Embedded -->
           <section>
             <h3>Connecting CSS to HTML: Embedded</h3>
-<pre><code class = "html">&lt;head&gt;
+<pre><code class = "html css">&lt;head&gt;
   &lt;style type="text/css"&gt;
     p {
       color: blue;
@@ -367,7 +367,7 @@
 
           <section>
             <img width="600px" src="https://media.makeameme.org/created/you-get-a-evdcuu.jpg" alt="">
-            <h2>BREAK!?</h2>
+            <h2>BREAK!</h2>
           </section>
           <!-- Selector position-->
           <section>
@@ -410,6 +410,13 @@
               <li>In your CSS file, try a position selector</li>
               <li>Remember, you need to look for an element <em>inside</em> another element</li>
             </ul>
+<p>HTML</p>
+<pre><code class = "html">&lt;p&gt;This is &lt;em&gt;important.&lt;/em&gt;&lt;/p&gt;</code></pre>
+            <p>CSS</p>
+<pre><code class = "css">p em {
+  color: yellow;
+}
+</code></pre>
           </section>
 
           <!-- IDs and Classes-->
@@ -431,13 +438,12 @@
             <h3>Selector: ID</h3>
             
             <p>The HTML</p>
-<pre><code class="html">&lt;p id="footer"&gt;Copyright 2011&lt;/p&gt;
-  </code></pre>
-  <p>Selects the element with an id of "footer"</p>
+<pre><code class="html">&lt;p id="footer"&gt;Copyright 2011&lt;/p&gt;</code></pre>
+<p>The CSS</p>
 <pre><code class = "css">#footer {
   color: blue;
-}
-</code></pre>
+}</code></pre>
+<p>This selects the element with an id of "footer"</p>
           </section>
           <section>
             <h3>Name it whatever you want!</h3>
@@ -447,24 +453,28 @@
             <p>The HTML</p>
 <pre><code class="html">&lt;p id="blahblah"&gt;Copyright 2011&lt;/p&gt;
   </code></pre>
-  <p>Selects the element with an id of "blahblah"</p>
+<p>The CSS</p>
+
 <pre><code class = "css">#blahblah {
   color: pink;
 }
 </code></pre>
+<p>Selects the element with an id of "blahblah"</p>
           </section>
 
           <!-- Selectors Class-->
           <section>
             <h3>Selector: Class</h3>
             <p>The HTML</p>
-            <pre><code class = "html">&lt;p class="warning"&gt;Run away!&lt;/p&gt;
+            <pre><code class = "html xml">&lt;p class="warning"&gt;Run away!&lt;/p&gt;
             </code></pre>
-            <p>Selects all elements with a class of "warning".</p>
+<p>The CSS</p>
+
 <pre><code class = "css">.warning {
   color: red;
 }
 </code></pre>
+  <p>Selects all elements with a class of "warning".</p>
 
           </section>
           <section>
@@ -472,13 +482,15 @@
             <p>No spaces and no starting with numbers, though!</p>
 <br>
             <p>The HTML</p>
-            <pre><code class = "html">&lt;p class="silly_sally"&gt;So Silly!&lt;/p&gt;
+            <pre><code class = "html xml">&lt;p class="silly_sally"&gt;So Silly!&lt;/p&gt;
             </code></pre>
-            <p>Selects all elements with a class of "silly_sally".</p>
+<p>The CSS</p>
+
 <pre><code class = "css">.silly_sally {
   color: red;
 }
 </code></pre>
+<p>Selects all elements with a class of "silly_sally".</p>
 
           </section>
 
@@ -501,20 +513,21 @@
 &lt;p class="red" id="special"&gt;Julio&lt;/p&gt;</code></pre>
 <pre class="fragment"><code class = "css">p{
   color:blue;
-  font-family: "Helvetica";
 }
 </code></pre>
+<p class="fragment">What color is Julio?</p>
 <pre class="fragment"><code class = "css">.red {
   color: red;
-  font-family: monospace;
 }
 </code></pre>
+<p class="fragment">Now, what color is Julio?</p>
 
 <pre class="fragment"><code class = "css">#special {
   color: pink;
-  font-family: "Arial";
 }
 </code></pre>
+<p class="fragment">Now, what color is Julio?</p>
+
           </section>
           <section>
             <h3>Cascading</h3>
@@ -527,15 +540,17 @@
   font-family: "Helvetica";
 }
 </code></pre>
+<p class="fragment">What font-family is Julio?</p>
 <pre class="fragment"><code class = "css">.red {
   color: red;
 }
 </code></pre>
-
+<p class="fragment">What font-family is Julio?</p>
 <pre class="fragment"><code class = "css">#special {
   font-family: "Arial";
 }
 </code></pre>
+<p class="fragment">What font-family is Julio?</p>
           </section>
           <section>
             <h3>Cascading priority</h3>
@@ -563,6 +578,7 @@
   color: blue;
 }
 </code></pre>
+<p>What color will the paragraph be?</p>
           </section>
           <section>
             <h3>Cascading priority</h3>
@@ -579,14 +595,13 @@
   color: blue;
 }
 </code></pre>
+<p>What color will the paragraph be, now?</p>
           </section>
           
           
           <section>
             <h3>Cascading priority</h3>
             <p>The tie-breaker is position. Rules lower in the file overwrite rules higher in the file</p>
-            <br>
-            <p>Which rule wins?</p>
 <pre><code class = "css">a{
   background-color: yellow;
 }
@@ -597,6 +612,7 @@ a{
   background-color: black;
 }
 </code></pre>
+<p>What will be background-color be?</p>
           </section>
 
           <!-- Properties-->
@@ -618,50 +634,7 @@ a{
             <h2>Questions?</h2>
           </section>
 
-          <section>
-            <h1>Wireframe your site!</h1>
-          </section>
-          <section>
-            <h1>What's a wireframe?</h1>
-            <p>A visual guide that represents the layout of a website</p>
-            <img class="fragment" src="https://alistapart.com/d/priority-guides/wireframes.png" alt="">
-          </section>
-
-          <section>
-            <h2>Why bother?</h2>
-            <ul>
-              <li class="fragment">Web design starts with planning!</li>
-              <li class="fragment">Measure twice, cut once</li>
-              <li class="fragment">Box model*</li>
-            </ul>
-          </section>
-
-          <!-- Exercise-->
-          <section>
-              <h3>Let's develop it</h3>
-              <h5>Create the wireframe for your website!</h5>
-              <p>(even if you've already started)</p>
-              <br>
-              <ul>
-                <li>Try to pick a topic you like</li>
-                <li>Preferably not yourself!</li>
-                <li>Use this as a guide to start building out your website's</li>
-              </ul>
-            </section>
-          <section>
-            <h2>BONUS!</h2>
-            <ul>
-              <li><a href="https://coolors.co/">coolors.co</a></li>
-              <li><a href="https://fonts.google.com/">Google Fonts</a></li>
-              <li>Dev Tools - editing file</li>
-              <li>Lorem Ipsum</li>
-              <li>
-                <a href="https://picsum.photos/">
-                  Pic Ipsum
-                </a>
-              </li>
-            </ul>
-          </section>
+          
 </div><!-- Close slides -->
 
     <div>

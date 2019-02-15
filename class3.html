@@ -116,12 +116,12 @@
 
         <section>
           <h3>Stacking Blocks</h3>
-          <img src="http://www.freeimageslive.com/galleries/workplace/education/pics/stack_of_blocks.jpg">
+          <img src="img/stack_of_blocks.jpg" alt="stack of blocks">
         </section>
 
         <section>
             <h3>Typing Intuition</h3>
-            <img src="https://media.giphy.com/media/11M1k4fIwVqPF6/giphy.gif" alt="">
+            <img src="img/giphy.webp" alt="giphy of Jim Carry typing quickly from the movie Bruce Almighty">
             <p>When you type words on a document, what happens when you get to the right side?</p>
           </section>
         <!-- Inline vs. block-->
@@ -156,10 +156,12 @@
 &lt;p style="background-color:gray"&gt;Fourth&lt;/p&gt;</code></pre>
           <img src="img/m_p.PNG" alt="">
         </section>
+
         <section>
           <h1>Multiple paragraphs example</h1>
           <pre><code class="html">&lt;p style="background-color:cyan"&gt;First&lt;/p&gt;&lt;p style="background-color:pink"&gt;Second&lt;/p&gt;&lt;p style="background-color:yellow"&gt;Third&lt;/p&gt;&lt;p style="background-color:gray"&gt;Fourth&lt;/p&gt;</code></pre>
           <img src="img/m_p.PNG" alt="">
+          <p>Notice the arrangments of elements in the HTML does NOT affect how elements are arranged on the website</p>
         </section>
 
         <section>
@@ -205,7 +207,7 @@
 
         <section>
           <h3>Whew!</h3>
-          <p>Now let's talk about the most used HTML element...</p>
+          <p>Now let's talk about one of the most used HTML elements...</p>
         </section>
         <!-- Divs -->
         <section>
@@ -289,7 +291,7 @@
           </div>
         </section>
         <section>
-          <h3>Styling with &lt;div&gt;</h3>
+          <h3>Using a class to style multiple &lt;div&gt; elements 😎</h3>
           <pre><code class="html xml">&lt;div&gt;
   &lt;h1 id="myTitle"&gt;Charline's Website!&lt;/h1&gt;
 
@@ -350,7 +352,25 @@
             <li class="smaller">Give these "section" divs the same class and style them</li>
           </ul>
           <div class="halfblock">
-              <img src="img/c_site2.PNG" alt="">
+              <pre><code class="html xml">&lt;div&gt;
+  &lt;h1 id="myTitle"&gt;Charline's Website!&lt;/h1&gt;
+
+  &lt;div class="mySection"&gt;
+    &lt;h2&gt;About Me&lt;/h2&gt;
+    &lt;p&gt;My name is Charline, and I'm awesome!&lt;/p&gt;
+  &lt;/div&gt;  
+
+  &lt;div class="mySection"&gt;
+    &lt;h2&gt;Blog 1&lt;/h2&gt;
+    &lt;a href="blog1.html"&gt;Check out my first blog!&lt;/a&gt;
+  &lt;/div&gt;
+
+  &lt;div class="mySection"&gt;
+    &lt;h4&gt;Contact&lt;/h4&gt;
+    &lt;p&gt;I can be reached at (123) 456-7890&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre></code>
             </div>
             <div class="halfblock">
                 <pre><code class="css">body{
@@ -383,22 +403,19 @@
         </section>
 
         <section>
-          <h2>We've been noticing "spaghetti" code</h2>
-          <img src="http://www.village-albatros.com/wp-content/uploads/2015/07/Spaghetti.jpg" alt="">
-        </section>
-
-        <section>
           <h1>"Spaghetti" code</h1>
+          <p>Quick! You have 5 seconds to spot the error!</p>
           <pre class="fragment"><code>&lt;h1&gt;Janice's Website&lt;/h1&gt;
 &lt;h4&gt;My Interests&lt;/h4&gt;&lt;p&gt;I love:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;writing&lt;/li&gt;&lt;li&gt;cooking&lt;/li&gt;&lt;li&gt;driving&lt;/li&gt;&lt;li&gt;smooth jazz&lt;/li&gt;
 </code></pre>
-          <p class="fragment">Where's the error?</p>
-          <img src="https://memegenerator.net/img/instances/42457844.jpg" alt="" class="fragment">
+          
+          <img src="img/lack_indents.jpg" alt="meme of darth vader force chocking crew member - I find your lack of indentation disturbing" class="fragment">
         </section>
 
         <section>
           <h1>Indents = Readability!</h1>
           <h1>Whitespace = Readability!</h1>
+          <p>Same code - you have 5 seconds to spot the error!</p>
           <pre class="fragment"><code>&lt;h1&gt;Janice's Website&lt;/h1&gt;
 
 &lt;h4&gt;My Interests&lt;/h4&gt;
@@ -410,7 +427,6 @@
   &lt;li&gt;driving&lt;/li&gt;
   &lt;li&gt;smooth jazz&lt;/li&gt;
 </code></pre>
-          <p class="fragment">Where's the error?</p>
         </section>
 
         <section>
@@ -434,13 +450,13 @@
           <h3>Semantic HTML5</h3>
          <p class="fragment left-align">HTML5 offers new elements for better document structure and semantics</p>
          <p class="fragment left-align">Some of the most commonly used new tags include:</p>
-<pre class="fragment"><code class ="html">&lt;header&gt;&lt;/header&gt;
-&lt;nav&gt;&lt;/nav&gt;
-&lt;article&gt;&lt;/article&gt;
-&lt;section&gt;&lt;/section&gt;
-&lt;main&gt;&lt;/main&gt;
-&lt;aside&gt;&lt;/aside&gt;
-&lt;footer&gt;&lt;/footer&gt;
+<pre class="fragment"><code class ="plaintext">&lt;header&gt; = Starting content (top)
+&lt;nav&gt;    = Navigation elements
+&lt;article&gt;= Information Content
+&lt;section&gt;= Divides site components
+&lt;main&gt;   = Main content
+&lt;aside&gt;  = Supplemental info
+&lt;footer&gt; = End content (bottom)
 </code></pre>
 
         <p class="fragment">A full list can be found <a href="http://www.tutorialspoint.com/html5/html5_new_tags.htm">here</a>.</p>
@@ -450,23 +466,24 @@
           <section>
           <h3>Let's Develop It</h3>
           <ul>
-            <li class="fragment">Replace your generic &lt;div&gt; elements with semantic HTML tags, <strong>where appropriate</strong></li>
+            <li class="fragment">Add semantic HTML tags <strong>where appropriate</strong></li>
             <li class="fragment">If you don't have header, nav, or footer content - consider adding them!</li>
             <li class="fragment">Keep your CSS in mind!</li>
           </ul>
 
           <div class="halfblock">
-<pre class="fragment"><code class ="html">&lt;header&gt;&lt;/header&gt;
-&lt;nav&gt;&lt;/nav&gt;
-&lt;article&gt;&lt;/article&gt;
-&lt;section&gt;&lt;/section&gt;
-&lt;main&gt;&lt;/main&gt;
-&lt;aside&gt;&lt;/aside&gt;
-&lt;footer&gt;&lt;/footer&gt;
+<pre class="fragment"><code class ="plaintext">&lt;header&gt; = Starting content (top)
+&lt;nav&gt;    = Navigation elements
+&lt;article&gt;= Information Content
+&lt;section&gt;= Divides site components
+&lt;main&gt;   = Main content
+&lt;aside&gt;  = Supplemental info
+&lt;footer&gt; = End content (bottom)
 </code></pre>
           </div>
-<div class="halfblock">
-  <img width="300px" src="https://memegenerator.net/img/instances/42457844.jpg" alt="" class="fragment">
+<div class="halfblock fragment">
+  <p>Let's aim for cleaner code!</p>
+  <img width="300px" src="img/lack_indents.jpg" alt="meme of darth vader force chocking crew member - I find your lack of indentation disturbing">
 </div>
         </section>
         
@@ -516,7 +533,8 @@
         <section>
           <section>
             <h1>Everything is a box...</h1>
-            <img style="width:600px!important;max-width:initial;max-height:initial;" src="img/box_ex1.png" alt="">
+            <img style="width:400px!important;max-width:initial;max-height:initial;" src="img/box_ex1.png" alt="">
+            <img width="200px" style="box-shadow: none;display: block;margin:auto;" src="img/down.png" alt="down arrow">
           </section>
           <section>
             <h1>Everything is a box...</h1>
@@ -549,14 +567,14 @@
         </section>
         <section>
           <h3>Box Model</h3>
-          <img src="http://web.simmons.edu/~grabiner/comm244/weekfive/box-model.gif" alt="Graphic illustrating box model"/>
+          <img src="img/box-model.gif" alt="Graphic illustrating box model"/>
         </section>
 
         <!-- Border-->
         <section>
             <h3>Border</h3>
             <p>The edge around the box.</p>
-            <img src="https://dhhmzgirqh63s.cloudfront.net/37076.gif" alt="Graphic illustrating box model, border highlighted">
+            <img src="img/borders.gif" alt="Graphic illustrating box model, border highlighted">
           </section>
   
           <section>
@@ -575,7 +593,7 @@ border-color: red;
         <section>
           <h3>Padding</h3>
           <p>Space between the border and the content</p>
-          <img src="http://web.simmons.edu/~grabiner/comm244/weekfive/box-model.gif" alt="Graphic illustrating box model, padding highlighted"/>
+          <img src="img/box-model.gif" alt="Graphic illustrating box model, padding highlighted"/>
         </section>
 
         <section>
@@ -598,12 +616,12 @@ border-color: red;
         <section>
           <h3>Margin</h3>
           <p>The transparent area around the box that separates it from other elements.</p>
-          <img src="http://web.simmons.edu/~grabiner/comm244/weekfive/box-model.gif" alt="Graphic illustrating box model, margin highlighted"/>
+          <img src="img/box-model.gif" alt="Graphic illustrating box model, margin highlighted"/>
         </section>
         <section>
           <h3>Margin</h3>
           <p>Threshold other elements cannot pass</p>
-          <img src="https://i.stack.imgur.com/2BvbQ.jpg" alt="Graphic illustrating box model, margin highlighted"/>
+          <img src="img/no_pass.jpg" alt="Gandolf stop sign - You shall not pass!"/>
         </section>
 
         <section>
@@ -677,11 +695,6 @@ border-left: 3px dashed green;</code></pre>
 margin: auto;</code></pre>
 </div>
           </section>
-
-          <section>
-            <h2>Show centering with wrapper</h2>
-          </section>
-
         <!-- Exercise -->
         <section>
           <h3>Let's develop it!</h3>
@@ -697,49 +710,7 @@ margin: auto;</code></pre>
         <section>
           <h2>Questions?</h2>
         </section>
-        
-        <!-- BONUS -->
-        <section>
-          <h2>BONUS!</h2>
-          <ul>
-            <li>Dev tools</li>
-            <li>Wireframe</li>
-            <li>HTML and CSS comments</li>
-            <li>Multiple CSS selectors</li>
-            <li>:hover and other pseudo-classes</li>
-          </ul>
-        </section>
 
-        <section>
-            <h1>Wireframe your site!</h1>
-          </section>
-          <section>
-            <h1>What's a wireframe?</h1>
-            <p>A visual guide that represents the layout of a website</p>
-            <img class="fragment" src="https://alistapart.com/d/priority-guides/wireframes.png" alt="">
-          </section>
-
-          <section>
-            <h2>Why bother?</h2>
-            <ul>
-              <li class="fragment">Web design starts with planning!</li>
-              <li class="fragment">Measure twice, cut once</li>
-              <li class="fragment">Box model*</li>
-            </ul>
-          </section>
-
-          <!-- Exercise-->
-          <section>
-              <h3>Let's develop it</h3>
-              <h5>Create the wireframe for your website!</h5>
-              <p>(even if you've already started)</p>
-              <br>
-              <ul>
-                <li>Try to pick a topic you like</li>
-                <li>Preferably not yourself!</li>
-                <li>Use this as a guide to start building out your website's</li>
-              </ul>
-            </section>
 </div><!-- Close slides -->
 
     <div>

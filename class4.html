@@ -60,7 +60,6 @@
               <li>CSS Property - Position</li>
               <li>Wireframing</li>
               <li>Let's Develop It!</li>
-              <li>Peer Review</li>
               <li>Exit Survey</li>
             </ul>
           </section>
@@ -237,6 +236,10 @@ h1,h2,h3,h4{
           </section>
 
           <section>
+            <h2>When in doubt...just use a div!</h2>
+          </section>
+
+          <section>
             <h2>CSS property - position</h2>
           </section>
 
@@ -290,7 +293,7 @@ h1,h2,h3,h4{
           <section>
             <h3>Relative Positioning (inline)</h3>
             <ul>
-              <li class="fragment">Takes the element out of the normal flow</li>
+              <li class="fragment">Takes the element <strong>out of the normal flow</strong></li>
               <li class="fragment">Does not affect the elements surrounding it - Other elements act as if it's still there</li>
               <li class="fragment">Can be shifted top, left, right or bottom</li>
               <li class="fragment">*If element contains other elements, it now serves as a "positioning context" for them</li>
@@ -356,7 +359,7 @@ h1,h2,h3,h4{
           <section >
             <h3>Absolute Positioning</h3>
             <ul>
-              <li class="fragment">Takes the element out of the normal flow</li>
+              <li class="fragment">Takes the element <strong>out of the normal flow</strong></li>
               <li class="fragment">Does not affect the elements surrounding it - Other elements act as if it's NOT there</li>
               <li class="fragment">Gets position around the WINDOW</li>
               <li class="fragment">Can be shifted using the top, left, right or bottom properties</li>
@@ -365,7 +368,7 @@ h1,h2,h3,h4{
 
           <section>
             <h3>Absolute Positioning</h3>
-            <p>The "absolute" position will take the element out of the normal flow and position it in relation to the WINDOW</p>
+            <p>The "absolute" position will put the element in relation to the WINDOW</p>
             <div class="fragment">
               <img class="special-img" style="border: red solid 2px;" src="img/cookie2.png" alt="">
               <img class="special-img" style="border: red solid 2px;" src="img/cookie2.png" alt="">
@@ -387,7 +390,7 @@ h1,h2,h3,h4{
           </section>
           <section>
             <h3>Absolute Positioning</h3>
-            <p>The "absolute" position will take the element out of the normal flow and position it in relation to the WINDOW</p>
+            <p>The "absolute" position will put the element in relation to the WINDOW</p>
             <div>
               <img class="special-img" style="border: red solid 2px;" src="img/cookie2.png" alt="">
               <img class="special-img" style="border: red solid 2px;" src="img/cookie2.png" alt="">
@@ -419,27 +422,28 @@ h1,h2,h3,h4{
     top: ?;
     right: ?;
   }</code></pre>
+  <p>HINT: Think about what <strong>bottom: 0;</strong> does...what about <strong>left: 0;</strong> ?</p>
             </section>
 
-            <!-- Hate to cut, but time contraints! -->
-
-          <!-- <section>
+          <section>
             <h3>Example: Absolute Positioning</h3>
             <div class="halfblock">
-              <p>Here's an example of an image with a caption absolutely positioned over top of it.</p>
-              <p>The containing div has a position of relative, and the caption has a position of absolute.</p>
+              <p class="fragment">Here's an example of an image with a caption absolutely positioned over top of it.</p>
+              <p class="fragment">The containing div has a position of relative, and the caption has a position of absolute.</p>
             </div>
             <div class="halfblock">
               <img src="img/example-absolute.png" class="noborder" alt="Photo with caption overlayed on top"/>
             </div>
             <div class="clear"></div>
+            <p class="fragment">This occurs because the container element is out of the normal flow (<strong>position: relative;</strong>) and now serves as a "positioning context" for internal elements (the text)</p>
           </section>
 
           <section>
             <h3>Let's Develop it!</h3>
-            <p>Let's add some positioning.</p>
+            <p>Let's create an image with some text overlay!</p>
             <p>Let's create a div that contains an image and a caption, and position the caption absolutely overtop the image.</p>
-          </section> -->
+            <p>Remember to give the container div an <strong>position: relative;</strong></p>
+          </section>
 
           <!-- Float-->
           <section>
@@ -584,23 +588,8 @@ h1,h2,h3,h4{
     <p style="color: blue;">Let's talk about dogs now!</p>
   </div>
             </section>
-          <!-- <section>
-            <h3>Placing elements side by side</h3>
-            <p>If you want two block level elements to be side by side, you need to float both elements. One left, and one right.</p>
-            <div style="border:5px solid black; padding:20px; width:720px; height:160px; margin:0 auto;">
-              <div style="background-color: #688836; color: white; width:300px; height:160px; margin-right:20px; float:left;">
-                <p>width: 300px;<br />
-                float: left;</p>
-              </div>
-              <div style="background-color: #C3C3C3; width:400px; height:160px; float:right;">
-                <p>width: 400px;<br />
-                float: right;</p>
-              </div>
-            </div>
-          </section> -->
 
-
-          <!-- Exercise-->
+            <!-- Exercise-->
           <section>
             <h3>Let's Develop It</h3>
             <p>Create a div and put an image and some text in it</p>
@@ -622,7 +611,7 @@ h1,h2,h3,h4{
           <section>
             <h1>What's a wireframe?</h1>
             <p>A visual guide that represents the layout of a website</p>
-            <img style="width:800px;max-width:none;" class="fragment" src="https://alistapart.com/d/priority-guides/wireframes.png" alt="">
+            <img style="width:800px;max-width:none;" class="fragment" src="img/wireframes.png" alt="example of a wireframe">
           </section>
 
           <section>
@@ -640,14 +629,15 @@ h1,h2,h3,h4{
               <h5>Creating your wireframe</h5>
               <div class="halfblock">
                 <ul>
-                  <li class="fragment">Pick a topic you like for your website (preferably not yourself!)</li>
-                  <li class="fragment">Using pencil and paper, draw out the wireframe for your <strong>single page website</strong></li>
-                  <li class="fragment" style="text-decoration: underline;">When done, call instructor over to brainstorm implementation</li>
+                  <li class="fragment">Pick a topic you like for your website</li>
+                  <li class="fragment">Using pencil and paper, draw out the wireframe for your website</li>
+                  <li class="fragment">Keep it simple!</li>
+                  <li class="fragment" style="text-decoration: underline;">When done, call instructor/TA over to brainstorm implementation</li>
                   <li class="fragment"><strong>10 min activity!</strong></li>
                 </ul>
               </div>
               <div class="halfblock">
-                <img src="https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/62cb6318-ad27-484a-8899-0c77039b29bb/wireframing-process-photoshop-xd-image-2.jpg" alt="">
+                <img src="img/wireframe_example.jpg" alt="wireframe example 2">
               </div>
 
             </section>
@@ -656,7 +646,7 @@ h1,h2,h3,h4{
               <h1>Let's Develop It!</h1>
               <h5>Creating your website</h5>
               <ul>
-                <li class="fragment">Using your wireframe and instructor input as your guide, start coding your site!</li>
+                <li class="fragment">Using your wireframe code your website!</li>
                 <li class="fragment">You can start a new project folder or continue using the one you have</li>
                 <li class="fragment">Keep your code clean and organized</li>
               </ul>
@@ -683,51 +673,14 @@ p, a {
 }</code></pre>
                 </div>
               </div>
-              <P class="fragment"><strong>Activity ends 20 min before end of class!</strong></P>
+              <P class="fragment"><strong>Activity ends 5 min before end of class!</strong></P>
             </section>
 
             <section>
-              <h1>Peer Review</h1>
-              <div class="halfblock">
-                <p class="fragment"><strong>In groups of 2-3, check out each others websites!</strong></p>
-                <ul class="fragment">
-                  <li>Ask: what was most challenging about making the site?</li>
-                  <li>Ask: what was most fun about making the site?</li>
-                </ul>
-              </div>
-              <div class="halfblock">
-                <p class="fragment"><strong>Look at the HTML/CSS for their site</strong></p>
-                <ul class="fragment">
-                  <li>How readable is their HTML? How organized is the content?</li>
-                  <li>How readable is their CSS?</li>
-                  <li>If you see any mistakes (unclosed tags, incorrect CSS syntax, etc.), let them know!</li>
-                </ul>
-              </div>
-            </section>
-
-            <section>
-              <img style="display: block; margin:auto;" src="img/qr1.png" alt="">
-              <a style="display: block; margin:20px auto;" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfrOuzj3C8zHjTquIK6IVFepmpDqRVGRwvtRYUiPiDTwOEOfw/viewform">Exit Survey</a>
-
+              <p>Exit Survey</p>
             </section>
             <section>
-              <img style="display: block; margin:auto;" src="img/qr1.png" alt="">
-              <a style="display: block; margin:20px auto;" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfg23FBDoqTnpJYFo0DoCnsj189jtFRFfTu4IiRY-t80Crhcw/viewform">GDI NYC Feedback (2 questions)</a>
-            </section>
-
-            <section>
-              <h1>That's all folks!</h1>
-              <h4>TY to our amazing TAs!🎉👏🏽</h4>
-              <div class="halfblock">
-                <img src="img/fireplace1.jpg" alt="">
-              </div>
-              <div class="halfblock">
-                <p style="margin-top: 30px;">My Contact info</p>
-                <a style="display:block; margin-bottom: 20px;" target="_blank" href="https://mahdis.pw">mahdis.pw</a>
-                <a style="display:block; margin-bottom: 20px;" target="_blank" href="mailto:mahdis.pw@gmail.com">mahdis.pw@gmail.com</a>
-                <a style="display:block; margin-bottom: 20px;" target="_blank" href="https://twitter.com/Shaddymaze">@Shaddymaze</a>
-                <a style="display:block; margin-bottom: 20px;" target="_blank" href="https://www.linkedin.com/in/mahdi-shadkamfarrokhi-8a410958/">LinkedIn</a>
-              </div>
+              <p style="font-style: italic;">Fin</p>
             </section>
 </div><!-- Close slides -->
 
