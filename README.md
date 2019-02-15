@@ -1,4 +1,4 @@
-Edited 1/24  
+Last Edited 2/14/19
 
 # Intro to HTML/CSS
 Slides and materials are hosted at [http://girldevelopit.github.io/gdi-featured-html-css-intro//](http://girldevelopit.github.io/gdi-featured-html-css-intro/).
