@@ -1,3 +1,5 @@
+Last Edited 2/14/19
+
 # Intro to HTML/CSS
 Slides and materials are hosted at [http://girldevelopit.github.io/gdi-featured-html-css-intro//](http://girldevelopit.github.io/gdi-featured-html-css-intro/).
 
@@ -38,4 +40,4 @@ Students will start customizing their portfolio with all sorts of goodies.
 Box model? Floating? Columns? What is this sorcery? You've brought people through the core of html and css. Now give them the next steps to be pros. Students will add columns, footers and headers to their portfolios.
 
 ## Credits
-This is the Girl Develop It Core HTML/CSS curriculum. It was developed through the contributions of Pamela Fox, Alexis Goldstein, Erin M. Kidwell, Izzy Johnston, and Jen Myers, and modified by Sylvia Pellicore.
+This is the Girl Develop It Core HTML/CSS curriculum. It was developed through the contributions of Pamela Fox, Alexis Goldstein, Erin M. Kidwell, Izzy Johnston, and Jen Myers, and modified by Sylvia Pellicore and Mahdi Shadkam-Farrokhi.
